@@ -1,0 +1,132 @@
+FORMATTING
+{
+  FORMAT Coordinate "&__4.4_"
+  FORMAT AbsCoord "&__5.4_"
+  FORMAT Feed_IPM "&__4.1_"
+  FORMAT Feed_IPR "&__1.4_"
+
+  ADDRESS X
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS Y
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS Z
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS I
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS J
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS K
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS R
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS K_cycle
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS cycle_step1
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS cycle_step
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS cycle_orient
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS E
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  BLOCK_TEMPLATE circular_move_turbo
+  {
+       G_cutcom[^sys_cutcom_code(CUTCOM_STATUS)]\opt
+       G_plane[^sys_cutcom_plane_code(CUTCOM_PLANE)]\opt
+       G_motion[^sys_circle_code(ARC_DIRECTION)]\opt
+       G_mode[^sys_output_code(OUTPUT_MODE)]
+       X[^POSX]
+       Y[^POSY]
+       Z[^POSZ]
+       I[^CENTERX]
+       J[^CENTERY]
+       K[^CENTERZ]
+       F[^FEED]
+       S[^SPINDLE_SPEED]
+       M_spindle[^sys_spindle_direction_code(SPINDLE_DIRECTION)]\opt
+       M_coolant[^sys_coolant_code(COOLNT_STATUS)]\opt
+  }
+
+  BLOCK_TEMPLATE linear_move_turbo
+  {
+       G_cutcom[^sys_cutcom_code(CUTCOM_STATUS)]\opt
+       G_plane[^sys_cutcom_plane_code(CUTCOM_PLANE)]\opt
+       G_motion[^sys_linear_code]
+       G_mode[^sys_output_code(OUTPUT_MODE)]
+       X[^POSX]
+       Y[^POSY]
+       Z[^POSZ]
+       F[^FEED]
+       D[^cutcom_adjust_register]\opt
+       S[^SPINDLE_SPEED]
+       M_spindle[^sys_spindle_direction_code(SPINDLE_DIRECTION)]\opt
+       M_coolant[^sys_coolant_code(COOLNT_STATUS)]\opt
+  }
+
+  BLOCK_TEMPLATE rapid_move_turbo
+  {
+       G_adjust[^sys_adjust_code]
+       G_motion[^sys_rapid_code]
+       G_mode[^sys_output_code(OUTPUT_MODE)]
+       X[^POSX]
+       Y[^POSY]
+       Z[^POSZ]
+       H[^tool_adjust_register]\opt
+       S[^SPINDLE_SPEED]
+       M_spindle[^sys_spindle_direction_code(SPINDLE_DIRECTION)]\opt
+       M_coolant[^sys_coolant_code(COOLNT_STATUS)]\opt
+  }
+
+  BLOCK_TEMPLATE sequence_number_turbo
+  {
+       N[^SEQNUM]
+  }
+}
