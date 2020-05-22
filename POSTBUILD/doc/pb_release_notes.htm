@@ -1,0 +1,2601 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="pb_release_notes_files/filelist.xml">
+<title>Post Builder v6.0 Release Notes</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Gen S. Lin</o:Author>
+  <o:LastAuthor>Gen S. Lin</o:LastAuthor>
+  <o:Revision>15</o:Revision>
+  <o:TotalTime>21138</o:TotalTime>
+  <o:LastPrinted>2005-05-23T18:23:00Z</o:LastPrinted>
+  <o:Created>2008-04-20T03:02:00Z</o:Created>
+  <o:LastSaved>2008-04-25T00:36:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2449</o:Words>
+  <o:Characters>13964</o:Characters>
+  <o:Company>Siemens PLM Software</o:Company>
+  <o:Lines>116</o:Lines>
+  <o:Paragraphs>32</o:Paragraphs>
+  <o:CharactersWithSpaces>16381</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 2 3 9 0 0 0 0 0 0;
+	mso-font-alt:MingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:136;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:536902279 -2147483648 8 0 511 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:136;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 2 3 9 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"Dutch 801";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:PMingLiU;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:1.0in right dotted 510.7pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:120.7pt right dotted 510.7pt;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3
+	{mso-style-update:auto;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:38.9pt;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-list:l11 level1 lfo1;
+	tab-stops:list 39.0pt;
+	font-size:12.0pt;
+	font-family:Times;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoListBullet4, li.MsoListBullet4, div.MsoListBullet4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo2;
+	tab-stops:list 1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin-top:0in;
+	margin-right:.25in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:0in 47.95pt 95.9pt 143.85pt 191.8pt 239.75pt 287.7pt 335.65pt 383.6pt 431.55pt;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.25in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Arial Unicode MS";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.endline, li.endline, div.endline
+	{mso-style-name:endline;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.paragraph, li.paragraph, div.paragraph
+	{mso-style-name:paragraph;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.listbullet, li.listbullet, div.listbullet
+	{mso-style-name:listbullet;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.Appendix, li.Appendix, div.Appendix
+	{mso-style-name:Appendix;
+	mso-style-next:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-list:l5 level1 lfo3;
+	tab-stops:list 1.5in;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.InstText, li.InstText, div.InstText
+	{mso-style-name:"Inst Text";
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan lines-together;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.InstructionText, li.InstructionText, div.InstructionText
+	{mso-style-name:"Instruction Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:right 6.0in;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Heading, li.Heading, div.Heading
+	{mso-style-name:Heading;
+	mso-style-parent:"Heading 1";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	tab-stops:31.35pt right 6.0in;
+	layout-grid-mode:char;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.SectionHeading, li.SectionHeading, div.SectionHeading
+	{mso-style-name:"Section Heading";
+	mso-style-parent:"Heading 2";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.disclaimer, li.disclaimer, div.disclaimer
+	{mso-style-name:disclaimer;
+	mso-style-update:auto;
+	mso-style-parent:"";
+	margin-top:.5in;
+	margin-right:.4in;
+	margin-bottom:2.9pt;
+	margin-left:0in;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:13.9pt;
+	mso-pagination:none;
+	tab-stops:1.4in 2.4in 3.4in;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.RevNum, li.RevNum, div.RevNum
+	{mso-style-name:"Rev Num";
+	mso-style-update:auto;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:46.0pt;
+	margin-left:0in;
+	text-align:center;
+	line-height:17.6pt;
+	mso-pagination:none;
+	tab-stops:0in 1.0in 2.0in 3.0in;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Dutch 801";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Cellbody, li.Cellbody, div.Cellbody
+	{mso-style-name:Cellbody;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.75pt;
+	margin-left:0in;
+	line-height:13.9pt;
+	mso-pagination:lines-together;
+	tab-stops:.35in 1.35in 2.35in 3.35in;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Append1, li.Append1, div.Append1
+	{mso-style-name:"Append 1";
+	mso-style-update:auto;
+	mso-style-parent:"Heading 1";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l10 level1 lfo4;
+	tab-stops:list .25in 1.25in;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Cellbody2, li.Cellbody2, div.Cellbody2
+	{mso-style-name:"Cellbody 2";
+	mso-style-parent:Cellbody;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.75pt;
+	margin-left:0in;
+	line-height:13.9pt;
+	mso-pagination:lines-together;
+	tab-stops:.35in 1.35in 2.35in 3.35in;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:1832567226;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"List Bullet 4";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:140847221;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-589530116 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:219483348;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1865261920 572797022 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.7pt;
+	mso-level-number-position:left;
+	margin-left:36.7pt;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	color:windowtext;
+	mso-text-animation:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l2:level2
+	{mso-level-tab-stop:18.7pt;
+	mso-level-number-position:left;
+	margin-left:18.7pt;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:54.7pt;
+	mso-level-number-position:left;
+	margin-left:54.7pt;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:90.7pt;
+	mso-level-number-position:left;
+	margin-left:90.7pt;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:126.7pt;
+	mso-level-number-position:left;
+	margin-left:126.7pt;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:162.7pt;
+	mso-level-number-position:left;
+	margin-left:162.7pt;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:198.7pt;
+	mso-level-number-position:left;
+	margin-left:198.7pt;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:234.7pt;
+	mso-level-number-position:left;
+	margin-left:234.7pt;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:270.7pt;
+	mso-level-number-position:left;
+	margin-left:270.7pt;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:297032196;
+	mso-list-type:hybrid;
+	mso-list-template-ids:720652064 1331346740 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:PMingLiU;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:416638664;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1735751454 -1440585306 -1876292544 1131153160 327966190 -72181734 -1828798636 -1489762052 405429988 -1357866348;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:464860931;
+	mso-list-template-ids:-1213329874;}
+@list l5:level1
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"Appendix %1\:";
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l5:level2
+	{mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.4in;}
+@list l5:level3
+	{mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;}
+@list l5:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;}
+@list l5:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;}
+@list l5:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;}
+@list l5:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;}
+@list l5:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;}
+@list l5:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;}
+@list l6
+	{mso-list-id:963853381;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1410283832 1347996508 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	color:windowtext;}
+@list l6:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:1000541484;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-762130592 1347996508 -12282614 1347996508 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	color:windowtext;}
+@list l7:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	color:windowtext;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l7:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	color:windowtext;}
+@list l7:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:1350179196;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1080265106 1331346740 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:PMingLiU;}
+@list l8:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:1425146366;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1914980110 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	color:windowtext;
+	mso-text-animation:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l9:level2
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l9:level3
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l9:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l9:level5
+	{mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l9:level6
+	{mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l9:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l9:level8
+	{mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l9:level9
+	{mso-level-tab-stop:4.25in;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l10
+	{mso-list-id:1540777082;
+	mso-list-type:simple;
+	mso-list-template-ids:-1410054564;}
+@list l10:level1
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"Appendix %1\:";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:1825659105;
+	mso-list-type:simple;
+	mso-list-template-ids:1849301912;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:1998218211;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453002856 -357167554 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	color:windowtext;
+	mso-text-animation:none;
+	text-effect:none;
+	text-shadow:none;
+	text-effect:none;
+	text-effect:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l12:level2
+	{mso-level-tab-stop:89.3pt;
+	mso-level-number-position:left;
+	margin-left:89.3pt;
+	text-indent:-.25in;}
+@list l12:level3
+	{mso-level-tab-stop:125.3pt;
+	mso-level-number-position:left;
+	margin-left:125.3pt;
+	text-indent:-.25in;}
+@list l12:level4
+	{mso-level-tab-stop:161.3pt;
+	mso-level-number-position:left;
+	margin-left:161.3pt;
+	text-indent:-.25in;}
+@list l12:level5
+	{mso-level-tab-stop:197.3pt;
+	mso-level-number-position:left;
+	margin-left:197.3pt;
+	text-indent:-.25in;}
+@list l12:level6
+	{mso-level-tab-stop:233.3pt;
+	mso-level-number-position:left;
+	margin-left:233.3pt;
+	text-indent:-.25in;}
+@list l12:level7
+	{mso-level-tab-stop:269.3pt;
+	mso-level-number-position:left;
+	margin-left:269.3pt;
+	text-indent:-.25in;}
+@list l12:level8
+	{mso-level-tab-stop:305.3pt;
+	mso-level-number-position:left;
+	margin-left:305.3pt;
+	text-indent:-.25in;}
+@list l12:level9
+	{mso-level-tab-stop:341.3pt;
+	mso-level-number-position:left;
+	margin-left:341.3pt;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableElegant
+	{mso-style-name:"Table Elegant";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:double black 2.25pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.75pt solid black;
+	mso-border-insidev:.75pt solid black;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableElegantFirstRow
+	{mso-style-name:"Table Elegant";
+	mso-table-condition:first-row;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	color:windowtext;
+	text-transform:uppercase;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="43010"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 align=right style='text-align:right'><span style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:"MS Mincho";font-weight:
+normal;mso-bidi-font-weight:bold'>April 18, 2008</span><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:"MS Mincho";
+font-weight:normal'><o:p></o:p></span></h1>
+
+<h1 align=center style='text-align:center'><span style='font-size:36.0pt;
+mso-fareast-font-family:"MS Mincho";color:teal'>SIEMENS</span><span
+style='font-size:36.0pt;mso-fareast-font-family:"MS Mincho";color:teal;
+font-weight:normal;mso-bidi-font-weight:bold'><o:p></o:p></span></h1>
+
+<h1 align=center style='margin-top:0in;text-align:center'><span
+style='mso-fareast-font-family:"MS Mincho";color:teal'>PLM Software<o:p></o:p></span></h1>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<h1><u><span style='mso-fareast-font-family:"MS Mincho"'>What’s New in Post
+Builder Version 6.0</span></u><span style='font-size:14.0pt;mso-fareast-font-family:
+"MS Mincho";font-weight:normal;mso-bidi-font-weight:bold'><o:p></o:p></span></h1>
+
+<h4 style='margin-left:9.0pt'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";color:navy'><o:p>&nbsp;</o:p></span></i></h4>
+
+<h4 style='margin-left:9.0pt'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";color:navy'>Summary<o:p></o:p></span></i></h4>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:36.7pt;text-indent:-.25in;mso-list:l2 level1 lfo5;tab-stops:
+list 36.7pt left 74.8pt'><a name="_Toc30397795"><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>UDE Editor</span></b></a><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'> – This module was first released in Post Builder version 5.0.3. It
+provides an integrated environment for the users to modify and create Machine Control
+events (MCE) and User Defined cycles (UDC).<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:36.7pt;text-indent:-.25in;mso-list:l2 level1 lfo5;tab-stops:
+list 36.7pt left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>Localization </span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>– Windows version of Post Builder 6.0 supports languages of 10 locales
+as NX does.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:36.7pt;text-indent:-.25in;mso-list:l2 level1 lfo5;tab-stops:
+list 36.7pt left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>VNC </span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>(<st1:place w:st="on"><st1:City w:st="on">Virtual</st1:City> <st1:State
+ w:st="on">NC</st1:State></st1:place> Controller) <b style='mso-bidi-font-weight:
+normal'>Creator</b> – More graphical user-interface elements have been
+implemented to facilitate the creation of machine tool simulation drivers.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:36.7pt;text-indent:-.25in;mso-list:l2 level1 lfo5;tab-stops:
+list 36.7pt left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:MingLiU'>Other Changes &amp; Enhancements<o:p></o:p></span></span></p>
+
+<i style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;font-family:
+Arial;mso-fareast-font-family:"MS Mincho";mso-bidi-font-family:"Times New Roman";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+AR-SA'><br clear=all style='page-break-before:always'>
+</span></i>
+
+<h4 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;margin-left:
+27.35pt'><span style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:
+normal'><span style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";
+color:navy'>UDE Editor<o:p></o:p></span></i></span></h4>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l12 level1 lfo6;
+tab-stops:list .75in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>UDE Editor can be enabled for creating a new
+post or editing an existing post.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l12 level1 lfo6;
+tab-stops:list .75in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The enabling switch is a <i style='mso-bidi-font-style:
+normal'>one-time activation</i> only for the post in question. It automatically
+resets back to “<b style='mso-bidi-font-weight:normal'>As Saved</b>” when the
+post in process is closed.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l12 level1 lfo6;
+tab-stops:list .75in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Any post created or saved with UDE enabled (<st1:PersonName
+w:st="on">Ye</st1:PersonName>s) will be opened with UDE being enabled and vice
+verse; unless the switch is purposely set otherwise before the post is opened.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l12 level1 lfo6;
+tab-stops:list .75in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>When creating a new post, “As Saved” options
+functions the same as the “No” option.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in'><span style='mso-bookmark:_Toc30397795'>The
+<b style='mso-bidi-font-weight:normal'>New Post</b> dialog also provides “<b
+style='mso-bidi-font-weight:normal'>Enable UDE Editor</b>” toggle allowing the
+users to activate UDE functionalities for the post to be created.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>There
+are 2 classes of <st1:place w:st="on">CAM</st1:place> objects implemented using
+UDE mechanism:</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>Machine Control
+Events</b> (MCE)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>User-Defined
+Cycles</b> (UDC)</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>When a post is
+created with the UDE editing capability <span class=GramE>enabled,</span>
+additional functionalities relevant to the editing and creation of Machine
+Control events and User-Defined cycles will become available.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>Only MCE with
+corresponding definition in the CDL file (<b style='mso-bidi-font-weight:normal'>ude.cdl</b>)
+will display a UDE parameters dialog mimicking the dialog presented in NX/CAM
+for the MCE in question.</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'>Machine Control Events</b> are presented in
+2 categories:</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>System MCE</b>
+(in light blue)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>Non-System</b>
+(Custom) <b style='mso-bidi-font-weight:normal'>MCE</b> (in green) – <st1:place
+w:st="on">CAM</st1:place> provides a set of default. The users can always add
+new ones as desired.</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'>User-Defined Cycles</b> are also presented
+in 2 categories:<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>System UDC</b>
+(in light blue) – They are not defined in the ude.cdl unless new parameters
+have been added.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level1 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>Non-System UDC</b>
+(in green) – By default, none exists in ude.cdl; user will add new cycles.</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt'><span style='mso-bookmark:_Toc30397795'>Two
+types of parameters will be presented on a UDE dialog:</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l8 level1 lfo8;
+tab-stops:list -.25in 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>System
+parameters</b> are displayed in cyan; they are read only and not deletable.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l8 level1 lfo8;
+tab-stops:list -.25in 1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><b style='mso-bidi-font-weight:normal'>Custom
+parameters</b> are displayed in light orange.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'>Handlers</b> for add-on non-system MCE can
+be constructed the same fashion (drag &amp; drop) as the system MCE.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>UDE
+definitions can be previewed on the “<b style='mso-bidi-font-weight:normal'>Output
+Settings</b> </span><span style='mso-bookmark:_Toc30397795'><span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+<b style='mso-bidi-font-weight:normal'>Post Files Preview</b> </span><span
+style='mso-bookmark:_Toc30397795'><span style='font-family:Wingdings;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span> <b style='mso-bidi-font-weight:
+normal'>User Defined Events</b>” page; whereas UDE handlers can be previewed on
+the “<b style='mso-bidi-font-weight:normal'>Output Settings</b> </span><span
+style='mso-bookmark:_Toc30397795'><span style='font-family:Wingdings;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Wingdings'>à</span></span> <b style='mso-bidi-font-weight:
+normal'>Post Files Preview</b> </span><span style='mso-bookmark:_Toc30397795'><span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+<b style='mso-bidi-font-weight:normal'>Event Handlers</b>” page.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>UDE
+definitions &amp; handlers defined for a post can be inherited by another post
+(<b style='mso-bidi-font-weight:normal'>NC Data Definitions </b></span><span
+style='mso-bookmark:_Toc30397795'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Wingdings;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Wingdings'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>à</span></span>
+Other Data Elements</b>). This mechanism is employed by the <b
+style='mso-bidi-font-weight:normal'>on-machine</b> <b style='mso-bidi-font-weight:
+normal'>probing</b> project to deliver the definitions and handlers of the
+probing cycles.</span></p>
+
+<i style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;font-family:
+Arial;mso-fareast-font-family:"MS Mincho";mso-bidi-font-family:"Times New Roman";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+AR-SA'><br clear=all style='page-break-before:always'>
+</span></i>
+
+<h4 style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;margin-left:
+27.35pt'><span style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:
+normal'><span style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";
+color:navy'>Localization </span></i></span><span style='mso-bookmark:_Toc30397795'><i
+style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;mso-fareast-font-family:
+"MS Mincho";color:navy;font-weight:normal'>(Windows only)</span></i></span><span
+style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";color:navy'> <o:p></o:p></span></i></span></h4>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>Languages
+of 10 locales are supported by default:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>English</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>French</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>German</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Italian</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Japanese</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Korean</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Russian</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Simplified Chinese</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Spanish</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'>Traditional Chinese</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>Users
+can switch to any of the installed languages before creating or opening a post.
+The choice of language at the time when a Post Builder session has ended will
+be remembered for the resumption of next session.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in'><span style='mso-bookmark:_Toc30397795'>Users can also use
+their own language file for localization. Using “<span class=SpellE><b
+style='mso-bidi-font-weight:normal'>my_language.tcl</b></span>” as the example,
+she can define the variable “<span class=SpellE><span class=GramE>gPB</span></span><span
+class=GramE>(</span><span class=SpellE><b style='mso-bidi-font-weight:normal'>my_language</b>,LABEL</span>)
+as the label to be displayed on the “<b style='mso-bidi-font-weight:normal'>Language</b>”
+pull-down menu. In this example, “<span class=SpellE><b style='mso-bidi-font-weight:
+normal'>my_language</b></span>” should be used as the <i style='mso-bidi-font-style:
+normal'>locale </i>name throughout the entire translation file, including <span
+class=SpellE><span class=GramE>gPB</span></span><span class=GramE>(</span><span
+class=SpellE>my_language,LABEL</span>), as indicated in the excerpt below. <b
+style='mso-bidi-font-weight:normal'>Unicode utf-8</b> encoding should be used.</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>#################<span class=GramE>#<span
+style='mso-spacerun:yes'>  </span>DO</span> NOT CHANGE ANYTHING ABOVE THIS LINE
+###################<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>if { [info exists <span class=SpellE>gPB</span>(LANG_TEST)]
+} {<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'> 
+</span>#+++++++++++++++++++++++++++++++++++++++++++<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'>  </span># Define label
+in Unicode for this language<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'> 
+</span>#+++++++++++++++++++++++++++++++++++++++++++<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'>   </span>set <span
+class=SpellE>gPB</span>(<span class=SpellE><b style='mso-bidi-font-weight:normal'>my_language</b>,LABEL</span>)
+&quot;</span></span><span style='mso-bookmark:_Toc30397795'><span lang=ZH-TW
+style='font-size:9.0pt;font-family:MingLiU;mso-bidi-font-family:MingLiU'>&#25105;&#30340;&#35821;&#35328;</span></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:9.0pt'>&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'> 
+</span>#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'>  </span># Return
+&quot;1&quot; when this language file is ready to be deployed,<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'>  </span># otherwise
+return &quot;0&quot;.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><span style='mso-spacerun:yes'>  </span>#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt'>return 1<o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>}<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>##------<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>## Title<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>##<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>::<span class=SpellE>msgcat::mcset</span> <span
+class=SpellE><b style='mso-bidi-font-weight:normal'>my_language</b></span>
+&quot;MC(<span class=SpellE>main,title,Unigraphics</span>)&quot;<span
+style='mso-spacerun:yes'>             </span>&quot;<span class=SpellE>Unigraphics</span>&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>::<span class=SpellE>msgcat::mcset</span> <span
+class=SpellE><b style='mso-bidi-font-weight:normal'>my_language</b></span>
+&quot;MC(<span class=SpellE>main,title,UG</span>)&quot;<span
+style='mso-spacerun:yes'>                      </span>&quot;UG&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:9.0pt'>::<span class=SpellE>msgcat::mcset</span> <span
+class=SpellE><b style='mso-bidi-font-weight:normal'>my_language</b></span>
+&quot;MC(<span class=SpellE>main,title,Post_Builder</span>)&quot;<span
+style='mso-spacerun:yes'>            </span>&quot;</span></span><span
+style='mso-bookmark:_Toc30397795'><span lang=ZH-TW style='font-size:9.0pt;
+font-family:MingLiU;mso-bidi-font-family:MingLiU'>&#21518;&#22788;&#29702;&#26500;&#36896;&#22120;</span></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:9.0pt'>&quot;<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in'><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:8.0pt'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='mso-bookmark:_Toc30397795'>By
+placing this translation file in the “<b style='mso-bidi-font-weight:normal'>POSTBUILD/<span
+class=SpellE>msgs</span></b>” folder, a new selection will then be added to the
+“Language” pull-down menu.</span></p>
+
+<i style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;font-family:
+Arial;mso-fareast-font-family:"MS Mincho";mso-bidi-font-family:"Times New Roman";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+AR-SA'><br clear=all style='page-break-before:always'>
+</span></i>
+
+<h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+27.35pt'><span style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:
+normal'><span style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";
+color:navy'>VNC Creator<o:p></o:p></span></i></span></h4>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='mso-fareast-font-family:MingLiU'>Many graphical elements &amp; interactive
+dialogs have been implemented for the creation of Virtual NC Controllers
+machine tool simulation.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='mso-fareast-font-family:MingLiU'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='mso-bookmark:_Toc30397795'><span
+style='mso-fareast-font-family:MingLiU'>This environment not only enables the
+users to create and modify the virtual controllers easily; but it also provides
+a mechanism to prepare the NC program setup data (fixture offsets &amp; tool
+assignments for now) for external NC code file simulation using the VNC created
+by Post Builder.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='mso-bookmark:_Toc30397795'><span
+style='mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></span></p>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.6in;text-indent:-.1in;page-break-after:auto;tab-stops:list .75in'><span
+style='mso-bookmark:_Toc30397795'><span style='color:#003300'>vnc_base_v600_tcl.txt<o:p></o:p></span></span></h3>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.5in;page-break-after:auto;tab-stops:list .75in'><span style='mso-bookmark:
+_Toc30397795'><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"MS Mincho";font-weight:normal;mso-bidi-font-weight:
+bold'>New version of the encrypted VNC base file is included in this release of
+Post Builder. This file will also be released with NX6.<o:p></o:p></span></span></h3>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.5in;page-break-after:auto;tab-stops:list .75in'><span style='mso-bookmark:
+_Toc30397795'><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"MS Mincho";font-weight:normal;mso-bidi-font-weight:
+bold'>Machine tool simulation drivers created with this version of Post Builder
+will require this VNC base file to work. The users of older NX or UG releases
+need to copy this file from the POSTBUILD directory to the desired </span></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:"MS Mincho"'>UGII_CAM_POST_DIR</span></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:"MS Mincho";font-weight:normal;
+mso-bidi-font-weight:bold'> directory.<o:p></o:p></span></span></h3>
+
+<b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;font-family:Arial;mso-fareast-font-family:"MS Mincho";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-TW;mso-bidi-language:
+AR-SA'><br clear=all style='page-break-before:always'>
+</span></i></b>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:27.0pt'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;font-family:Arial;mso-fareast-font-family:"MS Mincho";
+color:navy'>Other Changes &amp; Enhancements</span></i></b></span><span
+style='mso-bookmark:_Toc30397795'><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Arial;mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l6 level1 lfo9;
+tab-stops:list .75in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>Post Files Preview</span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'> page has been moved under the <b style='mso-bidi-font-weight:normal'>Output
+Settings</b> group to make room for VNC Creator.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level1 lfo10;
+tab-stops:list .75in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>Formatted M/G Code Tables</span></b></span><span style='mso-bookmark:
+_Toc30397795'><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:MingLiU'> – Formatted M &amp; G codes are displayed with
+specified address leaders for better &amp; clear representation of the NC
+instructions to be output.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level1 lfo10;
+tab-stops:list .75in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>XZC-Mill</span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'> post will be created with <span class=SpellE><b style='mso-bidi-font-weight:
+normal'>MOM_rotate</b></span> handler (for <b style='mso-bidi-font-weight:normal'>Rotate</b>
+UDE) included by default.</span></span><span style='mso-bookmark:_Toc30397795'><span
+style='mso-fareast-font-family:MingLiU'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level1 lfo10;
+tab-stops:list .75in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:MingLiU'>The problem with the efficiency of saving posts
+in Post Builder that deteriorates over time has been fixed. </span></span><span
+style='mso-bookmark:_Toc30397795'><span style='mso-fareast-font-family:MingLiU'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:.5in;tab-stops:74.8pt'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><u><span style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:MingLiU'>New Custom
+Commands<o:p></o:p></span></u></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level2 lfo10;
+tab-stops:list 1.0in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>PB_CMD_fix_RAPID_SET</span></b></span></span><span style='mso-bookmark:
+_Toc30397795'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:MingLiU'><o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'>This custom command can be
+added to the <b style='mso-bidi-font-weight:normal'>Start of Program</b> event
+to fix the problem with the legacy command that does not account for the –X or
+–Y directions. It also allows the users to temporarily switch off the work
+plane change when the spindle axis is not along a principal direction.<span
+style='mso-spacerun:yes'>  </span><span class=SpellE><b style='mso-bidi-font-weight:
+normal'>PB_CMD_restore_work_plane_change</b></span> can then be called at the
+end of the Rapid Move event to restore the setting of work plane change.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level2 lfo10;
+tab-stops:list 1.0in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>PB_CMD_restore_work_plane_change</span></b></span></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>(As described above)<o:p></o:p></span></i></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level2 lfo10;
+tab-stops:list 1.0in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>PB_CMD_set_cycle_plane</span></b></span></span><span style='mso-bookmark:
+_Toc30397795'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:MingLiU'><o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'>This command has been
+improved to better determine a proper principal axis by using the information
+in <span class=SpellE><b style='mso-bidi-font-weight:normal'>mom_spindle_axis</b></span>
+vector.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level2 lfo10;
+tab-stops:list 1.0in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>PB_CMD_abort_event</span></b></span></span><span style='mso-bookmark:
+_Toc30397795'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:MingLiU'><o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'>This command can be used to
+abort an event according to the condition indicated by the global variable <span
+class=SpellE><b style='mso-bidi-font-weight:normal'>mom_sys_abort_next_event</b></span>.
+Linear, Circular, Rapid and Cycle move events all have this trigger built-in by
+default. As desired, the users can also use this command to abort any other
+events.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l7 level2 lfo10;
+tab-stops:list 1.0in left 74.8pt'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>PB_CMD_before_output</span></b></span></span><span style='mso-bookmark:
+_Toc30397795'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:MingLiU'><o:p></o:p></span></b></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'>This command can be used to
+manipulate the NC data before it finally gets output to a file. This command,
+when present, is automatically executed by the <span class=SpellE><b
+style='mso-bidi-font-weight:normal'>MOM_before_output</b></span> handler.
+Framework of the command is provided in this release of Post Builder.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:3.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:74.8pt'><span
+style='mso-bookmark:_Toc30397795'><i style='mso-bidi-font-style:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>As of PB6.0, users should never overload the <span class=SpellE>MOM_before_output</span>
+handler itself. All customization should be done in <span class=SpellE>PB_CMD_before_output</span>!
+<o:p></o:p></span></i></span></p>
+
+<p class=MsoPlainText style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:.5in;tab-stops:74.8pt'><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><u><span style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:MingLiU'>Enhancements for
+Windows</span></u></b></span><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><u><span style='font-family:"Times New Roman";
+mso-fareast-font-family:MingLiU'> </span></u></b></span><span style='mso-bookmark:
+_Toc30397795'><b style='mso-bidi-font-weight:normal'><u><span style='font-size:
+12.0pt;font-family:"Times New Roman";mso-fareast-font-family:MingLiU'>version
+only<o:p></o:p></span></u></b></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo11;tab-stops:
+1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>External text editor</span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'> – Users can link an external text editor (via environment variable <b
+style='mso-bidi-font-weight:normal'>EDITOR</b>) to the Custom Command page.
+This functionality has been implemented since Post Builder version 5.0.1.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo11;tab-stops:
+1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU;color:blue'>C</span></b></span><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU;color:red'>o</span></b></span><span
+style='mso-bookmark:_Toc30397795'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU;color:lime'>l</span></b></span><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU;color:#FFCC00'>o</span></b></span><span
+style='mso-bookmark:_Toc30397795'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU;color:fuchsia'>r</span></b></span><span style='mso-bookmark:_Toc30397795'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'> coded text</span></b></span><span
+style='mso-bookmark:_Toc30397795'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:MingLiU'> is used in the custom
+command and the file preview pages.<o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo11;tab-stops:
+1.0in'><span style='mso-bookmark:_Toc30397795'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'>Mouse wheel</span></b></span><span style='mso-bookmark:_Toc30397795'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+MingLiU'> support<o:p></o:p></span></span></p>
+
+<b><u><span style='font-size:15.5pt;font-family:Arial;mso-fareast-font-family:
+"MS Mincho";mso-font-kerning:16.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span><span style='mso-bookmark:_Toc30397795'></span></u></b>
+
+<h1><u><span style='mso-fareast-font-family:"MS Mincho"'>Legacy Posts
+Conversion<o:p></o:p></span></u></h1>
+
+<h2 style='margin-left:.5in;line-height:150%'><a name="_Toc99425513"></a><a
+name="_Toc99425657"></a><a name="_Toc99425739"></a><a name="_Toc99425772"></a><a
+name="_Toc102901013"><span style='mso-bookmark:_Toc99425772'><span
+style='mso-bookmark:_Toc99425739'><span style='mso-bookmark:_Toc99425657'><span
+style='mso-bookmark:_Toc99425513'><i><span style='font-size:14.0pt;line-height:
+150%'>Pre V3.4 Mill Posts</span></i></span></span></span></span></a><i><span
+style='font-size:14.0pt;line-height:150%'><o:p></o:p></span></i></h2>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.85in;text-indent:-.1in;page-break-after:auto;tab-stops:list .75in'><a
+name="_Toc99425773"></a><a name="_Toc102901014"><span style='mso-bookmark:_Toc99425773'><span
+style='mso-bidi-font-size:12.0pt;color:navy'>Preserving New IKS Parameters</span></span></a><span
+style='mso-bidi-font-size:12.0pt;color:navy'><o:p></o:p></span></h3>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>In Post
+Builder 3.3 or earlier, custom commands such as “<span class=SpellE><b
+style='mso-bidi-font-weight:normal'>PB_CMD_init_new_iks</b></span>” were used
+to enable the new IKS functionality. Parameters specified in any of these custom
+commands will be extracted and preserved with the posts when saved in this
+version of Post Builder.<span style='mso-spacerun:yes'>  </span>Interactively,
+these parameters will be presented in the appropriate dialogs when a post is
+open. However, the parameters will not be preserved, if the new IKS service was
+not enabled (<span class=SpellE><b style='mso-bidi-font-weight:normal'>mom_kin_iks_usage</b></span>
+= 0) in the custom command. Default values for the new IKS parameters will then
+be presented instead.</p>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'><span
+style='mso-bidi-font-style:italic'>These legacy custom commands will no longer
+be needed but will be retained with the posts for user’s reference. They may be
+deleted manually.<o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'><span
+style='mso-bidi-font-style:italic'><o:p>&nbsp;</o:p></span></p>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.85in;text-indent:-.1in;page-break-after:auto;tab-stops:list .75in'><a
+name="_Toc99425774"></a><a name="_Toc102901015"><span style='mso-bookmark:_Toc99425774'><span
+style='mso-bidi-font-size:12.0pt;color:navy'>Swapping Rotary Axes of Dual-Head
+Posts</span></span></a><span style='mso-bidi-font-size:12.0pt;color:navy'><o:p></o:p></span></h3>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>The
+assignments of rotary axes in all <b style='mso-bidi-font-weight:normal'>dual-head
+5-axis mill</b> posts created before this version of Post Builder were
+intentionally switched to accommodate certain short comings with the legacy
+inverse kinematics solver.<span style='mso-spacerun:yes'>  </span>This
+erroneous setting will be corrected when a post is saved with this version of
+Post Builder.</p>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>Kinematic
+parameters for the 4<sup>th</sup> rotary axis will be swapped with that of the
+5<sup>th</sup> axis.</p>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'><i
+style='mso-bidi-font-style:normal'><span style='font-size:9.0pt;font-family:
+"Courier New";color:navy'><o:p>&nbsp;</o:p></span></i></p>
+
+<h4 style='margin-top:5.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+1.05in;text-indent:-.05in;page-break-after:auto;tab-stops:list 1.0in'><a
+name="_Toc102901016"></a><span class=SpellE><span style='mso-bookmark:_Toc102901016'><span
+style='mso-bidi-font-family:Arial;color:navy'>PB_CMD_revert_dual_head_kin_vars</span></span></span><span
+style='mso-bookmark:_Toc102901016'></span><span style='mso-bidi-font-family:
+Arial;color:navy'><o:p></o:p></span></h4>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>This custom
+command will be provided for all 5-axis mill posts and used to swap the
+kinematic parameters of the dual rotary heads. This custom command should also
+be called whenever the new IKS is disabled.</p>
+
+<p class=MsoBodyText2 style='margin-left:.5in;line-height:normal'><i
+style='mso-bidi-font-style:normal'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+
+<h4 style='margin-top:5.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+1.05in;text-indent:-.3in;page-break-after:auto;tab-stops:list 1.0in'><a
+name="_Toc102901017"><span style='font-size:13.0pt;color:navy'>VNC of Dual
+Rotary Heads</span></a><span style='font-size:13.0pt;color:navy'><o:p></o:p></span></h4>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>Prior to <b
+style='mso-bidi-font-weight:normal'>NX4</b>, the NC axes assignment in a <b
+style='mso-bidi-font-weight:normal'>VNC</b> file is done in a custom command.
+There’s no easy way to carry out an automatic conversion. The users will have
+to manually edit the custom command.</p>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.85in;text-indent:-.1in;page-break-after:auto;tab-stops:list .75in'><a
+name="_Toc102901018"><span style='color:navy'><o:p>&nbsp;</o:p></span></a></h3>
+
+<h3 style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.85in;text-indent:-.1in;page-break-after:auto;tab-stops:list .75in'><span
+style='mso-bookmark:_Toc102901018'><span style='color:navy'>Legacy Posts Using
+ugpadvkins.dll</span></span><span style='color:navy'><o:p></o:p></span></h3>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;line-height:normal'>New IKS
+service will be disabled for dual-head mill posts using “<span class=SpellE><b
+style='mso-bidi-font-weight:normal'>ugpadvkins</b></span>” shared library. The
+kinematic parameters assigned for the dual rotary heads will be swapped as
+described above.</p>
+
+<p class=MsoBodyText><span style='font-family:Arial;display:none;mso-hide:all'>This
+is the main section of the document. The purpose is to describe in great detail
+new functionality that will be delivered by the project. The level of detail
+needed is such that a programmer could design the algorithms for the
+functionality without further discussion with the author of the functional
+specification. Also, a user interface designer should be able to write Section
+3 of this document based on the content of this section.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span style='font-family:Arial;display:none;mso-hide:all'>The
+items listed below are guidelines for the type of information to be included in
+the description. This section should not describe how the functionality would
+be implemented -- that information should be included in the Design
+Specification. <o:p></o:p></span></p>
+
+<p class=MsoListBullet3><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;display:none;
+mso-hide:all;font-style:normal'><span style='mso-list:Ignore'>·</span></span><![endif]><span
+style='font-family:Arial;display:none;mso-hide:all'>What functions will the
+software perform? Describe these functions separately, for example, creation
+and editing. Please describe each sub functionality in a separately numbered
+paragraph (e.g. 2.1, 2.2, 2.2.1, etc…) for easier future reference.<o:p></o:p></span></p>
+
+<p class=MsoListBullet3><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;display:none;
+mso-hide:all;font-style:normal'><span style='mso-list:Ignore'>·</span></span><![endif]><span
+style='font-family:Arial;display:none;mso-hide:all'>Remember to tell the reader
+<b style='mso-bidi-font-weight:normal'>what</b> the system does, not <b
+style='mso-bidi-font-weight:normal'>how</b> it does it. In other words,
+describe the function from a user's point of view without discussing about internal
+implementation or interaction.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span style='font-family:Arial;display:none;mso-hide:all'>The
+Functional Description should be independent of any detail about how the user
+will interact with Unigraphics to use the new functionality -- interaction is
+described in Section 3 below.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V3.3 Lathe Posts<o:p></o:p></span></i></h2>
+
+<p class=MsoNormal style='margin-left:1.0in'>Custom command <span class=SpellE><b
+style='mso-bidi-font-weight:normal'><span style='mso-fareast-font-family:"MS Mincho"'>PB_CMD_output_spindle</span></b></span><span
+style='mso-fareast-font-family:"MS Mincho"'> </span>used by any legacy lathe
+posts to output a block for setting the maximum spindle speed needs to be <span
+style='mso-fareast-font-family:"MS Mincho"'>modified as follows: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:11.5pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>#=============================================================</span><span
+style='font-size:8.5pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>proc </span><span
+class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'>PB_CMD_output_spindle</span></b></span><span
+style='font-size:8.5pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>
+{ } {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>#=============================================================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>  </span>global <span class=SpellE>mom_spindle_mode</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>  </span>global <span class=SpellE>spindle_is_out</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>  </span>global <span class=SpellE>mom_spindle_maximum_rpm</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>   </span>if {![info exists <span class=SpellE>spindle_is_out</span>]}
+{ <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>      </span>if {$<span class=SpellE>mom_spindle_mode</span>
+== &quot;RPM&quot;} {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE>MOM_force</span>
+once <span class=SpellE>M_spindle</span> <st1:place w:st="on">S <span
+ class=SpellE>G_spin</span></st1:place><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE>MOM_do_template</span>
+<span class=SpellE>spindle_rpm</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>      </span>} <span class=SpellE>elseif</span> {$<span
+class=SpellE>mom_spindle_mode</span> == &quot;SFM&quot; || $<span class=SpellE>mom_spindle_mode</span>
+== &quot;SMM&quot;} {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE>MOM_force</span>
+once <span class=SpellE>M_spindle</span> S G <span class=SpellE>G_spin</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>        </span># The following line has been changed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho";color:red'><span
+style='mso-spacerun:yes'>      </span></span><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New";mso-fareast-font-family:"MS Mincho";
+color:green'>if {$<span class=SpellE>mom_spindle_maximum_rpm</span> &gt; 0} {<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New";mso-fareast-font-family:"MS Mincho";
+color:green'><span style='mso-spacerun:yes'>         </span><span class=SpellE>MOM_do_template</span>
+<span class=SpellE>spindle_max_rpm</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New";mso-fareast-font-family:"MS Mincho";
+color:green'><span style='mso-spacerun:yes'>      </span>}<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+mso-bidi-font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:
+"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>         </span><span class=SpellE>MOM_do_template</span>
+<span class=SpellE>spindle_css</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>      </span>set <span class=SpellE>spindle_is_out</span>
+1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:8.5pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>}<o:p></o:p></span></p>
+
+<p class=MsoPlainText><b><i><span style='font-size:9.5pt;mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></i></b></p>
+
+<p class=MsoNormal><span style='font-size:11.5pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><b><i><span style='font-size:14.0pt;font-family:Arial;
+mso-fareast-font-family:"MS Mincho"'>To Run ISV</span></i></b><b><span
+style='font-size:14.0pt;font-family:Arial'> </span></b><span style='font-size:
+14.0pt;font-family:Arial'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.5pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'>To use the Machine Tool Drivers (MTD) built with this
+version of Post Builder in ISV before NX3.0, you need to copy &quot;<b>mom_source.dll</b>&quot;
+<span style='mso-bidi-font-weight:bold'>(Windows users only)<b> </b></span>from
+\POSTBUILD directory to $UGII_CAM_AUXILIARY_DIR.</p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'>All legacy Machine Tool Drivers will need to be resaved
+with the new version Post Builder.</p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'>You need to copy &quot;<b>vnc_base_v340_tcl.txt</b>&quot;
+in \POSTBUILD directory to your $UGII_CAM_POST_DIR to use the <span
+class=SpellE>MTDs</span> created with this version of Post Builder.</p>
+
+<p class=MsoNormal style='margin-left:1.0in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V3.1 Multi-Axis Posts<o:p></o:p></span></i></h2>
+
+<p class=MsoNormal style='margin-left:1.0in'>The option of the <b>Axis Limit
+Violation&nbsp;Handling</b> for a rotary axis specifies how the postprocessor
+behaves when the system reaches a rotary axis limit.<span
+style='mso-spacerun:yes'>  </span>The option can be of</p>
+
+<p class=listbullet style='margin-left:1.5in;text-indent:-.25in;mso-list:l4 level1 lfo12;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Warning</b><span style='font-family:"Times New Roman"'>
+means that the postprocessor outputs a message to the warning file, but takes
+no action to correct the axis limit violation.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:1.5in;text-indent:-.25in;
+mso-list:l4 level1 lfo12;tab-stops:list 1.5in'><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-family:"Arial Unicode MS"'>Retract/Re-engage</span></b>
+means that the postprocessor generates N/C codes that enable machine-tool to
+retract to clearance geometry (plane, cylinder or sphere), reposition the
+rotary axis to a valid position if possible, re-engage to a specified distance
+above the part, feed to the previous position where it retracted from and then
+continue moving to the programmed destination. &nbsp;The feed rate for the
+retraction will be at the retract feed rate, the feed rate for the move from
+the clearance back to the re-engage point will be at the approach feed rate and
+the move from the re-engage point into the part will be at the engage feed
+rate.</p>
+
+<p class=MsoBodyTextIndent2><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.25in'>Parameters for this control are
+specified in the custom command<b> <span class=SpellE>PB_CMD_init_rotary</span></b>
+under Program &amp; Tool Path -&gt; Custom Command.<span
+style='mso-spacerun:yes'>  </span>As depicted in the graphic below, you can
+modify the variables <span class=SpellE><b>mom_kin_retract_type</b></span>, <span
+class=SpellE><b>mom_kin_retract_distance</b></span> and <span class=SpellE><b>mom_kin_reengage_distance</b></span>
+to configure how this functionality behaves.</p>
+
+<p class=MsoNormal style='margin-left:1.25in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyTextIndent2>The parameter <span class=SpellE><b>mom_kin_retract_plane</b></span>
+used in previous releases of Post Builder has been replaced by <span
+class=SpellE>mom_kin_retract_distance</span>.<span style='mso-spacerun:yes'> 
+</span><b>PLANE</b> used as one of the options of <span class=SpellE>mom_kin_retract_type</span>
+in some pre-release versions of v3.1 has been replaced by <b>SURFACE</b>.<span
+style='mso-spacerun:yes'>  </span>After you have saved your legacy posts in
+Post Builder v3.1, unless you make changes in the custom command <span
+class=SpellE>PB_CMD_init_rotary</span>, the value of <span class=SpellE>mom_kin_retract_plane</span>
+will be transferred to <span class=SpellE>mom_kin_retract_distance</span> and
+PLANE will be interpreted as SURFACE automatically.</p>
+
+<p class=MsoBodyTextIndent2><span style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V3.1 XZC Mill &amp; Simple Mill-Turn Posts<o:p></o:p></span></i></h2>
+
+<p class=MsoBodyTextIndent>Prior to version 3.1, C axis limits (Machine Tool
+-&gt; Rotary Axis) of a XZC mill or simple mill-turn post were not observed.</p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:11.5pt;
+mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='mso-fareast-font-family:
+"MS Mincho"'>No checks were made against the values that were on the dialog for
+the rotary axis limits.<span style='mso-spacerun:yes'>  </span>Only the limits
+of the <span class=SpellE><b>fourth_axis</b></span> Address –9999.9999 ~
+9999.9999 were used.<span style='mso-spacerun:yes'>  </span>Starting from version
+3.1 the actual limits will be enforced.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='mso-fareast-font-family:
+"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='mso-fareast-font-family:
+"MS Mincho"'>Example of a post with rotary axis limits of 0 ~ 360:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:11.5pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:11.5pt;
+mso-fareast-font-family:"MS Mincho"'><span style='mso-spacerun:yes'>   </span></span><b><i><u><span
+lang=DE style='mso-fareast-font-family:"MS Mincho";mso-ansi-language:DE'>V3.0.1<o:p></o:p></span></u></i></b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>G81 X1 Z1 R2.1 C180.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C260.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C340.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C420.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C500.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'><span style='mso-spacerun:yes'>   </span><b><i><u>V3.1<o:p></o:p></u></i></b></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>G81 X1 Z1 R2.1 C180.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C260.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C340.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C60.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'>C140.0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span lang=DE style='mso-fareast-font-family:
+"MS Mincho";mso-ansi-language:DE'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyTextIndent>When saving a legacy XZC or simple mill-turn post in
+Post Builder v3.1, if you need to preserve the effect of having the limits of
+the rotary axis being -9999.9999 ~ 9999.9999, you must change the values on the
+dialog accordingly.</p>
+
+<p class=MsoNormal><span style='font-size:11.5pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V3.0 XZC Simple Mill-Turn Posts<o:p></o:p></span></i></h2>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='mso-fareast-font-family:
+"MS Mincho"'>The information in the custom command <span class=SpellE><b>PB_CMD_init_mill_turn</b></span>
+and <span class=SpellE><b>PB_CMD_init_mill_xzc</b></span> will be converted to
+dialog items on the <b>Machine Tool</b> pages and removed.<span
+style='mso-spacerun:yes'>   </span>The custom commands <span class=SpellE><b>PB_CMD_start_of_mill</b></span>,
+<span class=SpellE><b>PB_CMD_end_of_mill</b></span>, <span class=SpellE><b>PB_CMD_start_of_turn</b></span>
+and <span class=SpellE><b>PB_CMD_end_of_turn</b></span> have been converted
+into event handlers.<span style='mso-spacerun:yes'>  </span>You can now edit
+the event handlers on the <b>Linked Posts</b> page.<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:.5in center 3.0in right 6.0in'><span
+style='font-size:11.5pt;mso-fareast-font-family:"MS Mincho"'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V3.0 Linked Posts</span></i><i><span style='font-size:
+14.0pt;line-height:150%;mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></i></h2>
+
+<p class=MsoBodyTextIndent>Custom command <span class=SpellE><b>PB_CMD_init_multiple_post</b></span>
+of all legacy posts has been converted to dialog items on the Linked Posts page
+and removed.<span style='mso-spacerun:yes'>    </span>The custom commands used
+to start and end each head have also been converted into event handlers.<span
+style='mso-spacerun:yes'>  </span>You can now edit these event handlers on the
+linked posts page.</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0in'><span style='font-size:11.5pt'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:.5in;line-height:150%'><i><span style='font-size:14.0pt;
+line-height:150%'>Pre V2.0.2 XZC Mill &amp; Simple Mill-Turn Posts<o:p></o:p></span></i></h2>
+
+<p class=MsoNormal style='margin-left:1.0in'>You will need to follow the
+following steps to rectify existing XZC mill posts created in Post Builder
+version 2.0:</p>
+
+<p class=MsoBodyText style='margin-left:1.5in;text-indent:-.25in;mso-list:l1 level1 lfo13;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-style:normal'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-style:normal'>Create a new XZC
+mill post using the existing post as the “controller” post.<span
+style='mso-spacerun:yes'>  </span>Make sure the new post has the same output
+units as the existing ones.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l1 level1 lfo13;
+tab-stops:list 1.5in'><![if !supportLists]><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Transfer
+your changes of the variables, if any, from the custom commands <span
+class=SpellE>PB_CMD_kin_mill_turn_initialize</span> and <span class=SpellE>PB_CMD_kin_mill_xzc_init</span>
+to <span class=SpellE>PB_CMD_init_mill_turn</span> and <span class=SpellE>PB_CMD_init_mill_xzc</span>
+respectively.</p>
+
+<p class=MsoNormal style='margin-left:1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText style='margin-left:1.5in;text-indent:-.25in;mso-list:l1 level1 lfo13;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-style:normal'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-style:normal'>Add a line of
+code containing the “return” (without quotes) statement into the beginning of
+both <span class=SpellE>PB_CMD_kin_mill_turn_initialize</span> and <span
+class=SpellE>PB_CMD_kin_mill_xzc_init</span> commands.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyTextIndent style='margin-left:1.5in;text-indent:-.25in;
+mso-list:l1 level1 lfo13;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-fareast-font-family:"Times New Roman"'>Examine and save the post.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.5pt;font-family:"Arial Unicode MS"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

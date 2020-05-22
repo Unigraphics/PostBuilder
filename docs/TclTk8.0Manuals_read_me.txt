@@ -1,0 +1,6 @@
+"TclTk8.0Manuals.zip" in "POSTBUILD/tcl/" directory contains a HTML version of Tcl/Tk8.0 manuals.
+
+When you unzip this file in "POSTBUILD/tcl/" directory, a sub-directory "doc" will be created.
+
+You will have access to the reference manulas of "Tcl/Tk 8.0" when next time you run Post Builder.
+
