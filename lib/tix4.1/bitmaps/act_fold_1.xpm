@@ -1,0 +1,26 @@
+/* XPM */
+static char * pb_open_fold_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"18 13 7 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconGray4	m white	c #949494949494",
+"o	s iconColor6	m white	c yellow",
+"O	s iconGray6	m black	c #636363636363",
+"+	s iconGray2	m white	c #bdbdbdbdbdbd",
+"@	s iconGray3	m white	c #adadadadadad",
+/* pixels */
+"     .....X       ",
+"    .ooooo.X      ",
+"   .ooooooo.....X ",
+"   .oooooooooooo.X",
+"O............+oo.X",
+"Oooooooooooo.@o+.X",
+" .ooooooooooo.+o.X",
+" .ooooooooooo.@o.X",
+"  .ooooooooooo.+.X",
+"  .o+o+o+o+o+o.@.X",
+"   .o+o+o+o+o+o..X",
+"   ..............X",
+"    XXXXXXXXXXXXXX"};

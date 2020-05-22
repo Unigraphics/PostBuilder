@@ -1,0 +1,23 @@
+/* XPM */
+static char * pb_fold_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"18 13 4 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconGray4	m white	c #949494949494",
+"o	s iconColor6	m white	c yellow",
+/* pixels */
+"     .....X       ",
+"    .ooooo.X      ",
+"   .............X ",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   .oooooooooooo.X",
+"   ..............X",
+"    XXXXXXXXXXXXXX"};

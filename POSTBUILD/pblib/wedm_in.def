@@ -1,0 +1,37 @@
+FORMATTING
+{
+  FORMAT AbsCoord "&__5.4_"
+  FORMAT Coordinate "&__4.4_"
+  FORMAT Feed_IPM "&__4.1_"
+  FORMAT Feed_IPR "&__1.4_"
+
+  ADDRESS X 
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS Y 
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS Z 
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS I 
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+
+  ADDRESS J 
+  {
+      MAX         9999.9999 Truncate
+      MIN         -9999.9999 Truncate
+  }
+}

@@ -1,0 +1,22 @@
+/* XPM */
+static char * folder_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"16 12 4 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconGray4	m white	c #949494949494",
+"o	s iconColor6	m white	c yellow",
+/* pixels */
+"  .....X        ",
+" .ooooo.X       ",
+".............X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".ooooooooooo.X  ",
+".............X  ",
+"XXXXXXXXXXXXXX  "};

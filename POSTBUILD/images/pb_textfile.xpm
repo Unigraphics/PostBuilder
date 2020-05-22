@@ -1,0 +1,23 @@
+/* XPM */
+static char * textfile_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"13 13 4 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconColor2	m white	c white",
+"o	s iconGray4	m white	c #949494949494",
+/* pixels */
+" .......     ",
+" .XXXXX..    ",
+" .XXXXX.X.   ",
+" .X...X....  ",
+" .XXXXXXXX.o ",
+" .X..XXXXX.o ",
+" .XXXXXXXX.o ",
+" .X.....XX.o ",
+" .XXXXXXXX.o ",
+" .X.....XX.o ",
+" .XXXXXXXX.o ",
+" ..........o ",
+"  oooooooooo "};
