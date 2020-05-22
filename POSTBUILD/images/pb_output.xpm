@@ -1,0 +1,42 @@
+/* XPM */
+
+static char * pb_listing_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"24 24 11 1 0 0",
+/* colors */
+" 	s iconColor6	m white	c yellow",
+".	s iconColor5	m black	c None",
+"X	s iconColor2	m white	c white",
+"o	s iconGray1	m white	c #dededededede",
+"O	s iconGray8	m black	c #212121212121",
+"+	s iconColor1	m black	c black",
+"@	s iconGray6	m black	c #636363636363",
+"#	s iconGray5	m black	c #737373737373",
+"$	s iconGray7	m black	c #424242424242",
+"%	s iconGray3	m white	c #adadadadadad",
+"&	s iconGray4	m white	c #949494949494",
+/* pixels */
+".XXXXXXXXXXXXXXXXXXX....",
+".XoooooooooooooooooO....",
+".Xo+@o+o@+@ooooooooO....",
+".XoooooooooooooooooO....",
+".Xo++o@oOo+@+o@+oooO....",
+".XoooooooooooooooooO....",
+".XoooooooooooooooooO....",
+".Xo@+o+#+#oooooooooO....",
+".Xoooooo$+#%oooooooO....",
+".Xoooooo$%XX%%oooooO....",
+".Xooooooo$Xo %%ooooO....",
+".Xooooooo$@%o %%oooO....",
+".Xoooooooo$@%o %%ooO....",
+".Xoooooooo%$@%o %%oO....",
+".Xoooooooo%%$@%o %%O....",
+".Xooooooooo%%$@%o %#....",
+".Xoooooooooo%%$@%o %#...",
+".Xooooooooooo%%$@%o %#..",
+".Xoooooooooooo%%$@%o$$#.",
+".Xooooooooooooo%%$@%oo&.",
+".Xoooooooooooooo%%$@&o&.",
+".Xooooooooooooooo%%$&&$.",
+".Xoooooooooooooooo%O$$$.",
+".X++++++++++++++++++...."};
