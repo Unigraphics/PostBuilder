@@ -1,0 +1,7 @@
+FORMATTING
+{
+  FORMAT Coordinate "&__4.4_"
+  FORMAT AbsCoord "&__5.4_"
+  FORMAT Feed_IPM "&__4.1_"
+  FORMAT Feed_IPR "&__1.4_"
+}

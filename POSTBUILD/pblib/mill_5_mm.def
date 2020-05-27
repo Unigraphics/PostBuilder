@@ -1,0 +1,22 @@
+FORMATTING
+{
+  FORMAT AbsCoord "&__5.3_"
+  FORMAT Coordinate "&__5.3_"
+  FORMAT Feed_MMPM "&__5.0_"
+  FORMAT Feed_MMPR "&__2.3_"
+  FORMAT Feed_DPM "&__5.2_"
+
+  BLOCK_TEMPLATE rotate_move_fourth_axis 
+  {
+    G_motion[$mom_sys_rapid_code]
+    fourth_axis[$mom_out_angle_pos(0)]
+  }
+
+  BLOCK_TEMPLATE rotate_move_fifth_axis 
+  {
+    G_motion[$mom_sys_rapid_code]
+    fifth_axis[$mom_out_angle_pos(1)]
+  }
+
+
+}
