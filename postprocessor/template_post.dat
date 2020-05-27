@@ -1,0 +1,24 @@
+
+###############################################################################
+# template_post config file - Event Handler and Definition files for 
+#                             Generic Machine
+#
+# 
+#
+###############################################################################
+WIRE_EDM_4_AXIS,${UGII_CAM_POST_DIR}wedm.tcl,${UGII_CAM_POST_DIR}wedm.def
+MILL_3_AXIS,${UGII_CAM_POST_DIR}mill3ax.tcl,${UGII_CAM_POST_DIR}mill3ax.def
+MILL_3_AXIS_TURBO,${UGII_CAM_POST_DIR}mill3ax_turbo.tcl,${UGII_CAM_POST_DIR}mill3ax_turbo.def
+MILL_4_AXIS,${UGII_CAM_POST_DIR}m4bh.tcl,${UGII_CAM_POST_DIR}m4bh.def
+MILL_5_AXIS_SINUMERIK_ACTT_IN,${UGII_CAM_POST_DIR}mill_5axis_actt_Sinumerik_840D_in.tcl,${UGII_CAM_POST_DIR}mill_5axis_actt_Sinumerik_840D_in.def
+MILL_5_AXIS_SINUMERIK_ACTT_MM,${UGII_CAM_POST_DIR}mill_5axis_actt_Sinumerik_840D_mm.tcl,${UGII_CAM_POST_DIR}mill_5axis_actt_Sinumerik_840D_mm.def
+MILL_5_AXIS,${UGII_CAM_POST_DIR}m5abtt.tcl,${UGII_CAM_POST_DIR}m5abtt.def
+MILL_5_AXIS_ACTT_IN,${UGII_CAM_POST_DIR}m5actt.tcl,${UGII_CAM_POST_DIR}m5actt.def
+LATHE_2_AXIS_TOOL_TIP,${UGII_CAM_POST_DIR}lathe_tool_tip.tcl,${UGII_CAM_POST_DIR}lathe_tool_tip.def
+LATHE_2_AXIS_TURRET_REF,${UGII_CAM_POST_DIR}lathe_turret_ref.tcl,${UGII_CAM_POST_DIR}lathe_turret_ref.def
+MILLTURN,${UGII_CAM_POST_DIR}millturn_3axis_mill.tcl,${UGII_CAM_POST_DIR}millturn_3axis_mill.def
+MILLTURN_MULTI_SPINDLE,${UGII_CAM_POST_DIR}millturn_4axis_mill.tcl,${UGII_CAM_POST_DIR}millturn_4axis_mill.def
+# TOOL_LIST(text),${UGII_CAM_POST_DIR}post_tool_list_text.tcl,${UGII_CAM_POST_DIR}post_shopdoc.def
+# TOOL_LIST(html),${UGII_CAM_POST_DIR}post_tool_list_html.tcl,${UGII_CAM_POST_DIR}post_shopdoc.def
+# OPERATION_LIST(text),${UGII_CAM_POST_DIR}post_operation_list_text.tcl,${UGII_CAM_POST_DIR}post_shopdoc.def
+# OPERATION_LIST(html),${UGII_CAM_POST_DIR}post_operation_list_html.tcl,${UGII_CAM_POST_DIR}post_shopdoc.def
