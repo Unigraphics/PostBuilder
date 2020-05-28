@@ -1,0 +1,41 @@
+/* XPM */
+
+static char * _balloon_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"24 24 10 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconGray3	m white	c #adadadadadad",
+"X	s iconGray5	m black	c #737373737373",
+"o	s iconColor1	m black	c black",
+"O	s iconColor6	m white	c yellow",
+"+	c #00000000FFFF",
+"@	s iconColor5	m black	c blue",
+"#	c #AAAA80808080",
+"$	c #5555BFBFBFBF",
+"%	c #AAAABFBFBFBF",
+/* pixels */
+"                        ",
+"       .XoooooooX.      ",
+"      oXOOOOOOOOOXo     ",
+"    ooOOOO+++++OOOOoo   ",
+"   oOOOOO+OOO+++OOOOOo  ",
+"  oOOOOOO+@OOO++OOOOOOo ",
+"  oOOOOOO++OOO++OOOOOOo ",
+" oOOOOOOOOOOO+++OOOOOOOo",
+" oOOOOOOOOOOO++OOOOOOOOo",
+" oOOOOOOOOOO++OOOOOOOOOo",
+" oOOOOOOOOOO+OOOOOOOOOOo",
+"  oOOOOOOOOOOOOOOOOOOOX#",
+"  oOOOOOOOOO+OOOOOOOOOo$",
+"   ooOOOOOO+++OOOOOOOo%%",
+"    #ooOOOOO+OOOOOOoo%$ ",
+"     %$oXOOOOOOOooo$$$  ",
+"     #%#oOOOOooo%%$$%   ",
+"       %oOOOo%$%$$%     ",
+"        oOOo%$%%        ",
+"        oOo$%           ",
+"        oo%#            ",
+"        o$%             ",
+"        %#              ",
+"        %               "};

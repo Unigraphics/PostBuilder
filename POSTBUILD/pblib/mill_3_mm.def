@@ -1,0 +1,80 @@
+FORMATTING
+{
+  FORMAT Coordinate "&__5.3_"
+  FORMAT AbsCoord "&__5.3_"
+  FORMAT Feed_MMPM "&__5.0_"
+  FORMAT Feed_MMPR "&__2.3_"
+
+  ADDRESS X 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS Y 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS Z 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS I 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS J 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS K 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS R 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS K_cycle 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS cycle_step1 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS cycle_step 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS cycle_orient 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS E 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+}
+
