@@ -1,0 +1,29 @@
+/* XPM */
+
+static char * nows_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"10 20 2 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor5	m black	c blue",
+/* pixels */
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+"          ",
+" ..   ..  ",
+" ...  ..  ",
+" .. . ..  ",
+" ..  ...  ",
+" ..   ..  ",
+"          ",
+"          "};

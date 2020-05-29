@@ -1,0 +1,69 @@
+FORMATTING
+{
+  FORMAT AbsCoord "&__5.3_"
+  FORMAT Coordinate "&__5.3_"
+  FORMAT Feed_MMPM "&__5.0_"
+  FORMAT Feed_MMPR "&__2.3_"
+  FORMAT Feed_DPM "&__5.2_"
+
+  ADDRESS X 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS Y 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS Z 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS I 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS J 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS K 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS R 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  ADDRESS E 
+  {
+      MAX         99999.999 Truncate
+      MIN         -99999.999 Truncate
+  }
+
+  BLOCK_TEMPLATE fourth_axis_rotate_move
+  {
+    G_motion[$mom_sys_rapid_code]
+    fourth_axis[$mom_out_angle_pos(0)]
+  }
+
+  BLOCK_TEMPLATE fifth_axis_rotate_move
+  {
+    G_motion[$mom_sys_rapid_code]
+    fifth_axis[$mom_out_angle_pos(1)]
+  }
+
+}

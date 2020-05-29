@@ -1,0 +1,31 @@
+/* XPM */
+
+static char * address_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"13 19 5 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconColor3	m black	c red",
+"o	s iconGray2	m white	c #bdbdbdbdbdbd",
+"O	s iconGray4	m white	c #949494949494",
+/* pixels */
+"             ",
+"             ",
+"             ",
+"   ..........",
+"  .XXXXXXXX. ",
+" .XXXXXXXX. .",
+"..........   ",
+".  .     .  .",
+"             ",
+".  .     .  .",
+"             ",
+".  .     .  .",
+"   .o . o. o.",
+". .      o . ",
+"o.       O.  ",
+".o. . . ..   ",
+"             ",
+"             ",
+"             "};
