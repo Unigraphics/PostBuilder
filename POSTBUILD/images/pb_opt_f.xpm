@@ -1,0 +1,30 @@
+/* XPM */
+
+static char * pb_opt_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"10 20 3 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor2	m white	c white",
+"X	s iconColor3	m black	c red",
+/* pixels */
+"          ",
+"......... ",
+"...XXX... ",
+"..XX.XX.. ",
+".XX...XX. ",
+".X.....X. ",
+".XX...XX. ",
+"..XX.XX.. ",
+"...XXX... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"......... ",
+"          "};
