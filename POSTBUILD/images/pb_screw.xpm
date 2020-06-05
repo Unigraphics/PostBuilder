@@ -1,0 +1,43 @@
+/* XPM */
+
+static char * screw_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"32 32 4 1 0 0",
+/* colors */
+" 	c #BFBFBFBFBFBF",
+".	c #000000000000",
+"X	s iconColor2	m white	c white",
+"o	c #808080808080",
+/* pixels */
+"                                ",
+"                                ",
+"                                ",
+"    ..X                         ",
+"   .oo X                        ",
+"  .oooo.                        ",
+"  .oooo.                        ",
+" .ooo o.                        ",
+" .oo oo.                        ",
+" .o o o.                        ",
+" .oXooo. . . . . . . . . . .    ",
+" .o .o .....................X   ",
+" ...oo ..o.o.o.o.o.o.o.o.o.o.X  ",
+"   o.oo.ooooooooooooooooooooo.  ",
+"  X .o .oo o o oXoXoXoXoXoXoo.  ",
+" ...ooo.oo o o o o o o o o oX.  ",
+" .oooo .oo o o o o o o o o o X  ",
+" .ooooo.o.o.o.o.o.o.o.o.o.o.o.  ",
+" .o ooo.. . . . . . . . . . .   ",
+" .o o o.                        ",
+" .ooooo.                        ",
+" .oooXo.                        ",
+" .ooooo.                        ",
+"  .ooo .                        ",
+"  .oooo                         ",
+"   .oo .                        ",
+"    . .                         ",
+"                                ",
+"                                ",
+"                                ",
+"                                ",
+"                                "};
