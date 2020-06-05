@@ -1,0 +1,38 @@
+/* XPM */
+static const char *siemens_logo_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    82    15       16            1",
+/* colors */
+"` c #099d99",
+". c #8cccc9",
+"# c #46b0ac",
+"a c #c8e9e8",
+"b c #28a3a0",
+"c c #6dc0be",
+"d c #a8d8d7",
+"e c #f4fbfa",
+"f c #37aca9",
+"g c #57bbb8",
+"h c #98d3d0",
+"i c #d9f0ee",
+"j c #b4e1e0",
+"k c #7ac8c4",
+"l c #189e9b",
+"m c #59b6b4",
+/* pixels */
+"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+"eeijhkk.haeeahhdeeidhhhhhhhaeidhhhaeeeeejhhhjeeidhhhhhhhaeidhhjieeihdieeijhkk.haee",
+"eikfllbbbkee.bl#iej#llllblbkiaflllcieeeamlllceedfllllblbhedfll#deeabfdei.flllbbcie",
+"ehb`bckkc.eekl`#iejf``#ggmgheab```bjeeehb```giehb``#ggmgjedb``lciejlbjedblbckcc.ie",
+"ek``gaiiiieekl`#iejf`bhaiaiieab```lkeeicl```ciedb`bdiaiiiedb```fdejlfdik``gaiiiiee",
+"ec``bcjieeeekl`#iejf`bdieeeeeab`bl`faejflb``giedb`bjieeeeedb`l`lgajlbjik``bcjieeee",
+"ehb``lbcjiee.l`#iejf`l#ccc.ieabbmf`lhikl#ml`ciedf`lgcccheedblgb`bdjlbjedb``lbcjiee",
+"ei.fl``lf.iekl`#iejf``lbbbmaeabbkgl`mj#bkcl`ciedb``lbbbciedbl.g``ghlfdei.fl``lfkie",
+"eeejkfl``bdi.l`#iejf`lchhhjieabb.hb`bglfjkl`ciedf`lkhhhjeedbbhhb`lglfjeeejk#l``bhe",
+"eeeeea.b``kikl`#iejf`bdeeeeeeabbhj#``llcikl`ciedb`baeeeeeedbldacl`l`bjeeeeea.b``ke",
+"eiaieea#``kikl`#iejf`l.aaaaieabbhi.l``bdekl`giedf`bhaaaaiedbbjedf```fjeiaieia#``ke",
+"eh#ckkgl`fdikl`#iejf``f####.iabbhejf`lgiekl`ciedb`lf####hedbljeicl``bded#ck.gb`fde",
+"e.blblllf.ie.bl#iej#lllll`lciabbheiclbheekblciedfl`lllll.idbbjeejfllfje.bllbllf.ie",
+"ea.kcckhjieeah.deeidhhhhhh.jeidhieea..ieeahhjeeadh.h.hh.aeidhieeid.hdieahkkckhjiee",
+"eeeeiieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeieeeeee"
+};

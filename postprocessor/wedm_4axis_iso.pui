@@ -1,0 +1,525 @@
+## POSTBUILDER_VERSION=2011.0.2.0
+##############################################################################
+#                                                                            #
+#  This file is used by Post Builder to edit the parameters associated       #
+#  with a specific post processor.                                           #
+#                                                                            #
+#                                                                            #
+#  <WARNING> The contents of this file should not be modified!               #
+#                                                                            #
+##############################################################################
+#  Created by Postino @ Friday, March 09 2018, 18:03:04 -0800
+#  with Post Builder version 12.0.2.
+#============================================================================#
+
+
+## POST EVENT HANDLER START
+def_file  wedm_4axis_iso.def
+tcl_file  wedm_4axis_iso.tcl
+## POST EVENT HANDLER END
+
+
+## POST INFORMATION START
+#  DESCRIPTION START
+#  DESCRIPTION END
+#  CONTROLLER START
+Unknown
+#  CONTROLLER END
+#  CONTROLLER TYPE START
+#  CONTROLLER TYPE END
+#  HISTORY START
+Created with UG/Post Builder Version 3.4.1 on Tue Sep 13 12:46:02 2005 Pacific Daylight Time by x_ratan.
+Saved with UG/Post Builder Version 3.4.1 on Tue Sep 13 12:46:35 2005 Pacific Daylight Time by x_ratan.
+Saved with UG/Post Builder Version 3.4.1 on Tue Sep 13 12:49:52 2005 Pacific Daylight Time by x_ratan.
+Saved with UG/Post Builder Version 3.4.1 on Tue Sep 13 12:52:57 2005 Pacific Daylight Time by x_ratan.
+Saved with UG/Post Builder Version 3.4.1 on Tue Sep 13 16:18:48 2005 Pacific Daylight Time by x_ratan.
+Saved with UG/Post Builder Version 3.4.1 on Tue Sep 13 16:21:55 2005 Pacific Daylight Time by x_ratan.
+Saved with NX/Post Builder Version 9.0.0 - Alpha.0 on Thursday, May 02, 2013 4:10:38 PM Pacific Daylight Time by ling.
+<Feb 16, 2015 gsl> NX10.0.2 - Added Initial Move & First Move event markers
+Saved with NX/Post Builder Version 11.0.1.0 on Tuesday, June 21, 2016 10:11:31 AM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.0.1 on Tuesday, June 21, 2016 3:09:53 PM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.0.1 on Wednesday, June 22, 2016 1:17:54 PM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.1.0 on Thursday, August 11, 2016 3:53:49 PM Pacific Daylight Time by Postino.
+Saved with NX/Post Builder Version 11.0.1.0 on Monday, October 17, 2016 6:04:17 PM China Standard Time by lili.
+Saved with NX/Post Builder Version 11.0.1.1 on Thursday, October 20, 2016 4:26:34 PM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.1.1 on Thursday, October 20, 2016 4:36:29 PM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.1.1 on Wednesday, October 26, 2016 3:27:37 PM China Standard Time by w5ygvn.
+Saved with NX/Post Builder Version 11.0.2.0 on Tuesday, January 31, 2017 12:43:49 PM Pacific Standard Time by Postino.
+Saved with NX/Post Builder Version 11.0.2.0 on Tuesday, February 21, 2017 4:44:21 PM China Standard Time by ndcep8.
+Saved with NX/Post Builder Version 11.0.2.0 on Tuesday, February 21, 2017 7:31:42 PM China Standard Time by ndcep8.
+Saved with NX/Post Builder Version 11.0.2.1 on Tuesday, April 11, 2017 5:52:36 PM China Standard Time by ndcep8.
+Saved wedm_4axis_iso with NX/Post Builder Version 12.0.0.0 on Monday, July 17, 2017 2:03:26 PM Pacific Daylight Time by Postino.
+Saved wedm_4axis_iso with NX/Post Builder Version 12.0.1.0 on Monday, September 25, 2017 2:53:31 PM Pacific Daylight Time by Postino.
+Saved wedm_4axis_iso with NX/Post Builder Version 12.0.2.0 on Friday, March 09 2018, 18:03:04 -0800 by Postino.
+#  HISTORY END
+## POST INFORMATION END
+
+
+## LISTING FILE START
+Listfileflag_warn              OFF
+Listfileflag                   OFF
+Listfileflag_alt_unit_post_name wedm_4axis_iso__MM.pui
+Listfileflag_group             OFF
+Listfileflag_verbose           ON
+Listfileflag_tool              0
+Listfileflag_oper              0
+Listfileflag_lpt_ext           lpt
+Listfileflag_ncfile_ext        ptp
+Listfileflag_usertcl_name      new_post_user.tcl
+Listfileflag_review            OFF
+Listfileflag_start_path        0
+Listfileflag_warn_opt          FILE
+Listfileflag_head              OFF
+Listfileflag_use_default_unit_fragment 1
+Listfileflag_end_path          0
+Listfilelines                  40
+Listfileflag_oper_time         0
+Listfileflag_tool_chng         0
+Listfilecolumn                 30
+Listfileflag_usertcl_check     OFF
+Listfileflag_setup_time        0
+Listfilename                   listfile.lpt
+## LISTING FILE END
+
+## KINEMATIC VARIABLES START
+"$mom_kin_4th_axis_center_offset(0)"      "0.0"
+"$mom_kin_4th_axis_center_offset(1)"      "0.0"
+"$mom_kin_4th_axis_center_offset(2)"      "0.0"
+"$mom_kin_4th_axis_max_limit"             "0.0"
+"$mom_kin_4th_axis_min_incr"              "0.0"
+"$mom_kin_4th_axis_min_limit"             "0.0"
+"$mom_kin_4th_axis_point(0)"              "0.0"
+"$mom_kin_4th_axis_point(1)"              "0.0"
+"$mom_kin_4th_axis_point(2)"              "0.0"
+"$mom_kin_4th_axis_zero"                  "0.0"
+"$mom_kin_5th_axis_center_offset(0)"      "0.0"
+"$mom_kin_5th_axis_center_offset(1)"      "0.0"
+"$mom_kin_5th_axis_center_offset(2)"      "0.0"
+"$mom_kin_5th_axis_max_limit"             "0.0"
+"$mom_kin_5th_axis_min_incr"              "0.0"
+"$mom_kin_5th_axis_min_limit"             "0.0"
+"$mom_kin_5th_axis_point(0)"              "0.0"
+"$mom_kin_5th_axis_point(1)"              "0.0"
+"$mom_kin_5th_axis_point(2)"              "0.0"
+"$mom_kin_5th_axis_zero"                  "0.0"
+"$mom_kin_arc_output_mode"                "FULL_CIRCLE"
+"$mom_kin_arc_valid_plane"                "XY"
+"$mom_kin_clamp_time"                     "2.0"
+"$mom_kin_flush_time"                     "2.0"
+"$mom_kin_linearization_flag"             "1"
+"$mom_kin_linearization_tol"              "0.001"
+"$mom_kin_machine_resolution"             ".0001"
+"$mom_kin_machine_type"                   "4_axis_wedm"
+"$mom_kin_machine_zero_offset(0)"         "0.0"
+"$mom_kin_machine_zero_offset(1)"         "0.0"
+"$mom_kin_machine_zero_offset(2)"         "0.0"
+"$mom_kin_max_arc_radius"                 "9999.9999"
+"$mom_kin_max_dpm"                        "0.0"
+"$mom_kin_max_fpm"                        "400"
+"$mom_kin_max_fpr"                        "0.0"
+"$mom_kin_max_frn"                        "0.0"
+"$mom_kin_min_arc_length"                 "0.0001"
+"$mom_kin_min_arc_radius"                 "0.0001"
+"$mom_kin_min_dpm"                        "0.0"
+"$mom_kin_min_fpm"                        "0.1"
+"$mom_kin_min_fpr"                        "0.0"
+"$mom_kin_min_frn"                        "0.0"
+"$mom_kin_output_unit"                    "IN"
+"$mom_kin_pivot_gauge_offset"             "0.0"
+"$mom_kin_post_data_unit"                 "IN"
+"$mom_kin_rapid_feed_rate"                "600"
+"$mom_kin_tool_change_time"               "12.0"
+"$mom_kin_wire_tilt_output_type"          "ADVANCED"
+"$mom_kin_x_axis_limit"                   "50"
+"$mom_kin_y_axis_limit"                   "50"
+"$mom_kin_z_axis_limit"                   "1000"
+## KINEMATIC VARIABLES END
+
+## GCODES START
+"$mom_sys_rapid_code"                     "$gPB(g_code,rapid,name)"
+"$mom_sys_linear_code"                    "$gPB(g_code,linear,name)"
+"$mom_sys_circle_code(CLW)"               "$gPB(g_code,circular_clw,name)"
+"$mom_sys_circle_code(CCLW)"              "$gPB(g_code,circular_cclw,name)"
+"$mom_sys_delay_code(SECONDS)"            "$gPB(g_code,delay_sec,name)"
+"$mom_sys_cutcom_code(OFF)"               "$gPB(g_code,cutcom_off,name)"
+"$mom_sys_cutcom_code(LEFT)"              "$gPB(g_code,cutcom_left,name)"
+"$mom_sys_cutcom_code(RIGHT)"             "$gPB(g_code,cutcom_right,name)"
+"$mom_sys_unit_code(IN)"                  "$gPB(g_code,inch,name)"
+"$mom_sys_unit_code(MM)"                  "$gPB(g_code,metric,name)"
+"$mom_sys_output_code(ABSOLUTE)"          "$gPB(g_code,abs,name)"
+"$mom_sys_output_code(INCREMENTAL)"       "$gPB(g_code,inc,name)"
+"$mom_sys_reset_code"                     "$gPB(g_code,reset,name)"
+## GCODES END
+
+## MCODES START
+"$mom_sys_program_stop_code"              "$gPB(m_code,stop,name)"
+"$mom_sys_optional_stop_code"             "$gPB(m_code,opt_stop,name)"
+"$mom_sys_end_of_program_code"            "$gPB(m_code,prog_end,name)"
+"$mom_sys_rewind_code"                    "$gPB(m_code,rewind,name)"
+"$mom_sys_thread_wire"                    "$gPB(m_code,thread_wire,name)"
+"$mom_sys_cut_wire"                       "$gPB(m_code,cut_wire,name)"
+"$mom_sys_flushing_on"                    "$gPB(m_code,fls_on,name)"
+"$mom_sys_flushing_off"                   "$gPB(m_code,fls_off,name)"
+"$mom_sys_power_on"                       "$gPB(m_code,power_on,name)"
+"$mom_sys_power_off"                      "$gPB(m_code,power_off,name)"
+"$mom_sys_wire_on"                        "$gPB(m_code,wire_on,name)"
+"$mom_sys_wire_off"                       "$gPB(m_code,wire_off,name)"
+## MCODES END
+
+## MASTER SEQUENCE START
+G_cutcom          "$mom_sys_cutcom_code(OFF)"  0  "Cutcom G-Code"  0
+G_motion          "$mom_sys_linear_code"  0  "Motion G-Code"  0
+G_mode            "$mom_sys_output_code($mom_output_mode)"  0  "Positioning Mode G-code"  0
+G                 "$mom_sys_blank_code"  0  "Other G-Codes"  0
+X                 "$mom_sys_blank_code"  0  "X Axis Position"  0
+Y                 "$mom_sys_blank_code"  0  "Y Axis Position"  0
+Z                 "$mom_sys_blank_code"  0  "Z Axis Position"  0
+I                 "$mom_sys_blank_code"  0  "X Axis Position of the Circle Center"  0
+J                 "$mom_sys_blank_code"  0  "Y Axis Position of the Circle Center"  0
+upper_g_motion    "$mom_usd_add_var"  0  "New Address"  1
+fourth_axis       "$mom_sys_blank_code"  0  "Upper Wire Guide Position"  0
+fifth_axis        "$mom_sys_blank_code"  0  "Upper Wire Guide Position"  0
+F                 "$mom_sys_blank_code"  0  "Feed Rate"  0
+D                 "$mom_sys_blank_code"  0  "Wire Kerf Compensation Register"  0
+dwell             "$mom_sys_blank_code"  0  "Programmed Dwell"  0
+M                 "$mom_sys_optional_stop_code"  0  "Other M-Codes"  0
+N                 ""  0  "Sequence Number"  0
+Text              ""  0  "Text String"  0
+upper_I           "$mom_usd_add_var"  0  "(upper_I)"  1
+upper_J           "$mom_usd_add_var"  0  "(upper_J)"  1
+region_num        "$mom_usd_add_var"  0  "New Address"  1
+## MASTER SEQUENCE END
+
+## CYCLE EVENT START
+#Cycle Common Block Start
+{Cycle Parameters}
+#Cycle Common Block End
+
+#Cycle Block Share Common Block Start
+{ \
+}
+#Cycle Block Share Common Block End
+## CYCLE EVENT END
+
+## SEQUENCE START
+#Program Start Sequence Start
+{Start of Program}         {PB_CMD_start_of_conic}  {$gPB(event,start_prog,name)}
+#Program Start Sequence End
+
+#Operation Start Sequence Start
+{Start of Path}            {}  {$gPB(event,opr_start,start_path,name)}
+{From Move}                {PB_CMD_unset_upper_motion_event}  {$gPB(event,opr_start,from_move,name)}
+{Initial Move}             {}  {$gPB(event,opr_start,init_move,name)}
+{First Move}               {}  {$gPB(event,opr_start,fst_move,name)}
+{Approach Move}            {}  {$gPB(event,opr_start,appro_move,name)}
+{Start of Pass}            {}  {$gPB(event,opr_start,start_pass,name)}
+{Cutcom Move}              {}  {$gPB(event,opr_start,cutcom_move,name)}
+{Lead In Move}             {}  {$gPB(event,opr_start,lead_move,name)}
+#Operation Start Sequence End
+
+##Tool Path Start
+#Control Functions Start
+{Thread Wire}              {}  {$gPB(event,threadwire,name)} {thread_wire}
+{Cut Wire}                 {}  {$gPB(event,cutwire,name)} {cut_wire}
+{Wire Guides}              {}  {$gPB(event,wireguides,name)} {wire_guides}
+{Set Modes}                {}  {$gPB(event,set_modes,name)} {set_modes}
+{Cutcom On}                {}  {$gPB(event,cutcom_on,name)} {wire_cutcom}
+{Cutcom Off}               {}  {$gPB(event,cutcom_off,name)} {}
+{Feedrates}                {}  {$gPB(event,feedrates,name)} {wire_feed_rate}
+{Delay}                    {}  {$gPB(event,delay,name)} {dwell}
+{Auxfun}                   {}  {$gPB(event,auxfun,name)} {auxfun}
+{Prefun}                   {}  {$gPB(event,prefun,name)} {prefun}
+{Stop}                     {}  {$gPB(event,stop,name)} {stop}
+{Opstop}                   {}  {$gPB(event,opstop,name)} {opstop}
+#Control Functions End
+
+#Motions Start
+{Linear Move}              {PB_CMD_suppress_output PB_CMD_output_linear_move}  {$gPB(event,linear,name)}
+{Circular Move}            {PB_CMD_output_circular_move}  {$gPB(event,circular,name)}
+{Rapid Move}               {rapid_move}  {$gPB(event,rapid,name)}
+#Motions End
+
+#Cycles Start
+{Cycle Parameters}         {}  {Cycle Parameters}
+#Cycles End
+
+#Misc Start
+{Start of Region Marker}   {PB_CMD_start_of_region_marker}  {$gPB(event,misc,region_start_marker,name)}
+{End of Region Marker}     {PB_CMD_end_of_region_marker}  {$gPB(event,misc,region_end_marker,name)}
+#Misc End
+##Tool Path End
+
+#Operation End Sequence Start
+{Lead Out Move}            {}  {$gPB(event,opr_end,lead_move,name)}
+{End of Pass}              {}  {$gPB(event,opr_end,end_pass,name)}
+{Gohome Move}              {PB_CMD_unset_upper_motion_event}  {$gPB(event,opr_end,goh_move,name)}
+{End of Path}              {PB_CMD_unset_upper_motion_event}  {$gPB(event,opr_end,end_path,name)}
+#Operation End Sequence End
+
+#Program End Sequence Start
+{End of Program}           {end_of_program}  {$gPB(event,end_prog,name)}
+#Program End Sequence End
+
+#Linked Posts Sequence Start
+#Linked Posts Sequence End
+
+#Virtual NC Sequence Start
+#Virtual NC Sequence End
+## SEQUENCE END
+
+## EVENTS ELEMENT EXECUTION START
+## EVENTS ELEMENT EXECUTION END
+
+## EVENTS USER INTERFACE START
+{Cutcom On} \
+     {{"$gPB(event,cutcom_on,g_code)" 1  V} \
+        {{"null" 2  V} \
+                {"$gPB(event,cutcom_on,left)" 2  a $mom_sys_cutcom_code(LEFT) UI_PB_tpth_EntryCallBack null} \
+                {"$gPB(event,cutcom_on,right)" 2  a $mom_sys_cutcom_code(RIGHT) UI_PB_tpth_EntryCallBack null}}} \
+     {{"$gPB(event,cutcom_on,reg)" 1  V} \
+        {{"null" 2  V} \
+                {"$gPB(event,cutcom_on,max)" 0  i $rad_offset_max null null} \
+                {"$gPB(event,cutcom_on,min)" 0  i $rad_offset_min null null}}} \
+     {{"$gPB(event,cutcom_on,bef)" 1  V} \
+        {{"null" 2  H} \
+                {"$gPB(isv,setup,dog_leg,yes)" 4  n $cutcom_off_before_change null YES} \
+                {"$gPB(isv,setup,dog_leg,no)" 4  n $cutcom_off_before_change null NO}}}
+{Cutcom Off} \
+     {{"null" 1  V} \
+        {{"$gPB(event,cutcom_off,g_code)" 1  V} \
+                {"$gPB(event,cutcom_off,off)" 2  a $mom_sys_cutcom_code(OFF) UI_PB_tpth_EntryCallBack null}}}
+{Feedrates} \
+     {{"$gPB(event,feedrates,ipm_mode)" 3  V} \
+        {{"$gPB(event,feedrates,format)" 1  V} \
+                {"null" 9  n $mom_sys_feed_param(IPM,format) UI_PB_tpth_EditFeedFmt null}} \
+        {{"null" 1  V} \
+                {"$gPB(event,feedrates,max)" 2  f $mom_kin_max_fpm null null}} \
+        {{"null" 1  V} \
+                {"$gPB(event,feedrates,min)" 2  f $mom_kin_min_fpm null null}}}
+{Linear Move} \
+     {{"null" 1  V} \
+        {{"$gPB(event,linear,g_code)" 1  V} \
+                {"$gPB(event,linear,motion)" 2  a $mom_sys_linear_code UI_PB_tpth_EntryCallBack null}}}
+{Circular Move} \
+     {{"$gPB(event,circular,g_code)" 1  V} \
+        {{"null" 2  V} \
+                {"$gPB(event,circular,clockwise)" 2  a $mom_sys_circle_code(CLW) UI_PB_tpth_EntryCallBack null} \
+                {"$gPB(event,circular,counter-clock)" 2  a $mom_sys_circle_code(CCLW) UI_PB_tpth_EntryCallBack null}}} \
+     {{"$gPB(event,circular,record)" 1  V} \
+        {{"null" 2  H} \
+                {"$gPB(event,circular,full_circle)" 4  n $mom_kin_arc_output_mode null FULL_CIRCLE} \
+                {"$gPB(event,circular,quadrant)" 4  n $mom_kin_arc_output_mode null QUADRANT}}} \
+     {{"$gPB(event,circular,radius)" 1  V} \
+        {{"null" 2  V} \
+                {"$gPB(event,circular,max)" 2  f $mom_kin_max_arc_radius null null} \
+                {"$gPB(event,circular,min)" 2  f $mom_kin_min_arc_radius null null}}} \
+     {{"$gPB(event,circular,ij_def)" 1  V} \
+        {{"null" 1  V} \
+                {"null" 10  n $mom_sys_cir_vector UI_PB_tpth_IJKParameters {"Vector - Arc Start to Center" "Vector - Arc Center to Start" "Unsigned Vector - Arc Start to Center" "Vector - Absolute Arc Center"}}}} \
+     {{"null" 1  V} \
+        {{"null" 1  V} \
+                {"$gPB(event,circular,arc_len)" 2  f $mom_kin_min_arc_length null null}}}
+{Rapid Move} \
+     {{"null" 1  V} \
+        {{"$gPB(event,rapid,g_code)" 1  V} \
+                {"$gPB(event,rapid,motion)" 2  a $mom_sys_rapid_code UI_PB_tpth_EntryCallBack null}}}
+## EVENTS USER INTERFACE END
+
+## MOM SYS VARIABLES START
+{G_cutcom} \
+      {"$mom_sys_cutcom_code($mom_cutcom_status)" "\$mom_sys_cutcom_code(LEFT)" "Cutcom (LEFT/RIGHT/OFF)"} \
+      {"$mom_sys_cutcom_code(LEFT)" "41" "Cutcom Left"} \
+      {"$mom_sys_cutcom_code(RIGHT)" "42" "Cutcom Right"} \
+      {"$mom_sys_cutcom_code(OFF)" "40" "Cutcom Off"}
+{G_motion} \
+      {"$mom_sys_rapid_code" "0" "Rapid Move"} \
+      {"$mom_sys_linear_code" "1" "Linear Move"} \
+      {"$mom_sys_circle_code($mom_arc_direction)" "\$mom_sys_circle_code(CLW)" "Circular Interpolation (CLW/CCLW)"} \
+      {"$mom_sys_circle_code(CLW)" "2" "Circular Interpolation CLW"} \
+      {"$mom_sys_circle_code(CCLW)" "3" "Circular Interpolation CCLW"}
+{G_mode} \
+      {"$mom_sys_output_code($mom_output_mode)" "\$mom_sys_output_code(ABSOLUTE)" "Absolute/Incremental Mode"} \
+      {"$mom_sys_output_code(ABSOLUTE)" "90" "Absolute Mode"} \
+      {"$mom_sys_output_code(INCREMENTAL)" "91" "Incremental Mode"}
+{G} \
+      {"$mom_prefun" "" "Pre Function"} \
+      {"$mom_sys_delay_code(SECONDS)" "4" "Delay in Seconds"} \
+      {"$mom_sys_delay_code(REVOLUTIONS)" "4" "Delay in Revloutions"} \
+      {"$mom_sys_delay_code($mom_delay_mode)" "\$mom_sys_delay_code(SECONDS)" "Delay (Seconds/Revolutions)"} \
+      {"$mom_sys_reset_code" "92" "Absolute Position Reset"} \
+      {"$mom_sys_unit_code(IN)" "70" "Output Unit (Inch)"} \
+      {"$mom_sys_unit_code(MM)" "71" "Output Unit (Metric)"} \
+      {"$mom_sys_unit_code($mom_output_unit)" "\$mom_sys_unit_code(IN)" "Output Unit (Inch/Metric)"}
+{X} \
+      {"$mom_pos(0)" "" "X Coordinate"}
+{Y} \
+      {"$mom_pos(1)" "" "Y Coordinate"}
+{Z} \
+      {"$mom_pos(2)" "" "Z Coordinate"}
+{I} \
+      {"$mom_prev_pos(0) - $mom_pos_arc_center(0)" "" "Arc Center To Start X-Axis"}
+{J} \
+      {"$mom_prev_pos(1) - $mom_pos_arc_center(1)" "" "Arc Center To Start Y-Axis"}
+{upper_g_motion} \
+      {"" "" ""}
+{fourth_axis} \
+      {"$mom_pos(3)" "" "Upper Wire Guide Position"}
+{fifth_axis} \
+      {"$mom_pos(4)" "" "Upper Wire Guide Position"}
+{F} \
+      {"$feed" "" "Feed Rate"}
+{D} \
+      {"$mom_wire_cutcom_adjust_register" "1" "Wire Kerf Compensation Register"}
+{dwell} \
+      {"$mom_delay_value" "" "Programmed Dwell"}
+{M} \
+      {"$mom_sys_optional_stop_code" "1" "Optional Stop"} \
+      {"$mom_auxfun" "" "Aux Function"} \
+      {"$mom_sys_program_stop_code" "0" "Stop Program"} \
+      {"$mom_sys_end_of_program_code" "2" "End of program"} \
+      {"$mom_sys_thread_wire" "20" "Thread Wire"} \
+      {"$mom_sys_cut_wire" "21" "Cut Wire"} \
+      {"$mom_sys_flushing_on" "80" "Flushing On"} \
+      {"$mom_sys_flushing_off" "81" "Flushing Off"} \
+      {"$mom_sys_power_on" "84" "Power On"} \
+      {"$mom_sys_power_off" "85" "Power Off"} \
+      {"$mom_sys_wire_on" "82" "Wire On"} \
+      {"$mom_sys_wire_off" "83" "Wire Off"} \
+      {"$mom_sys_rewind_code" "30" "Rewind Program"}
+{N} \
+      {"$mom_seqnum" "" "Sequence Number"}
+{Text} \
+      {"" "" ""}
+{upper_I} \
+      {"" "" ""}
+{upper_J} \
+      {"" "" ""}
+{region_num} \
+      {"" "" ""}
+{New_Address} \
+      {"" "" ""}
+{PB_Dummy} \
+      {"Include_UDE" "1" ""} \
+      {"UDE_File_Name" "\$UGII_CAM_USER_DEF_EVENT_DIR/ude.cdl" ""} \
+      {"Output_VNC" "0" ""} \
+      {"VNC_Mode" "Standalone" ""} \
+      {"Main_VNC" "" ""} \
+      {"Decimal_Point" "." ""} \
+      {"Comment_Start" "(" ""} \
+      {"Comment_End" ")" ""} \
+      {"seq_blk_nc_code" "0" ""} \
+      {"$mom_sys_blank_code" "" ""} \
+      {"$is_linked_post" "0" ""} \
+      {"$linked_posts_list" "\{\{\} \{this_post\}\}" ""} \
+      {"$output_mode_opt" "Absolute/Incremental" ""} \
+      {"$cutcom_plane_xy" "1" ""} \
+      {"$cutcom_plane_yz" "0" ""} \
+      {"$cutcom_plane_zx" "0" ""} \
+      {"$rad_offset_min" "1" ""} \
+      {"$rad_offset_max" "99" ""} \
+      {"$spin_fmt_type" "None" ""} \
+      {"$spin_dwell_time" "0" ""} \
+      {"$cir_record_output" "YES" ""} \
+      {"$rap_wrk_pln_chg" "0" ""} \
+      {"$rap_mode_trav_rate" "1" ""} \
+      {"$rap_mode_trav_value" "100" ""} \
+      {"$cycle_rapto_opt" "None" ""} \
+      {"$cycle_recto_opt" "None" ""} \
+      {"$cycle_plane_control_opt" "None" ""} \
+      {"$cycle_start_blk" "0" ""} \
+      {"$tool_num_output" "TOOL_NUMBER_ONLY" ""} \
+      {"$cutcom_off_before_change" "NO" ""} \
+      {"SeqNo_output" "0" ""} \
+      {"$gcode_status" "0" ""} \
+      {"$mcode_status" "0" ""} \
+      {"$oth_rev_xy_plane" "0" ""} \
+      {"$oth_rev_yz_plane" "0" ""} \
+      {"$oth_rev_zx_plane" "0" ""} \
+      {"$oth_sup_out_ijk_zero" "0" ""} \
+      {"$oth_sup_out_ijk_xyz" "0" ""} \
+      {"$mom_usd_add_var" "" ""} \
+      {"$evt_ncoutput_status" "Output_Imediately" ""} \
+      {"$4th_axis_direction" "Magnitude_Determines_Direction" ""}
+{PB_Tcl_Var} \
+      {"$mom_sys_cir_vector" "Vector - Arc Center to Start" ""} \
+      {"$mom_sys_gcodes_per_block" "10" ""} \
+      {"$mom_sys_mcodes_per_block" "5" ""} \
+      {"$mom_sys_rewind_stop_code" "\#" ""} \
+      {"$mom_sys_home_pos(0)" "0" ""} \
+      {"$mom_sys_home_pos(1)" "0" ""} \
+      {"$mom_sys_home_pos(2)" "0" ""} \
+      {"$mom_sys_zero" "0" ""} \
+      {"$mom_sys_opskip_block_leader" "/" ""} \
+      {"$mom_sys_seqnum_start" "10" ""} \
+      {"$mom_sys_seqnum_incr" "10" ""} \
+      {"$mom_sys_seqnum_freq" "1" ""} \
+      {"$mom_sys_seqnum_max" "9999" ""} \
+      {"$mom_sys_leader(N)" "N" ""} \
+      {"$mom_sys_leader(X)" "X" ""} \
+      {"$mom_sys_leader(Y)" "Y" ""} \
+      {"$mom_sys_leader(Z)" "Z" ""} \
+      {"$mom_sys_leader(fourth_axis)" "X" ""} \
+      {"$mom_sys_leader(fifth_axis)" "Y" ""} \
+      {"$mom_sys_contour_feed_mode(LINEAR)" "IPM" ""} \
+      {"$mom_sys_rapid_feed_mode(LINEAR)" "IPM" ""} \
+      {"$mom_sys_cycle_feed_mode" "IPM" ""} \
+      {"$mom_sys_feed_param(IPM,format)" "Feed_IPM" ""} \
+      {"$mom_sys_feed_param(IPR,format)" "Feed_IPR" ""} \
+      {"$mom_sys_feed_param(FRN,format)" "" ""} \
+      {"$mom_sys_feed_param(MMPM,format)" "Feed_MMPM" ""} \
+      {"$mom_sys_feed_param(MMPR,format)" "Feed_MMPR" ""}
+{Command} \
+      {"Custom Command" "" "New Custom Command"} \
+      {"MOM_set_seq_off" "" "MOM Command"} \
+      {"MOM_set_seq_on" "" "MOM Command"} \
+      {"PB_CMD___log_revisions" "" "Custom Command"} \
+      {"PB_CMD__config_post_options" "" "Custom Command"} \
+      {"PB_CMD__manage_part_attributes" "" "Custom Command"} \
+      {"PB_CMD_abort_event" "" "Custom Command"} \
+      {"PB_CMD_ask_machine_type" "" "Custom Command"} \
+      {"PB_CMD_before_motion" "" "Custom Command"} \
+      {"PB_CMD_cancel_suppress_force_once_per_event" "" "Custom Command"} \
+      {"PB_CMD_end_of_alignment_character" "" "Custom Command"} \
+      {"PB_CMD_end_of_region_marker" "" "Custom Command"} \
+      {"PB_CMD_kin_abort_event" "" "Custom Command"} \
+      {"PB_CMD_kin_before_motion" "" "Custom Command"} \
+      {"PB_CMD_kin_before_output" "" "Custom Command"} \
+      {"PB_CMD_kin_end_of_path" "" "Custom Command"} \
+      {"PB_CMD_kin_feedrate_set" "" "Custom Command"} \
+      {"PB_CMD_kin_init_mill_turn" "" "Custom Command"} \
+      {"PB_CMD_kin_init_mill_xzc" "" "Custom Command"} \
+      {"PB_CMD_kin_init_rotary" "" "Custom Command"} \
+      {"PB_CMD_kin_linearize_motion" "" "Custom Command"} \
+      {"PB_CMD_kin_mill_turn_initialize" "" "Custom Command"} \
+      {"PB_CMD_kin_mill_xzc_init" "" "Custom Command"} \
+      {"PB_CMD_kin_set_csys" "" "Custom Command"} \
+      {"PB_CMD_kin_start_of_path" "" "Custom Command"} \
+      {"PB_CMD_kin_start_of_program" "" "Custom Command"} \
+      {"PB_CMD_kin_wedm_engage_move" "" "Custom Command"} \
+      {"PB_CMD_output_circular_move" "" "Custom Command"} \
+      {"PB_CMD_output_linear_move" "" "Custom Command"} \
+      {"PB_CMD_pause" "" "Custom Command"} \
+      {"PB_CMD_run_postprocess" "" "Custom Command"} \
+      {"PB_CMD_set_csys" "" "Custom Command"} \
+      {"PB_CMD_start_of_alignment_character" "" "Custom Command"} \
+      {"PB_CMD_start_of_conic" "" "Custom Command"} \
+      {"PB_CMD_start_of_region_marker" "" "Custom Command"} \
+      {"PB_CMD_suppress_output" "" "Custom Command"} \
+      {"PB_CMD_unset_upper_motion_event" "" "Custom Command"}
+{Operator_Message} \
+      {"" "" ""}
+{PB_Spindle} \
+      {"" "" ""}
+{PB_ZeroFmt} \
+      {"$zero_int_fmt" "Zero_int" ""} \
+      {"$zero_real_fmt" "Zero_real" ""}
+{VNC_Instruction} \
+      {"" "" ""}
+{PB_Rapid} \
+      {"$pb_rapid_1" "" ""} \
+      {"$pb_rapid_2" "" ""}
+## MOM SYS VARIABLES END
+
+## FUNCTION INFO START
+## FUNCTION INFO END
+
