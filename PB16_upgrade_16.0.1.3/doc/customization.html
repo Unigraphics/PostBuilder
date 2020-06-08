@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>customization</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+Customization</H1>
+Post Builder allows you to customization the appearance of the dialogs.&nbsp;
+There are two files that may be changed in order to do this.
+<BR>&nbsp;
+<H2>
+<A NAME="ui_pb_resource.tcl"></A>ui_pb_resource.tcl</H2>
+This file can be modified to change the default&nbsp;<A NAME="font"></A>font
+sets,&nbsp;<A NAME="labels,"></A>labels,&nbsp;<A NAME="messages"></A>messages
+and text strings that appear thoughout UG/POST Builder.
+<BR>Only the system administrator should change this file.&nbsp; This file
+is in the POSTBUILD/app/ui directory.
+<H2>
+<A NAME="ui_pb_user_resource.tcl"></A>ui_pb_user_resource.tcl</H2>
+This file can be modified to overwrite the <I>ui_pb_resource.tcl</I> file.&nbsp;
+This file can also be found in the POSTBUILD/app/ui directory.This file
+should be placed in the users home directory in order to personally customize
+the appearance and behavior of UG/POST Builder for each user.&nbsp; This
+file should be copied into the users home directory.
+
+<P>On Unix this directory is <I>/users/log_name.</I>
+
+<P>On Windows this directory is found by typing <I>echo %HOME%&nbsp; </I>from
+a DOS command prompt.
+<BR>&nbsp;
+
+<P>For example, to change the font appearance on your display, either increase
+or decrease the size of the numbers in the file.&nbsp; Only change the
+value of the numbers or the name of the browser.
+
+<P>##############################################################################
+<BR>#&nbsp;&nbsp; UI_PB_USER_RESOURCE.TCL
+<BR>##############################################################################
+<BR>#&nbsp;&nbsp; Description
+<BR>#&nbsp;&nbsp; This file defines personalized resources for the PostBuilder.
+<BR>#
+<BR>##############################################################################
+<BR>global gPB env tcl_platform tixOption
+
+<P>#========================
+<BR># Font set specification
+<BR>#========================
+<BR>if {$tcl_platform(platform) == "windows"} \
+<BR>{
+<BR>&nbsp; set gPB(font)&nbsp;&nbsp; {ansi 8}
+<BR>&nbsp; set gPB(font_sm)&nbsp; {ansi 6}
+<BR>&nbsp; set gPB(bold_font)&nbsp; {ansi 8 bold}
+<BR>&nbsp; set gPB(bold_font_lg)&nbsp; {ansi 10 bold}
+<BR>&nbsp; set gPB(italic_font)&nbsp; {ansi 8 italic bold}
+<BR>&nbsp; set gPB(fixed_font)&nbsp; {courier 8}
+<BR>&nbsp; set gPB(fixed_font_sm) {courier 6}
+<BR>}
+<BR>&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+/* XPM */
+static char * block_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"170 21 5 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconColor3	m black	c red",
+"o	s iconColor6	m white	c yellow",
+"O	s iconColor7	m white	c cyan",
+/* pixels */
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          ",
+"    ..........                                                                                                                                                            ",
+"   .XXXXXXXX..                                                                                                                                                            ",
+"  .XXXXXXXX.o.                                                                                                                                                            ",
+" ..........oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.oo.                                                                                                                                                            ",
+" .OOOOOOOO.o.                                                                                                                                                             ",
+" .OOOOOOOO..                                                                                                                                                              ",
+" ..........                                                                                                                                                               ",
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          ",
+"                                                                                                                                                                          "};

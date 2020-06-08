@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>Post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+<A NAME="Machine Tool"></A>Machine Tool</H1>
+This section allows you to configure the kinematics of your machine tool.&nbsp;
+You will be able to define the limits and axis orientation of each of the
+axis. The Machine Tool dialog is divided into three sections. The general
+parameters section is available for all machine tool types.&nbsp; The dialogs
+for the fourth and fifth axes are available only for four and five axis
+machine tools.
+<BR>&nbsp;
+<H2>
+<A NAME="General Parameters"></A>General Parameters</H2>
+&nbsp;
+<BR>&nbsp;<IMG SRC="image2le.jpg" HEIGHT=805 WIDTH=1079>
+
+<P>The option&nbsp;<A NAME="Display Machine Tool"></A><B>Display Machine
+Tool</B> will give you an up to date picture of your machine tool so that
+you can visualize the axis orientations.&nbsp; For a four and five axis
+milling machine it will also show the address leader designation (A,B or
+C) and limits for each rotary axis.
+
+<P><IMG SRC="image6oa.jpg" HEIGHT=731 WIDTH=943>
+
+<P>The option&nbsp;<A NAME="Output Circular Record"></A><B>Output Circular
+Record</B> can be set to Yes or No.&nbsp; If set to Yes, then all circles
+that can be output based on the circle motion parameters will be output.&nbsp;
+If set to No there will be no circle blocks, (G2 or G3) output.
+
+<P><A NAME="Linear Axis Travel"></A><B>Linear Axis Travel Limit</B> is
+not yet implemented and is for reference purposes only.
+
+<P><A NAME="Home Position"></A><B>Home Position</B> defines the default
+from position if a FROM is not specified.
+
+<P><A NAME="Linear Motion Resolution"></A><B>Linear Motion Resolution</B>
+defines the minimum value that all coordinate will be rounded to.&nbsp;
+This does not necessarily control the format of the coordinate data.&nbsp;
+You must change the number of decimal digits output to do that.
+
+<P><A NAME="Traversal Feedrate"></A><B>Traversal Feedrate</B> defines the
+feedrate that will be used to calculate machine time for rapid motion.&nbsp;
+This value will also be used to determine if a linear feedrate move is
+actually to be performed at rapid.
+<BR>&nbsp;
+<HR WIDTH="100%">
+<BR>&nbsp;
+<H2>
+<A NAME="Fourth Axis"></A>Fourth Axis</H2>
+<IMG SRC="imagerdg.jpg" HEIGHT=805 WIDTH=1079>
+<BR>&nbsp;
+
+<P>The&nbsp;<A NAME="Rotary Axis Configuration"></A><B>Rotary Axis Configuration</B>
+dialog allows you to define the&nbsp;<A NAME="Plane of Rotation"></A>Plane
+of Rotation and&nbsp;<A NAME="Address Leader"></A>Address Leader for both
+the fourth and the fifth axis.&nbsp; This dialog may be accessed from either
+the fourth or the fifth axis configuration dialogs.&nbsp; Note that you
+must make sure you change the Address Leader when you change the rotary
+axis plane.&nbsp; Note that the plane of the fourth axis must be different
+than the plane of the fifth axis.&nbsp; This dialog is only available for
+specifying the parameters of a five-axis machine tool.&nbsp; It is not
+available for a forages machine tool only.
+
+<P><IMG SRC="imagehkf.jpg" HEIGHT=268 WIDTH=662>
+
+<P>The option&nbsp;<A NAME="Machine Zero to Rotary Axis Center"></A><B>Machine
+Zero to Rotary Axis Center</B> allows you to define where the center of
+the fourth axis is in relation to your machine zero.&nbsp; This is the
+3-d distance is set usually set to zero.&nbsp; This value must be programmed
+correctly for the post processor to be able to map correctly between the
+MCS programmed in UG and the Machine Tool Coordinate System.
+
+<P>The option&nbsp;<A NAME="Rotary Motion Resolution"></A><B>Rotary Motion
+Resolution</B> allows you to control the number of digits that the rotary
+angle will be rounded to.&nbsp; This is typically .001 degrees for most
+contouring axes.
+
+<P>The option&nbsp;<A NAME="Maximum Rotary Feed Rate"></A><B>Maximum Rotary
+Feed Rate</B> allows you to define the&nbsp;<A NAME="maximum degrees per minute"></A>maximum
+degrees per minute that the fourth axis can rotate.&nbsp; If during a combined
+linear and rotary move, the amount of rotation during that move exceeds
+the maximum DPM, the post processor will reduce the federate so that it
+does not exceed this value.
+
+<P>The option&nbsp;<A NAME="Pivot Distance"></A><B>Pivot Distance</B> is
+not valid for the dual rotary type five-axis machine tool.&nbsp; You can
+define the distance from the pivot point to the spindle gage point.&nbsp;
+This value may be specified with either the fourth or the fifth axis dialogs,
+however there is only one pivot distance on the machine tool.
+
+<P>The&nbsp;<A NAME="Angular Offset"></A><B>Angular Offset</B> option must
+be used when a tool axis of (0,0,1) does not result in angular positions
+of 0.0 for the fourth axis.&nbsp; This offset is needed for some Sundstrand
+head/table machine tools.&nbsp; Enter the value that needs to be added
+to adjust the rotary angle (usually -90).
+
+<P>The option&nbsp;<A NAME="Axis Rotation"></A><B>Axis Rotation</B> defines
+whether the fourth axis rotates according to the right-hand rule.&nbsp;
+Standard is default and most rotary tables rotate clockwise to a larger
+angle.&nbsp; If your table does not rotate according to the right-hand
+rule, then set this value to Reverse.&nbsp; For example, if get a B90 when
+you expect a B-90, you may need to use the reverse option.
+
+<P>The option&nbsp;<A NAME="Axis Direction"></A><B>Axis Direction</B> defines
+how your rotary table determines whether to rotate clockwise or counterclockwise.&nbsp;
+The following options are available, Magnitude Determines Direction or
+Sign Determines Direction.
+<BR>&nbsp;
+<BLOCKQUOTE><A NAME="Magnitude Determines Direction"></A><B>Magnitude Determines
+Direction</B> denotes that the sign is used algebraically to determine
+the angular position.&nbsp; B-90 and B90 are different positions on the
+rotary axis and are 180 degrees apart.&nbsp; Rotation to a larger angle
+is always clockwise and rotation to a smaller angel is always counter clockwise.&nbsp;
+Typically the travel limits on this type of table is more than 360 degrees
+(i.e. -9999 to 9999)
+
+<P><A NAME="Sign Determines Direction"></A><B>Sign Determines Direction</B>
+means that the sign is used only for direction of rotation.&nbsp; B90 and
+B-90 are the same position on the rotary table.&nbsp; The minus sign on
+B-90 means that the table will rotate counterclockwise from wherever it
+was at to 90.&nbsp; Likewise, B90 means that the table will rotate clockwise
+from wherever it was at to 90.&nbsp; Typically, the limits on this table
+are from 0 to 360.</BLOCKQUOTE>
+<A NAME="Rotary Axis Limits"></A><B>Rotary Axis Limits</B> allows you to
+control the minimum and maximum angles that can be programmed for the fourth
+axis.&nbsp;&nbsp;&nbsp; If the range of travel is limited to less than
+360 degrees, you must specify the valid range of travel measuring clockwise
+on the table.&nbsp; For instance, if the range of travel is 40 degrees,
+plus or minus 20 degrees, the minimum angle would be specified as 340 degrees
+(or -20) and the maximum angle would be specified as 20 degrees.&nbsp;
+If the rotary axis has no limitation on travel, there are two possible
+choices for the values for the minimum and maximum angles.&nbsp; If the
+sign determines direction, you must select 0 degrees for the minimum and
+360 for the maximum.&nbsp; If magnitude determines direction, the minimum
+can at most be -359.999 degrees and the maximum has to be at least 359.999
+degrees.
+
+<P>The&nbsp;<A NAME="Rotary Axis Limit Violation"></A><B>Rotary Axis Limit
+Violation</B> option specifies how the post processor will behave when
+a rotary axis limit is reached.&nbsp; The post processor can either give
+a warning only or retract, rotate then re-engage.
+
+<P>The option&nbsp;<A NAME="Consecutive Linear Motions"></A><B>Consecutive
+Linear Motions</B> allows you to combine output blocks that have the same
+x, y and z values but have different rotary values.
+
+<P>
+<HR WIDTH="100%">
+<BR>&nbsp;
+<H2>
+<A NAME="Fifth Axis Parameters"></A>Fifth Axis Parameters</H2>
+<IMG SRC="image4n7.jpg" HEIGHT=805 WIDTH=1079>
+
+<P>The&nbsp;<A NAME="Rotary Axis Configuration"></A><B>Rotary Axis Configuration</B>
+dialog allows you to define the Plane of Rotation and Address Leader for
+both the fourth and the fifth axis.&nbsp; This dialog may be accessed from
+either the fourth or the fifth axis configuration dialogs.&nbsp; See the
+Fourth Axis section for details.
+
+<P>The option&nbsp;<A NAME="Fourth Axis Rotary Center to Fifth Axis Rotary"></A><B>Fourth
+Axis Rotary Center to Fifth Axis Rotary Center</B> allows you to define
+the distance between the center of the fourth axis to the center of the
+fifth axis.&nbsp; This 3-d distance is set usually set to zero.&nbsp; For
+a dual rotary five-axis machine tool, this vector is the represents distance
+between the axis vectors of the fourth axis and the fifth axis.&nbsp; For
+a dual head five-axis machine tool, this distance is the distance between
+the pivot points of the fourth and fifth axes. This value must be programmed
+correctly for the post processor to be able to map correctly between the
+MCS programmed in UG and the Machine Tool Coordinate System.&nbsp; See
+Appendix A for a complete description.
+
+<P>For the remainder of the options for the fifth axis parameters, see
+the descriptions under Fourth Axis Parameters.&nbsp; The parameter descriptions
+are the same for both the fourth and fifth axes.
+<BR>&nbsp;
+<BR>
+<HR WIDTH="100%">
+<H2>
+<A NAME="2-Axis Lathe Parameters"></A><B>2-Axis Lathe Parameters</B></H2>
+<IMG SRC="imageup8.jpg" HEIGHT=805 WIDTH=1079>
+
+<P>The&nbsp;<A NAME="Turret"></A><B>Turret </B>option allows you to define
+whether you have one or two turrets.&nbsp; Currently the two turrets must
+be a fixed distant apart and do NOT move independently.&nbsp; When you
+select the two turret option, you must specify the names of the two turrets
+and the&nbsp;<A NAME="Offset from primary to secondary head"></A>distance
+between them.&nbsp; Currently, you must select from one of the six names
+available for the names of the primary and secondary turrets.&nbsp; You
+must use these names for the turrets in Unigraphics so that the post processor
+knows whether or not to add the offsets.&nbsp; The distance is measured
+from the primary turret to the secondary turret.&nbsp; This value will
+be algebraically added to the x and z coordinates when the secondary head
+is being used.
+
+<P><IMG SRC="imagecjm.jpg" HEIGHT=417 WIDTH=618>
+
+<P>The&nbsp;<A NAME="Lathe Output Method"></A><B>Lathe Output Method</B>
+defines your basic tool tracking method.
+<BR>&nbsp;
+<BR><A NAME="Tool Tip"></A><B>Tool Tip</B> -- means that you want the x
+and z values in your NC output file to represent the tool tip location.&nbsp;
+This is accomplished by resetting the tool tip location with every tool
+change.
+<BR>The basic elements for tool tip programming are:
+<UL>
+<LI>
+A FROM command at the beginning of the program to define the initial turret
+reference position</LI>
+
+<LI>
+A G92 block with each tool change to take into account the change in offsets.</LI>
+
+<LI>
+A GOHOME or return to home position to return back to a common turret reference
+position.</LI>
+</UL>
+<A NAME="Turret Reference"></A><B>Turret Reference</B> -- means that the
+x and z values represent the turret reference location similar to the method
+used for programming milling machines.
+</BODY>
+</HTML>

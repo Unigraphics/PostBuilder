@@ -1,0 +1,314 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+<A NAME="N/C Data Definitions"></A>N/C Data Definitions</H1>
+There are two ways to view your post within Post Builder.&nbsp; One way
+is the&nbsp;<A NAME="Program view"></A>Program view.&nbsp; The Program
+&amp; Tool Path shows you the events that occur within your program and
+the output blocks that will result.&nbsp; The NC Data Definitions section
+shows you the blocks, words and formats in a similar format as to what
+is written to the&nbsp;<A NAME="definition file."></A>definition file.&nbsp;
+You can edit and create blocks and words that can then be used as output
+in the sequences and events.&nbsp; This section has the following options
+or tabs for you to choose from.
+
+<P><IMG SRC="imagemc3.jpg" HEIGHT=112 WIDTH=807>
+<H2>
+<A NAME="Block"></A>Block</H2>
+<IMG SRC="image1nn.jpg" HEIGHT=752 WIDTH=1008>
+
+<P>This dialog allows you to create and edit blocks.&nbsp; You have the
+same options for creating a new block or editing a block as you do within
+the event or sequence dialogs.&nbsp; When you create a new block from this
+dialog you are basically copying an existing block and the editing it.&nbsp;
+You are limited to a single block.&nbsp; If you need more than one block
+for your function, you must create more than one block.
+<BR>&nbsp;
+<BR>&nbsp;
+<H3>
+<A NAME="Creating a New Block"></A>Creating or Editing a New Block</H3>
+
+<BLOCKQUOTE>There are two methods that may be used to create a block within
+Post Builder.&nbsp; From the sequence or event dialogs you may drag a blank
+block and drop it into a sequence or event.&nbsp; You can also edit any
+existing block with the sequence, event or N/C Data Definitions block dialog.&nbsp;
+After you have placed the new block in the correct sequence or selected
+a block to edit, the following dialog will be displayed so that you can
+now select words from the word select pull down to edit or build your block.
+
+<P><IMG SRC="imagei4a.jpg" HEIGHT=765 WIDTH=1026>
+
+<P>You can build your block by inserting the following elements into your
+block.</BLOCKQUOTE>
+
+<BLOCKQUOTE>
+<BLOCKQUOTE>
+<H4>
+<A NAME="New Word"></A><B>New Word</B></H4>
+<IMG SRC="image5tk.jpg" HEIGHT=627 WIDTH=508>
+
+<P>Select the&nbsp;<A NAME="New Word"></A><B>New Word</B> option in the
+word selection pull down dialog.&nbsp;&nbsp; Depress and hold the left
+mouse button on the&nbsp;<A NAME="Add Word"></A><B>Add Word</B> button
+and drag the word until the highlight appears in the block construction
+area.&nbsp; Once the word is placed into the block, a dialog will appear
+to allow you to define the parameters for the word you want to create.&nbsp;&nbsp;
+See the <A HREF="#Address">Word</A> section for editing options.
+
+<P>&nbsp;
+<H4>
+<A NAME="Text"></A><B>Text</B></H4>
+Select the <B>Text</B> option in the block selection pull down dialog.&nbsp;&nbsp;
+Depress and hold the left mouse button on the&nbsp;<A NAME="Add Word"></A><B>Add
+Word</B> button and drag the word until the highlight appears in the block
+construction area.&nbsp; Once the word is placed into the block a dialog
+will appear to allow you to define the parameters for the word you want
+to create
+<BR>&nbsp;
+<H4>
+<A NAME="Existing Addresses"></A><B>Existing Words</B></H4>
+Select the word selection pull down dialog and choose the specific word
+that you would like to add to the current block.&nbsp; Each word from this
+list has a choice of pre-defined contexts.&nbsp; For instance, the X word
+can be defined to be output as any one of the definitions on the pull down
+list or you can specify a specific variable that you create using the&nbsp;<A NAME="User Defined Expression"></A>User
+Defined Expression option.&nbsp; If you choose an existing word it will
+output whatever the current value is for that word.&nbsp; If you choose
+X-Coordinate for example, it will output an X word with the current X position.&nbsp;
+See the section on words for details on creating and editing words.
+<BR>&nbsp;
+<BR>&nbsp;</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H2>
+<A NAME="Words"></A>Words</H2>
+<IMG SRC="imageotv.jpg" HEIGHT=752 WIDTH=1008>
+
+<P>This dialog allows you to create and edit words.&nbsp; You have the
+same options for creating a new word or editing a word as you do within
+the event or sequence dialogs.&nbsp; When you create a new word from this
+dialog you are basically copying an existing word and the editing it.
+<BR>&nbsp;
+<BR><IMG SRC="imagedin.jpg" HEIGHT=627 WIDTH=508>
+
+<P>The&nbsp;<A NAME="word dialog"></A>word dialog allows you to define
+or edit the characteristics of any word.&nbsp; A word is composed of an
+address leader, a number or text and a trailer.&nbsp; An address leader
+may be any characters.&nbsp; For NC code the address leader is usually
+a single letter such as G, M or X.&nbsp; It can be multiple characters
+such as R2, (FI, etc.&nbsp; The trailer is usually blank.&nbsp; This is
+needed for some controls that require formats such as &lt;12.345>.&nbsp;
+In this case > would be the trailer.
+
+<P>You can specific which&nbsp;<A NAME="format"></A>format will be used
+for the current word.&nbsp; You can select from the existing list of formats
+or you can edit one of the existing formats.&nbsp; If need a completely
+different format or don't want to change one of the existing formats, you
+will need to create a new format in the <A HREF="#Format">Format</A> section
+of the NC Data Definitions dialog.&nbsp; The format is used control whether
+you output the decimal, leading and trailing zeroes etc.
+
+<P>The green rectangle at the top of the dialog shows you what the word
+will look like when it is output.&nbsp;&nbsp; When you have an word that
+has a pre-defined context, then the pre-defined representative code will
+be displayed at the top of the dialog.
+
+<P>The&nbsp;<A NAME="Modality"></A>Modality option may be set to Off which
+means Modal or Always which means Non-Modal.&nbsp; If set to Modal the
+word will only be output if the value of the expression changes between
+two blocks of output.&nbsp; This is the default setting for all words.&nbsp;
+If a word is set to Non-Modal it is output in every block that the word
+appears.&nbsp; Typically Modal words are for coordinate data, motion G
+codes, etc.&nbsp; You can always force out within the context of an event.&nbsp;
+For instance, the Opstop event should always force an M01.
+
+<P>For each word you can also define the&nbsp;<A NAME="maximum and minimum"></A>maximum
+and minimum value that will be output with your word.&nbsp; You can also
+determine what action will take place when maximum or minimum value is
+exceeded.&nbsp; Your choices are:
+<BLOCKQUOTE>
+<H4>
+<A NAME="Truncate"></A>Truncate</H4>
+This setting will cause a warning to be output to the system warning file
+and continue using the maximum or minimum value.
+<H4>
+<A NAME="Warning"></A>Warning</H4>
+This setting will cause only a warning to be output.
+<H4>
+<A NAME="Abort"></A>Abort</H4>
+This setting will cause the postprocessor to stop and report an error.</BLOCKQUOTE>
+The&nbsp;<A NAME="expression"></A>expression defines the number or text
+that will be used to make your word.&nbsp; The expression can only be defined
+in the context of an event.&nbsp; The same word used in different events
+can have different expressions defining the output.&nbsp; For instance,
+the M word in the Opstop event would use the system code for opstop (1).&nbsp;
+The M word in the stop event would use the system code for stop (0).&nbsp;
+The expression cannot be defined in the NC Data Definitions section because
+that dialog only defines the static characteristics of the word.&nbsp;&nbsp;
+If you select a word that has a pre-defined context you will not be able
+to change the expression.
+<BR>&nbsp;
+<H4>
+<A NAME="Word Modifiers"></A>Word Modifiers</H4>
+The word modifiers can only be applied when editing a word within the event
+or sequence dialogs.&nbsp; The word modifiers actually belong to the event
+or sequence themselves and not to any block or word.&nbsp; You can access
+the word modifier dialog by right clicking on any word in any event or
+sequence dialog. If you right click on the M01 word and select&nbsp;<A NAME="Change Element,"></A>Change
+Element, you can use a different pre-defined context for your M code or
+select User Defined Expression.
+
+<P><IMG SRC="image63b.jpg" HEIGHT=194 WIDTH=429>
+
+<P>In the above example for M, you can choose from a list pre-defined M-codes.&nbsp;
+Words use the system variables that are assigned for each function.&nbsp;
+The Stop Program M-code is defined in the M-code table.&nbsp;&nbsp;&nbsp;
+You can specify the value for your word by selecting user-defined expression
+from the list.&nbsp; This expression can be any valid TCL expression.&nbsp;
+Typically you can enter a number, text or mom variable.&nbsp; See the UG
+Post online docs for a list of mom variables.&nbsp; For example if want
+an M10 for your word, enter the text 10 for your expression.&nbsp; This
+is a valid expression.&nbsp; Other valid expressions are 6 for M6 and the
+text "spindle" would be Mspindle.&nbsp; All mom variables must be preceded
+by a $ or they will be considered to be literal text.&nbsp; The text "mom_spindle_speed"
+is literal text, but the text "$mom_spindle_speed" will be resolved into
+the current value of the variable "mom_spindle_speed".&nbsp; Note that
+if you specify digit or numeric formats, your expression must resolve into
+a number.
+
+<P><IMG SRC="image2r4.jpg" HEIGHT=124 WIDTH=401>
+<BR>&nbsp;
+<BR>If you make a word&nbsp;<A NAME="optional"></A>optional, that means
+that it will only be output if the expression used for that word has been
+defined.&nbsp; For example, if you make a block with a word that will turn
+on the coolant.&nbsp; If you don't program a coolant UDE in your part program,
+the data for coolant will not be set.&nbsp; If you do not use the option
+specifier, then you will get a run time TCL error.&nbsp; If you do use
+the optional specifier, then you will not get an error, instead you will
+get no output.&nbsp; This is what is desired because you will only get
+your coolant code output if you program the coolant UDE.
+
+<P>The&nbsp;<A NAME="No Word Separator"></A>No Word Separator option allows
+you to suppress the output of the word separator after the word.&nbsp;
+This is useful mainly for CLS output.
+
+<P>The&nbsp;<A NAME="Force Output"></A>Force Output option allows you to
+force the output of your word within the current block only.&nbsp; This
+is useful for forcing out a T code or M06 for each tool change.&nbsp; By
+default all words are modal and will output only if the value changes from
+one block to the next.&nbsp; Force Output can only be specified within
+the context of an event or sequence.
+
+<P>UG/Post Builder has grouped the G and M code words into modal groupings.&nbsp;
+That is, when you output a G17 it does not cancel a G01.&nbsp; However
+if you output a G00, then a G01, and then a G00 in the third block, the
+G00 is output again in the third block.&nbsp; This behavior is consistent
+with the method that machine tool controls output code.&nbsp; UG/Post Builder
+has also constructed many words with predefined variables to assist you
+in getting the correct output.&nbsp; For instance, when select an X word
+to be output in a block, you have a number of choices on how the number
+will be obtained.&nbsp; If you right click on an X word in any event or
+sequence dialog you can see what you options are to change how the number
+will be obtained.
+
+<P><IMG SRC="imagetld.jpg" HEIGHT=147 WIDTH=396>
+
+<P>In the above pull down dialog you can use the default setting of the
+motion x or select one of the options from the list.&nbsp; They all reference
+different mom variables or constant.&nbsp; See <A HREF="appendixc.html">Appendix
+C</A> for a complete list.
+<H2>
+<A NAME="Format"></A>Format</H2>
+<IMG SRC="imagetmg.jpg" HEIGHT=752 WIDTH=1008>
+
+<P>The Format dialog in NC Data Definitions allow you to create and edit
+formats.&nbsp; Post Builder comes with a complete set of formats for all
+of the default blocks and addresses.&nbsp; The formats listed here are
+used in all of the existing blocks.&nbsp; You can also change formats within
+the context of the words using the <A HREF="word_summary.html">word summary
+</A>dialog.
+
+<P>You can create a new format by highlighting an existing format and selecting
+create.&nbsp; This will give you a new block exactly like the original
+except the name will have an _1 after it.&nbsp; You can edit this new format.&nbsp;
+This is useful when you need a different format for one of your coordinates.
+
+<P>You can change the data type to be numeric or text.&nbsp; This should
+be done only if you know what you are doing.&nbsp; If you specify text
+then there is no formatting and all of the other options are not allowed.&nbsp;
+All NC data should be numeric except for certain G-codes.&nbsp; For instance,
+if you need L for G01, R for G00, CW for G02, etc. then you can change
+the type to text and change all of you Motion G codes to the text you want.&nbsp;
+This is the only case we have found where it is necessary to use a text
+format.
+
+<P>You can also set the&nbsp;<A NAME="number of digits"></A>number of digits
+to left and right of the decimal point, supress or output the&nbsp;<A NAME="decimal point,"></A>decimal
+point, supress or&nbsp;<A NAME="output leading"></A>output leading or&nbsp;<A NAME="trailing zeros"></A>trailing
+zeros or output or&nbsp;<A NAME="suppress the plus"></A>suppress the plus
+sign.
+
+<P>The&nbsp;<A NAME="zero format"></A>zero format is used define how a
+value of zero will be output.&nbsp; The default format will output X0.0
+or X0 for coordinate data.&nbsp; If you want X0. or X.0 then you will need
+to change the number of digits accordingly.&nbsp; For non-decimal data
+you will get either M00 or M0 depending on whether you suppress leading
+zeros or not.
+
+<P>&nbsp;
+<H2>
+<A NAME="Other Data Definitions"></A>Other Data Definitions</H2>
+<IMG SRC="imagefks.jpg" HEIGHT=502 WIDTH=1008>
+<BR>&nbsp;
+<H4>
+<A NAME="Sequence Number"></A>Sequence Number</H4>
+This dialog allows you to specify how the sequence number will be output.
+<BR>&nbsp;
+<H4>
+<A NAME="Special Characters"></A>Special Characters</H4>
+This dialog allows to define the characters that will be output for the
+following situations.
+<BLOCKQUOTE>
+<H4>
+<A NAME="Word Separator"></A>Word Separator</H4>
+You have the following choices.
+
+<P><IMG SRC="imagedbt.jpg" HEIGHT=175 WIDTH=167>
+
+<P>The default setting for the word sepatarator is a space.&nbsp; This
+means your words will have a space between. Example: N0010 G01 X1.23.
+<BR>You can also specify any text as your word separator.
+<BR>&nbsp;
+<H4>
+<A NAME="End of Block"></A>End of Block</H4>
+You have the following choices.
+
+<P><IMG SRC="imagek8s.jpg" HEIGHT=199 WIDTH=164>
+
+<P>The default end of block is none.&nbsp; The system will place a line
+feed at the end of every block for you.&nbsp; This is if you need an additional
+code at the end of block.
+<BR>&nbsp;
+<H4>
+<A NAME="Message Start / Message End"></A>Message Start / Message End</H4>
+You have the following choices.
+
+<P><IMG SRC="imageg4g.jpg" HEIGHT=231 WIDTH=166>&nbsp;<IMG SRC="image799.jpg" BORDER=0 HEIGHT=120 WIDTH=326>&nbsp;<IMG SRC="imagelll.jpg" HEIGHT=120 WIDTH=360>
+
+<P>These two characters will define how the system will output operator
+messages when you construct&nbsp;<A NAME="operator message blocks"></A>operator
+message blocks from the block selection pulldown in the event and sequence
+dialogs.&nbsp; You can format the exact start and end of message strings
+with this dialog.&nbsp; The default characters are "(" for message start
+and ")" for message end.&nbsp; A common message start is (MSG,.
+<BR>&nbsp;</BLOCKQUOTE>
+&nbsp;
+</BODY>
+</HTML>

@@ -1,0 +1,428 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>Post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+<FONT SIZE=+4>UG/Post Builder V1.0</FONT></H1>
+
+<H4>
+August 7, 2000</H4>
+
+<H1>
+<A HREF="#Index">Index</A></H1>
+
+<H1>
+Table of Contents</H1>
+<A HREF="introduction.html#Getting Started">Getting Started</A>
+<BR><A HREF="introduction.html#Creating a New">Creating a New Post</A>
+<BLOCKQUOTE><A HREF="introduction.html#Mill">Mill</A>
+<BR><A HREF="introduction.html#Lathe">Lathe</A></BLOCKQUOTE>
+<A HREF="help.html#Help Functions">Help Functions</A>
+<BLOCKQUOTE><A HREF="help.html#Balloon Help">Balloon Help</A>
+<BR><A HREF="help.html#Context Sensitive Help">Context Sensitive Help</A>
+<BR><A HREF="help.html#Dialog Sensitive Help">Dialog Sensitive Help</A>
+<BR><A HREF="help.html#Browse User Documentation">Browse User Documentation</A></BLOCKQUOTE>
+<A HREF="machine_tool.html#Machine Tool">Machine Tool</A>
+<BLOCKQUOTE><A HREF="machine_tool.html#General Parameters">General Parameters</A>
+<BR><A HREF="machine_tool.html#Fourth Axis">Fourth Axis</A>
+<BR><A HREF="machine_tool.html#Rotary Axis Configuration">Rotary Axis Configuration</A>
+<BR><A HREF="machine_tool.html#Fifth Axis Parameters">Fifth Axis Parameters</A>
+<BR><A HREF="machine_tool.html#2-Axis Lathe Parameters">Lathe Parameters</A>
+<BR><A HREF="machine_tool.html#Turret">Turret</A></BLOCKQUOTE>
+<A HREF="program.html#Program and Tool Path">Program and Tool Path</A>
+<BLOCKQUOTE><A HREF="program.html#Program">Program</A>
+<BLOCKQUOTE><A HREF="program.html#Display Combined N/C Code Blocks">Display
+Combined N/C Code Blocks</A>
+<BR><A HREF="program.html#New Block">New Block</A>
+<BR><A HREF="program.html#Operator Message">Operator Message</A>
+<BR><A HREF="program.html#MOM_command">MOM_command</A>
+<BR><A HREF="program.html#Custom Command">Custom Command</A>
+<BR><A HREF="program.html#Existing Block">Existing Block</A>
+<BR><A HREF="start_sequences.html#Program Start Sequence">Program Start
+Sequence</A>
+<BR><A HREF="start_sequences.html#Operation Start Sequence">Operation Start
+Sequence</A>
+<BR><A HREF="machine_control.html#Tool Path Events">Tool Path Events</A>
+<BLOCKQUOTE><A HREF="machine_control.html#Machine Control">Machine Control</A>
+<BLOCKQUOTE><A HREF="machine_control.html#Tool Change (Mill)">Tool Change
+(Mill)</A>
+<BR><A HREF="machine_control.html#Tool Code Configuration Dialog">Tool
+Code Configuration Dialog</A>
+<BR><A HREF="machine_control.html#Tool Change (Lathe)">Tool Change (Lathe)</A>
+<BR><A HREF="machine_control.html#Set Modes">Set Modes</A>
+<BR><A HREF="machine_control.html#Spindle RPM">Spindle RPM</A>
+<BR><A HREF="machine_control.html#Spindle CSS">Spindle CSS</A>
+<BR><A HREF="machine_control.html#Spindle Off">Spindle Off</A>
+<BR><A HREF="machine_control.html#Coolant On">Coolant On</A>
+<BR><A HREF="machine_control.html#Coolant Off">Coolant Off</A>
+<BR><A HREF="machine_control.html#Inch Metric Modes">Inch Metric Modes</A>
+<BR><A HREF="machine_control.html#Feedrates">Feedrates</A>
+<BR><A HREF="machine_control.html#Feedrates (Mill)">Feedrates (Mill)</A>
+<BR><A HREF="machine_control.html#Feedrates (Mill 4/5 axis)">Feedrates
+(Mill 4/5 axis)</A>
+<BR><A HREF="machine_control.html#Cutcom On">Cutcom On</A>
+<BR><A HREF="machine_control.html#Cutcom Off">Cutcom Off</A>
+<BR><A HREF="machine_control.html#Delay">Delay</A>
+<BR><A HREF="machine_control.html#Opstop">Opstop</A>
+<BR><A HREF="machine_control.html#Load Tool">Load Tool</A>
+<BR><A HREF="machine_control.html#Stop">Stop</A></BLOCKQUOTE>
+<A HREF="motion.html#Motion (Lathe)">Motion</A>
+<BLOCKQUOTE><A HREF="motion.html#Motion (Lathe)">Motion (Lathe)</A>
+<BLOCKQUOTE><A HREF="motion.html#Linear Move">Linear Move</A>
+<BR><A HREF="motion.html#Circle Move">Circle Move</A>
+<BR><A HREF="motion.html#Rapid Move">Rapid Move</A>
+<BR><A HREF="motion.html#Lathe Thread">Lathe Thread</A></BLOCKQUOTE>
+<A HREF="motion.html#Motion (Mill 3-axis)">Motion (Mill 3-axis)</A>
+<BR><A HREF="motion.html#Motion (Mill 4/5-axis)">Motion (Mill 4/5-axis)</A></BLOCKQUOTE>
+<A HREF="canned_cycles.html#Canned Cycles">Canned Cycles</A>
+<BR><A HREF="canned_cycles.html#Canned Cycles"></A>&nbsp;
+<BLOCKQUOTE><A HREF="canned_cycles.html#Cycle Parameters">Cycle Parameters</A>
+<BR><A HREF="canned_cycles.html#Cycle Start">Cycle Start</A>
+<BR><A HREF="canned_cycles.html#Rapid To">Rapid To</A>
+<BR><A HREF="canned_cycles.html#Retract To">Retract To</A></BLOCKQUOTE>
+</BLOCKQUOTE>
+<A HREF="end_sequences.html#Operation End Sequence">Operation End Sequence</A>
+<BR><A HREF="end_sequences.html#Program End Sequence">Program End Sequence</A></BLOCKQUOTE>
+<A HREF="g_code_summary.html">G Code Summary</A>
+<BR><A HREF="m_code_summary.html">M Code Summary</A>
+<BR><A HREF="word_summary.html#Address Summary">Address Summary</A>
+<BR><A HREF="word_sequence.html#Word Sequencing">Word Sequencing</A>
+<BR><A HREF="custom_command.html#Custom Command">Custom Command</A></BLOCKQUOTE>
+<A HREF="data_definitions.html#N/C Data Definitions">N/C Data Definitions</A>
+<BLOCKQUOTE><A HREF="data_definitions.html#Block">Block</A>
+<BR><A HREF="data_definitions.html#Truncate">Words</A>
+<BR><A HREF="data_definitions.html#Format">Format</A>
+<BR><A HREF="data_definitions.html#Other Data Definitions">Other Data Definitions</A></BLOCKQUOTE>
+<A HREF="listing_file.html">Listing File</A>
+<BR><A HREF="files_preview.html">Files Preview</A>
+<BR><A HREF="customization.html">Customizing UG/POST Builder</A>
+<BR><A HREF="glossary.html">Glossary of Terms</A>
+<BR><A HREF="appendixa.html">Appendix A - Modal Word Groups and MOM Variables</A>
+<BR>&nbsp;
+<H1>
+
+<HR WIDTH="100%"></H1>
+
+<H1>
+<A NAME="Index"></A>Index</H1>
+<A HREF="data_definitions.html#Abort">Abort</A>
+<BR><A HREF="program.html#Add Block">Add Block</A>
+<BR><A HREF="data_definitions.html#Add Word">Add Word</A>
+<BR><A HREF="glossary.html#Address">Address</A>
+<BR><A HREF="m_code_summary.html#Address Summary">Address Summary</A>
+<BR><A HREF="g_code_summary.html#Address Summary">Address Summary</A>
+<BR><A HREF="machine_tool.html#Angular Offset">Angular Offset</A>
+<BR><A HREF="start_sequences.html#Approach Move">Approach Move</A>
+<BR><A HREF="start_sequences.html#Automatic Tool Change">Automatic Tool
+Change</A>
+<BR><A HREF="help.html#Balloon Help">Balloon Help</A>
+<BR><A HREF="glossary.html#Block">Block</A>
+<BR><A HREF="data_definitions.html#Block">Block</A>
+<BR><A HREF="help.html#Browse User Documentation">Browse User Documentation</A>
+<BR><A HREF="canned_cycles.html#cams">Cam cycles</A>
+<BR><A HREF="canned_cycles.html#Canned Cycles">Canned Cycles</A>
+<BR><A HREF="data_definitions.html#Change Element,">Change Element</A>
+<BR><A HREF="motion.html#circle center">Circle Center</A>
+<BR><A HREF="motion.html#Circles in other planes">Circle Plane</A>
+<BR><A HREF="motion.html#Circle Move">Circle Move</A>
+<BR><A HREF="motion.html#Circular Motion G code">Circular Motion G code</A>
+<BR><A HREF="machine_tool.html#Output Circular Record">Circular Record
+Output</A>
+<BR><A HREF="machine_tool.html#Consecutive Linear Motions">Consecutive
+Linear Motions</A>
+<BR><A HREF="help.html#Context Sensitive Help">Context Sensitive Help</A>
+<BR><A HREF="machine_control.html#Coolant Off">Coolant Off</A>
+<BR><A HREF="machine_control.html#Coolant On">Coolant On</A>
+<BR><A HREF="program.html#Copy As.">Copy As</A>
+<BR><A HREF="program.html#Add, copy or delete blocks.">Copy blocks</A>
+<BR><A HREF="data_definitions.html#Creating a New Block">Creating a New
+Block</A>
+<BR><A HREF="introduction.html#Creating a New">Creating a New Post</A>
+<BR><A HREF="data_definitions.html#Text">Creating a New Text Block</A>
+<BR><A HREF="data_definitions.html#New Word">Creating a New Word</A>
+<BR><A HREF="glossary.html#Custom Command">Custom Command</A>
+<BR><A HREF="custom_command.html">Custom Command</A>
+<BR><A HREF="canned_cycles.html#cycle delay">Cycle delay</A>
+<BR><A HREF="canned_cycles.html#Cycle Off then Rapid Spindle">Cycle Off
+then Rapid Spindle</A>
+<BR><A HREF="canned_cycles.html#Cycle Parameters">Cycle Parameters</A>
+<BR><A HREF="canned_cycles.html#Cycle Plane Change">Cycle Plane Change</A>
+<BR><A HREF="canned_cycles.html#Cycle Plane Control">Cycle Plane Control</A>
+<BR><A HREF="canned_cycles.html#Cycle Start">Cycle Start</A>
+<BR><A HREF="canned_cycles.html#Cycle Start Block">Cycle Start Block</A>
+<BR><A HREF="canned_cycles.html#cycle_step">cycle_step</A>
+<BR><A HREF="canned_cycles.html#cycle_step1">cycle_step1</A>
+<BR><A HREF="program.html#Custom Command">Custom Command</A>
+<BR><A HREF="machine_control.html#Cutcom Off">Cutcom Off</A>
+<BR><A HREF="machine_control.html#Cutcom On">Cutcom On</A>
+<BR><A HREF="machine_control.html#Cutcom plane code">Cutcom plane code</A>
+<BR><A HREF="motion.html#cutting motion">Cut motion</A>
+<BR><A HREF="word_summary.html#Decimal (.)">Decimal point</A>
+<BR><A HREF="data_definitions.html#decimal point,">Decimal point</A>
+<BR><A HREF="machine_control.html#Delay">Delay</A>
+<BR><A HREF="program.html#Add, copy or delete blocks.">Delete blocks</A>
+<BR><A HREF="data_definitions.html#definition file.">Definition file</A>
+<BR><A HREF="introduction.html#my_machine_tool.def">Definition file</A>
+<BR><A HREF="glossary.html#Definition file">Definition file</A>
+<BR><A HREF="files_preview.html#Definition file">Definition file preview</A>
+<BR><A HREF="help.html#Dialog Sensitive Help">Dialog Sensitive Help</A>
+<BR><A HREF="program.html#Display Combined N/C Code Blocks">Display Combined
+N/C Code Blocks</A>
+<BR><A HREF="machine_tool.html#Display Machine Tool">Display Machine Tool</A>
+<BR><A HREF="program.html#Drag and drop blocks">Drag and drop blocks</A>
+<BR><A HREF="machine_control.html#Revolutions Only">Dwell Revolutions</A>
+<BR><A HREF="machine_control.html#Seconds Only">Dwell Seconds</A>
+<BR><A HREF="data_definitions.html#End of Block">End of Block</A>
+<BR><A HREF="start_sequences.html#Engage Move">Engage Move</A>
+<BR><A HREF="glossary.html#Event">Event</A>
+<BR><A HREF="glossary.html#Event Generator">Event Generator</A>
+<BR><A HREF="glossary.html#Event Handler">Event Handler</A>
+<BR><A HREF="introduction.html#my_machine_tool.tcl">Event Handler</A>
+<BR><A HREF="files_preview.html#Event Handler.">Event Handler preview</A>
+<BR><A HREF="data_definitions.html#Existing Addresses">Existing Addresses</A>
+<BR><A HREF="program.html#Existing Block">Existing Block</A>
+<BR><A HREF="data_definitions.html#expression">Expression</A>
+<BR><A HREF="glossary.html#Extensions">Extensions</A>
+<BR><A HREF="motion.html#face threads">Face threads</A>
+<BR><A HREF="machine_control.html#Feedrate Formats Mill">Feedrate Formats
+(Mill)</A>
+<BR><A HREF="machine_control.html#Feedrate G-codes">Feedrate Mode G-codes
+(Mill)</A>
+<BR><A HREF="machine_control.html#Feedrate Mode G-code">Feedrate Mode G-code</A>
+<BR><A HREF="machine_control.html#Feedrate Mode Table">Feedrate Mode Table</A>
+<BR><A HREF="files_preview.html#Files Preview">Files Preview</A>
+<BR><A HREF="start_sequences.html#First Cut">First Cut</A>
+<BR><A HREF="start_sequences.html#First Cut">First Cut Move</A>
+<BR><A HREF="start_sequences.html#First Move">First Move</A>
+<BR><A HREF="start_sequences.html#First Tool">First Tool</A>
+<BR><A HREF="customization.html#font">Font</A>
+<BR><A HREF="data_definitions.html#Force Output">Force Output</A>
+<BR><A HREF="data_definitions.html#format">Format</A>
+<BR><A HREF="data_definitions.html#Format">Format</A>
+<BR><A HREF="machine_tool.html#Fourth Axis Rotary Center to Fifth Axis Rotary">Fourth
+Axis Rotary Center to Fifth Axis Rotary</A>
+<BR><A HREF="machine_control.html#FRN output mode,">FRN</A>
+<BR><A HREF="start_sequences.html#From Move">From Move</A>
+<BR><A HREF="motion.html#full circle">Full circle</A>
+<BR><A HREF="motion.html#G00 and F0">G00 and F0</A>
+<BR><A HREF="motion.html#G01 and R">G01 and R</A>
+<BR><A HREF="canned_cycles.html#G79 block">G79 block</A>
+<BR><A HREF="canned_cycles.html#G98/G99">G98/G99</A>
+<BR><A HREF="introduction.html#Getting Started">Getting Started</A>
+<BR><A HREF="glossary.html#Global variable">Global variable</A>
+<BR><A HREF="motion.html#GOHOME">GOHOME</A>
+<BR><A HREF="motion.html#GOTO records">GOTO records</A>
+<BR><A HREF="help.html#Help Functions">Help</A>
+<BR><A HREF="machine_tool.html#Home Position">Home Position</A>
+<BR><A HREF="machine_control.html#Inch Metric Modes">Inch Metric Modes</A>
+<BR><A HREF="start_sequences.html#Initial Move">Initial Move</A>
+<BR><A HREF="canned_cycles.html#K word in the canned cycle">K word in the
+canned cycle</A>
+<BR><A HREF="customization.html#labels,">Labels</A>
+<BR><A HREF="machine_tool.html#Lathe Output Method">Lathe Coordinate Output
+Method</A>
+<BR><A HREF="motion.html#Lathe Thread">Lathe Thread</A>
+<BR><A HREF="glossary.html#Leader">Leader</A>
+<BR><A HREF="word_summary.html#Lead Zero">Leading Zero</A>
+<BR><A HREF="machine_control.html#Length Offset Number">Length Offset Register
+(Lathe)</A>
+<BR><A HREF="machine_control.html#Length Offset Number">Length Offset Register
+(Mill)</A>
+<BR><A HREF="machine_tool.html#Linear Axis Travel">Linear Axis Travel</A>
+<BR><A HREF="motion.html#Linear Move">Linear Move</A>
+<BR><A HREF="machine_tool.html#Linear Motion Resolution">Linear Motion
+Resolution</A>
+<BR><A HREF="machine_control.html#Load Tool">Load Tool</A>
+<BR><A HREF="machine_control.html#Machine control parameters">Machine control
+parameters</A>
+<BR>Ma<A HREF="introduction.html#machine type.">chine type</A>
+<BR><A HREF="glossary.html#Marker">Marker</A>
+<BR><A HREF="program.html#markers.">Marker</A>
+<BR><A HREF="customization.html#messages">Messages</A>
+<BR><A HREF="machine_tool.html#Rotary Motion Resolution">Machine Zero to
+Rotary Axis Center</A>
+<BR><A HREF="machine_tool.html#Magnitude Determines Direction">Magnitude
+Determines Direction</A>
+<BR><A HREF="start_sequences.html#Manual Tool Change">Manual Tool Change</A>
+<BR><A HREF="data_definitions.html#maximum and minimum">Maximum and minimum</A>
+<BR><A HREF="motion.html#minimum and maximum radius">Maximum and minimum
+circle radius</A>
+<BR><A HREF="machine_control.html#Maximum and minimum values for the cutter compensation register">Maximum
+and minimum cutter compensation register</A>
+<BR><A HREF="machine_control.html#Maximum and Minimum Feedrates (5 axis)">Maximum
+and minimum Feedrates (5 axis)</A>
+<BR><A HREF="machine_control.html#Maximum and Minimum Feedrates Mill">Maximum
+and minimum Feedrates (Mill</A> )
+<BR><A HREF="machine_control.html#Minimum and maximum Length Offset Register numbers">Maximum
+and minimum Length Offset Register numbers</A>
+<BR><A HREF="machine_control.html#Minimum and maximum tool numbers">Maximum
+and minimum tool numbers (Lathe)</A>
+<BR><A HREF="machine_control.html#Minimum and maximum tool numbers">Maximum
+and minimum tool numbers (Mill)</A>
+<BR><A HREF="machine_tool.html#maximum degrees per minute">Maximum degrees
+per minute</A>
+<BR><A HREF="machine_tool.html#Maximum Rotary Feed Rate">Maximum Rotary
+Feed Rate</A>
+<BR><A HREF="canned_cycles.html#minimum clearance distance">Minimum clearance
+distance</A>
+<BR><A HREF="data_definitions.html#Modality">Modality</A>
+<BR><A HREF="glossary.html#mom_variable">mom variable</A>
+<BR><A HREF="program.html#mom variables">mom variable</A>
+<BR><A HREF="glossary.html#MOM">MOM</A>
+<BR><A HREF="program.html#MOM_command">MOM_command</A>
+<BR><A HREF="motion.html#motion types">Motion types</A>
+<BR><A HREF="program.html#New Block">New Block</A>
+<BR><A HREF="data_definitions.html#No Word Separator">No Word Separator</A>
+<BR><A HREF="data_definitions.html#number of digits">Number of digits</A>
+<BR><A HREF="machine_tool.html#Offset from primary to secondary head">Offset
+from primary to secondary head</A>
+<BR><A HREF="end_sequences.html#Operation End Sequence">Operation End Sequence</A>
+<BR><A HREF="glossary.html#Operation End Sequence">Operation End Sequence</A>
+<BR><A HREF="glossary.html#Operation Start Sequence">Operation Start Sequence</A>
+<BR><A HREF="start_sequences.html#Operation Start Sequence">Operation Start
+Sequence</A>
+<BR><A HREF="program.html#Operator Message">Operator Message</A>
+<BR><A HREF="glossary.html#Operator Message">Operator Message</A>
+<BR><A HREF="data_definitions.html#operator message blocks">Operator Message
+blocks</A>
+<BR><A HREF="data_definitions.html#Message Start / Message End">Operator
+Message End</A>
+<BR><A HREF="data_definitions.html#Message Start / Message End">Operator
+Message Start</A>
+<BR><A HREF="data_definitions.html#optional">opt specifier</A>
+<BR><A HREF="machine_control.html#Opstop">Opstop</A>
+<BR><A HREF="data_definitions.html#optional">Optional</A>
+<BR><A HREF="data_definitions.html#output leading">Output leading zero</A>
+<BR><A HREF="machine_tool.html#Pivot Distance">Pivot Distance</A>
+<BR><A HREF="machine_tool.html#Plane of Rotation">Plane of Rotation</A>
+<BR><A HREF="word_summary.html#Plus (+)">Plus Sign</A>
+<BR><A HREF="glossary.html#Postprocessor">Postprocessor</A>
+<BR><A HREF="introduction.html#text">Postprocessor description</A>
+<BR><A HREF="introduction.html#name">Postprocessor name</A>
+<BR><A HREF="glossary.html#Postprocessor template file">Postprocessor template
+file</A>
+<BR><A HREF="introduction.html#my_machine_tool.pui">Postprocessor User
+Interface File</A>
+<BR><A HREF="glossary.html#Procedure">Procedure</A>
+<BR><A HREF="program.html#Program">Program</A>
+<BR><A HREF="glossary.html#Program End Sequence">Program End Sequence</A>
+<BR><A HREF="end_sequences.html#Program End Sequence">Program End Sequence</A>
+<BR><A HREF="glossary.html#Program Start Sequence">Program Start Sequence</A>
+<BR><A HREF="start_sequences.html#Program Start Sequence">Program Start
+Sequence</A>
+<BR><A HREF="glossary.html#pui file">pui file</A>
+<BR><A HREF="motion.html#quadrant boundaries.">Quadrant boundaries</A>
+<BR><A HREF="canned_cycles.html#R in the canned cycle block.">R in the
+canned cycle block</A>
+<BR><A HREF="canned_cycles.html#rapid clearance plane">Rapid clearance
+plane</A>
+<BR><A HREF="motion.html#Rapid Move">Rapid Move</A>
+<BR><A HREF="canned_cycles.html#Rapid Spindle">Rapid Spindle</A>
+<BR><A HREF="canned_cycles.html#Rapid To">Rapid To</A>
+<BR><A HREF="canned_cycles.html#Rapid Traverse & R">Rapid Traverse &amp;
+R</A>
+<BR><A HREF="canned_cycles.html#RAPTO">RAPTO</A>
+<BR><A HREF="program.html#Reference Block">Reference Block</A>
+<BR><A HREF="canned_cycles.html#Retract To">Retract To</A>
+<BR><A HREF="motion.html#RETRCT">RETRCT</A>
+<BR><A HREF="glossary.html#Review Tool">Review Tool</A>
+<BR><A HREF="machine_tool.html#Rotary Axis Configuration">Rotary Axis Configuration</A>
+<BR><A HREF="machine_tool.html#Axis Direction">Rotary Axis Direction</A>
+<BR><A HREF="machine_tool.html#Rotary Axis Limits">Rotary Axis Limits</A>
+<BR><A HREF="machine_tool.html#Rotary Axis Limit Violation">Rotary Axis
+Limit Violation</A>
+<BR><A HREF="machine_tool.html#Axis Rotation">Rotary Axis Rotation</A>
+<BR><A HREF="machine_tool.html#Address Leader">Rotary Address Leader</A>
+<BR><A HREF="machine_tool.html#Rotary Motion Resolution">Rotary Motion
+Resolution</A>
+<BR><A HREF="canned_cycles.html#RTRCTO">RTRCTO</A>
+<BR><A HREF="canned_cycles.html#RTRCTO,AUTO">RTRCTO,AUTO</A>
+<BR><A HREF="canned_cycles.html#RTRCTO,MANUAL">RTRCTO,MANUAL</A>
+<BR><A HREF="glossary.html#Sequence">Sequence</A>
+<BR><A HREF="machine_control.html#SET/MODE,ABSOL">SET/MODE,ABSOL</A>
+<BR><A HREF="machine_control.html#SET/MODE command for Feedrate Output Mode">SET/MODE
+for Feedrate Output Mode</A>
+<BR><A HREF="machine_control.html#SET/MODE,INCR">SET/MODE,INCR</A>
+<BR><A HREF="data_definitions.html#Sequence Number">Sequence Number</A>
+<BR><A HREF="program.html#sequences.">Sequences</A>
+<BR><A HREF="machine_tool.html#Sign Determines Direction">Sign Determines
+Direction</A>
+<BR><A HREF="data_definitions.html#Special Characters">Special Characters</A>
+<BR><A HREF="machine_control.html#Spindle CSS">Spindle CSS</A>
+<BR><A HREF="machine_control.html#Spindle Direction M Code">Spindle Direction
+M Code</A>
+<BR><A HREF="machine_control.html#G Code for SFM">Spindle G Code for SFM</A>
+<BR><A HREF="machine_control.html#Spindle Off">Spindle Off</A>
+<BR><A HREF="machine_control.html#Range Code with M code">Spindle Range
+Code with M code</A>
+<BR><A HREF="machine_control.html#Separate M Code">Spindle Range M Code</A>
+<BR><A HREF="machine_control.html#Spindle Ranges">Spindle Ranges</A>
+<BR><A HREF="machine_control.html#Spindle RPM">Spindle RPM</A>
+<BR><A HREF="machine_control.html#RPM Pre-start Block">Spindle RPM Pre-start
+Block</A>
+<BR><A HREF="machine_control.html#Spindle User Defined Event">Spindle User
+Defined Event</A>
+<BR><A HREF="start_sequences.html#Start of Operation">Start of Operation</A>
+<BR><A HREF="machine_control.html#Stop">Stop</A>
+<BR><A HREF="data_definitions.html#suppress the plus">Suppress Plus Sign</A>
+<BR><A HREF="glossary.html#Tcl">Tcl</A>
+<BR><A HREF="glossary.html#Tk">Tk</A>
+<BR><A HREF="glossary.html#tcl file">Tcl file</A>
+<BR><A HREF="motion.html#Thread cycle">Thread cycle</A>
+<BR><A HREF="machine_control.html#Tool change M code">Tool Change M code
+(Lathe)</A>
+<BR><A HREF="machine_control.html#tool change M code.">Tool Change M code
+(Mill)</A>
+<BR><A HREF="machine_control.html#Tool Change (Lathe)">Tool Change (Lathe)</A>
+<BR><A HREF="machine_control.html#Tool Change (Mill)">Tool Change (Mill)</A>
+<BR><A HREF="machine_control.html#Tool change retract Z position">Tool
+change retract Z position</A>
+<BR><A HREF="machine_control.html#Tool Code Configure Lathe">Tool Code
+Configure (Lathe</A>)
+<BR><A HREF="machine_control.html#Tool Code Configure">Tool Code Configure
+(Mill)</A>
+<BR><A HREF="machine_control.html#Tool Length G code">Tool Length G code</A>
+<BR><A HREF="machine_control.html#Tool Number">Tool Number (Lathe)</A>
+<BR><A HREF="machine_control.html#Tool Number">Tool Number (Mill)</A>
+<BR><A HREF="machine_control.html#Tool Path Events">Tool Path Events</A>
+<BR><A HREF="machine_tool.html#Tool Tip">Tool Tip</A>
+<BR><A HREF="canned_cycles.html#top of the hole position.">Top of the hole
+position</A>
+<BR><A HREF="data_definitions.html#trailing zeros">Trailing zero</A>
+<BR><A HREF="word_summary.html#Trail Zero">Trailing zero</A>
+<BR><A HREF="machine_tool.html#Traversal Feedrate">Traversal Feedrate</A>
+<BR><A HREF="data_definitions.html#Truncate">Truncate</A> <A HREF="glossary.html#UG/Post Execute">UG
+Post Execute</A>
+<BR><A HREF="motion.html#turn threads">Turn threads</A>
+<BR><A HREF="machine_tool.html#Turret">Turret</A>
+<BR><A HREF="machine_tool.html#Turret Reference">Turret Reference</A>
+<BR><A HREF="glossary.html#UG/POST Builder">UG/Post Builder</A>
+<BR><A HREF="customization.html#ui_pb_resource.tcl">ui_pb_resource.tcl</A>
+<BR><A HREF="customization.html#ui_pb_user_resource.tcl">ui_pb_user_resource.tcl</A>
+<BR><A HREF="introduction.html#Units">Units</A>
+<BR><A HREF="machine_control.html#User Defined Events">User Defined Events</A>
+<BR><A HREF="glossary.html#User Defined Event">User Defined Events</A>
+<BR><A HREF="data_definitions.html#User Defined Expression">User Defined
+Expression</A> <A HREF="glossary.html#Wish">Wish</A>
+<BR><A HREF="data_definitions.html#Warning">Warnings</A>
+<BR><A HREF="glossary.html#Word">Word</A>
+<BR><A HREF="word_summary.html#Leader/Code">Word Components</A>
+<BR><A HREF="word_summary.html#Data Type">Word Data Type</A>
+<BR><A HREF="data_definitions.html#Word Modifiers">Word Modifiers</A>
+<BR><A HREF="data_definitions.html#Word Separator">Word Separator</A>
+<BR><A HREF="motion.html#work plane change">work plane change</A>
+<BR><A HREF="data_definitions.html#zero format">zero format</A>
+
+<P>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P>&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

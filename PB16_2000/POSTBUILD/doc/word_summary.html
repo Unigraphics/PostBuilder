@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H2>
+<A NAME="Address Summary"></A>Address Summary</H2>
+<IMG SRC="imagechj.jpg" HEIGHT=694 WIDTH=907>
+
+<P>This dialog allows you to define the output characteristics of each
+of the words that your postprocessor will output.&nbsp; Note that this
+dialog will modify groups of words that use the same format.&nbsp;&nbsp;
+This dialog allows you modify the format.&nbsp; If you want to specify
+a different format one of the words, you must go to the word address section
+of N/C Data Definitions.&nbsp; The following fields are available:
+
+<P><A NAME="Address"></A><B>Address</B>
+<BR>This field is the name of the word used by the system.&nbsp; This name
+is the same name that you will find in the word address section of the
+N/C Data Definitions section.
+
+<P><A NAME="Leader/Code"></A><B>Leader/Code</B>
+<BR>This field will allow you to modify the leader for any word.&nbsp;
+The leader is the character than precedes the numeric information.&nbsp;
+For instance, if the word is X12.345, then the leader is X.&nbsp; You can
+either type in a new leader or right click on the existing leader and choose
+from the list.
+
+<P><IMG SRC="image7nh.jpg" HEIGHT=201 WIDTH=218>
+
+<P><A NAME="Data Type"></A><B>Data Type</B>
+<BR>The data type can be either numeric or text.&nbsp; Usually all N/C
+code is numeric.&nbsp; You will need to specify text when the code you
+need cannot be formatted from a number directly into a word address and
+a value like most N/C code.&nbsp; One example of this is if you need a
+G84.1 for tapping and G81 (without a decimal) for drilling.&nbsp; In this
+case you have to make the G_motion word a text and change all the G codes
+to G81 instead of 81 and a leader of G.&nbsp; You can also go to the format
+dialog in N/C Data Definitions to change only the G_motion word to text.
+
+<P><A NAME="Plus (+)"></A><B>Plus (+)</B>
+<BR>This option will allow you to get a plus sign for all positive numbers.&nbsp;
+If you set this option to no you will get an X1.0.&nbsp; If you set this
+to yes, you will get an X+1.0.&nbsp; You will always get a minus sign for
+all numeric data if the specified number is negative.
+
+<P><A NAME="Lead Zero"></A><B>Lead Zero</B>
+<BR>The option will allow you to define whether you will output leading
+zeroes with your N/C Code.
+
+<P><A NAME="Integer"></A><B>Integer</B>
+<BR>This option will control how many digits are output to the left of
+the decimal point.&nbsp; You will get an error if your numeric data exceeds
+the format you have specified.
+
+<P><A NAME="Decimal (.)"></A><B>Decimal (.)</B>
+<BR>This option will control whether or not the numeric data has a decimal
+point.&nbsp; You will get an error if you suppress the decimal point and
+do not output at least leading or trailing zeroes.
+
+<P><A NAME="Fraction"></A><B>Fraction</B>
+<BR>This option determines how many digits will be output to right of the
+decimal point.
+
+<P><A NAME="Trail Zero"></A><B>Trail Zero</B>
+<BR>The option will allow you to define whether you will output trailing
+zeroes with your N/C Code.
+<BR>&nbsp;
+
+<P>Post Builder will automatically output a zero format that is compatible
+with the options you have chosen.&nbsp; If you suppressed the decimal point,
+your format for outputting zero will be M0.&nbsp; If you are outputting
+the decimal point, your zero format will be X0.0.&nbsp; If you want to
+change how your postprocessor will output a value of zero for your coordinate
+data, see the <A HREF="data_definitions.html#zero format">zero option </A>for
+formats in the N/C Data Definitions section.
+</BODY>
+</HTML>

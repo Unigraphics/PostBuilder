@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>Post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+<A NAME="Getting Started"></A><B>Getting Started</B></H1>
+UG/Post Builder creates and edits postprocessors.&nbsp; These posts have
+three elements.&nbsp; They are each identified by the base name and one
+of three extensions.&nbsp; Assuming your postprocessor name is my_machine_tool.&nbsp;
+These files would then be:
+
+<P><A NAME="my_machine_tool.def"></A>my_machine_tool.def&nbsp; -- This
+file defines all the static information for the post.&nbsp; This includes
+formats, address and NC blocks.&nbsp; The format of this file is a special
+syntax created by UG.&nbsp; This file is used by UG/Post to postprocess
+the tool path and generate NC code.
+
+<P><A NAME="my_machine_tool.tcl"></A>my_machine_tool.tcl -- This file determines
+the blocks that need to be output from events that are generating by UG
+Post.&nbsp; This file uses the Tcl language and is completely created by
+Post Builder every time you save your post.&nbsp; UG/Post also uses this
+file at run time to generate NC code.
+
+<P><A NAME="my_machine_tool.pui"></A>my_machine_tool.pui&nbsp; -- This
+file is used by post builder only and not by UG/Post.&nbsp; This file contains
+static information on how to write out the .tcl file.&nbsp; Although UG/Post
+does not need this file, it must be present in the same directory as the
+.tcl and .def files in order to edit your post.
+
+<P>By default UG/Post Builder will create your post in the directory that
+you started UG/Post Builder.&nbsp; Use the Save As option in the file dialog
+to save your post in the directory of your choice.&nbsp; In order to use
+your postprocessor in Unigraphics you must add an entry to your template_post.dat
+file in your current postprocessor directory.
+
+<P>
+<HR WIDTH="100%">
+<H1>
+<A NAME="Creating a New"></A>Creating a New Post</H1>
+&nbsp;<IMG SRC="images14.jpg" HEIGHT=134 WIDTH=1008>
+
+<P>Either select the new file icon or select new in the file dialog.&nbsp;
+You then will need to make several initial choices from the Create New
+Postprocessor dialog.
+
+<P><IMG SRC="imageatc.jpg" HEIGHT=580 WIDTH=623>
+<BR>&nbsp;
+
+<P>At this point you must select the&nbsp;<A NAME="name"></A>name of your
+postprocessor or use the default name.
+
+<P>You can optionally enter a&nbsp;<A NAME="text"></A>text description
+of your postprocessor.
+
+<P>You can specify whether the output will be&nbsp;<A NAME="Units"></A>inches
+or millimeters.&nbsp; If you select inch, all coordinate output and formats
+will be inches.&nbsp; If you specify metric, all coordinate output will
+be in millimeters.&nbsp; All of the default parameters such as tolerances,
+minimums and maximums will be based upon the output units.
+
+<P>You must select a&nbsp;<A NAME="machine type."></A>machine type.&nbsp;
+Once this option is selected you may not change it again for this postprocessor.&nbsp;
+The choices are:
+<BR>&nbsp;
+<BLOCKQUOTE><B>&middot;&nbsp;<A NAME="Mill"></A>Mill</B>
+
+<P>This option defines your machine as a mill type.&nbsp; This means you
+have three linear axis (Cartesian X, Y and Z) and up to two rotary axis.&nbsp;
+This option has additional choices to define the axes are to be used.
+
+<P><IMG SRC="image6bb.jpg" HEIGHT=580 WIDTH=623>
+<UL>
+<LI>
+<B>&nbsp;<A NAME="Lathe"></A>Lathe</B></LI>
+
+<BR>This option defines your machine to a lathe type.&nbsp; Typically lathes
+have two linear axes (Cartesian X and Z).&nbsp; The chuck rotates and the
+tool is in a turret that moves in the X and Z-axis.</UL>
+You must now select a basic controller type.&nbsp; At present only generic
+is available.&nbsp; The basic default options are set to a Fanuc 6M.</BLOCKQUOTE>
+
+</BODY>
+</HTML>

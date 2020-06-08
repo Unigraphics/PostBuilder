@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+<A NAME="Program and Tool Path"></A>Program and Tool Path</H1>
+<IMG SRC="imageg9i.jpg" HEIGHT=118 WIDTH=1006>
+
+<P>The <B>Program and Tool Path</B> tab has options that allows you to
+determine the NC output for specific events and commands that are generated
+by the Unigraphics Event Generator.&nbsp; The tabs under this option control
+the content, format and order of output for your NC Code.
+<H2>
+<A NAME="Program"></A>Program</H2>
+Post Builder breaks down your NC program into five distinct<A NAME="sequences."></A>
+sequences.&nbsp; Each one of the sequences allows the user to control the
+exact output that is needed for that sequence.&nbsp; Some functions,&nbsp;
+such as the rewind stop code and program end, are needed only at the start
+and end of NC programs.&nbsp; There are also functions,&nbsp; tool change
+sequences, starting and turning off the spindle, turning the coolant on
+and off and applying tool offsets, are needed only at the start and end
+of operations.&nbsp; You can also control the output from the remaining
+tool path events such as linear motion, circular motion, etc. by the use
+of the tool path sequence.
+
+<P>In each sequence dialog there are&nbsp;<A NAME="markers."></A>markers.&nbsp;
+These are the yellow boxes located in the left column of the screen.&nbsp;
+The markers represent events that occur in the tool path.&nbsp; When events
+occur in the tool path while post processing, you can then determine the
+NC blocks that are to be output.&nbsp; The markers are fixed and cannot
+be changed.&nbsp;&nbsp; The plus or minus sign to the left of the yellow
+marker can be toggled to display the blocks attached it.
+
+<P>The information in the sequences can be displayed in two different modes,
+combined mode and uncombined mode.
+
+<P><IMG SRC="imaged4o.jpg" HEIGHT=333 WIDTH=648>
+
+<P>The&nbsp;<A NAME="Display Combined N/C Code Blocks"></A><B>Display Combined
+N/C Code Blocks</B> is toggled off.&nbsp; In this mode the information
+is displayed in the uncombined mode.
+
+<P><IMG SRC="imager0n.jpg" HEIGHT=167 WIDTH=572>
+
+<P>The <B>Display Combined N/C Code Blocks</B> is toggled on.&nbsp; In
+this mode the blocks are displayed as they will be output in the combined
+mode.&nbsp; You can use this mode to get an idea of the combining of the
+blocks will be done.
+
+<P>Each of the sequence dialogs have the same basic options.&nbsp; In a
+sequence dialog you can&nbsp;<A NAME="Add, copy or delete blocks."></A>add,
+copy or delete blocks.&nbsp;&nbsp; To add a block, you need to first select
+the block you wish to add to a particular marker.&nbsp; You can do this
+from this block selection pull down dialog.
+
+<P>Once you have selected the block you wish to add, depress and hold the
+left mouse button on the&nbsp;<A NAME="Add Block"></A><B>Add Block</B>
+button and drag the block to the desired marker.&nbsp;<A NAME="Drag and drop blocks"></A>You
+now have the option now of placing your new block before, with or after
+any existing block that is already being output with that marker.&nbsp;
+Continue to hold down the mouse button until the existing block is highlighted.&nbsp;
+The highlight will appear either above, below or completely around the
+existing block.&nbsp; To place the new block before an existing block release
+the mouse when the highlight appears above the existing block.&nbsp; To
+place the new block after an existing block release the mouse when the
+highlight appears below the existing block.&nbsp;&nbsp; To place the new
+block with an existing block release the mouse when the highlight appears
+around the existing block.&nbsp; If there are no existing blocks being
+output with the desired marker, then drag the new block until the highlight
+appears to the right of the marker and the release the mouse button.
+<BR>&nbsp;
+
+<P><IMG SRC="imageh2o.jpg" HEIGHT=185 WIDTH=672>
+
+<P><IMG SRC="image2om.jpg" HEIGHT=106 WIDTH=638>
+
+<P>With the entire existing block highlighted, the new block is placed
+on the same line as the existing block.
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><IMG SRC="imageov4.jpg" HEIGHT=182 WIDTH=689>
+
+<P><IMG SRC="imageer6.jpg" HEIGHT=149 WIDTH=463>
+
+<P>With the highlight appearing above the existing block, the new block
+will be listed on a line above the existing block.
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><IMG SRC="image52g.jpg" HEIGHT=179 WIDTH=672>
+
+<P><IMG SRC="imagetm9.jpg" HEIGHT=149 WIDTH=463>
+
+<P>With the highlight appearing below the existing block, the new block
+will be listed on a line below the existing block.
+
+<P>To remove an existing block from a marker, you can either right click
+on the block and select <B>delete</B> or drag the block to trash can.
+
+<P>You can also copy a block or blocks and paste them with another marker
+in the same sequence.&nbsp; This is very useful, for instance, to make
+the first and auto tool change events both output the same code.&nbsp;
+To copy a single block, right click the right mouse button and select&nbsp;<A NAME="Copy As."></A><B>Copy
+As</B>.&nbsp; You now can make a copy of the blocks using the&nbsp;<A NAME="Reference Block"></A><B>Reference
+Block</B> option or use the <B>New Block</B> option to create completely
+new blocks.&nbsp; The <B>New Block</B> option will allow you to edit the
+new blocks without changing the original blocks.&nbsp; The <B>Reference
+Block</B> option means that only one copy of the blocks exists and any
+changes will apply to both.&nbsp; You can place the block using the same
+techniques as the <B>Add Block</B> option.&nbsp; You can also copy all
+the blocks associated with a marker by right clicking on the marker itself.&nbsp;
+Now you can place all the blocks with another marker.
+
+<P><A NAME="New Block"></A><B>New Block</B>
+<BR>This option allows you to create a new block by adding word addresses
+and text.&nbsp; Refer to the chapter on <A HREF="#Creating a New Block">Creating
+a New Block</A> for a detailed description.
+
+<P><IMG SRC="image8il.jpg" HEIGHT=752 WIDTH=1008>
+
+<P><A NAME="Operator Message"></A><B>Operator Message</B>
+<BR>This option allows you to create a block that will be specifically
+created to output an operator message.&nbsp; A dialog will be presented
+to allow you to enter the message text.&nbsp; The system will automatically
+place the message start string and the message end&nbsp; string before
+and after your text.&nbsp; Your text can contain any valid&nbsp;<A NAME="mom variables"></A>mom
+variable as well as text.&nbsp;&nbsp; In the following example the variable
+$mom_tool_number will be replaced by the current tool number when the post
+processor is used.&nbsp; Note you must make sure that the variable exists
+and is defined at the time of operation or a run-time error will occur.&nbsp;
+See the online UG/Post documentation for a complete list of variables that
+may be used.
+
+<P><IMG SRC="image799.jpg" BORDER=0 HEIGHT=120 WIDTH=326>
+
+<P>See the section on <A HREF="data_definitions.html#Message Start / Message End">Operator
+Message</A> for information for defining the message start and end characters.
+
+<P><A NAME="MOM_command"></A><B>MOM_command</B>
+<BR>You can select from the list of blocks, blocks that were created to
+perform specific functions.&nbsp; For example, MOM_set_seq_off, will turn
+off all sequence number output.&nbsp; These blocks can be placed within
+any sequence to perform their pre-defined function.&nbsp; For a complete
+list of MOM_commands that can be used, see the online UG/Post documentation.
+
+<P><A NAME="Custom Command"></A><B>Custom Command</B>
+<BR>This option allows you to insert your own TCL procedure into your post
+processor.&nbsp; After you have placed the block with the marker, a dialog
+will appear to allow you to enter you custom TCL procedure.&nbsp; See the
+section on <A HREF="custom_command.html">Custom Commands</A> for more details.
+
+<P><A NAME="Existing Block"></A><B>Existing Block</B>
+<BR>You can use a block that already exists.&nbsp; This could be a block
+that was default with the system or is being output with another marker
+or event.&nbsp; All the blocks in your current post can be selected.
+<BR>&nbsp;
+</BODY>
+</HTML>

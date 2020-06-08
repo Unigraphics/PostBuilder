@@ -1,0 +1,200 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>glossary</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+Glossary of Terms</H1>
+The following list of terms are common to postprocessing, UG/POST and the
+UG/POST Builder.
+
+<P><A NAME="Address"></A><B>Address</B> -- In NC output, this tells the
+NC controller where to store the contents of a value and what that value
+represents. Examples: <I>X1.234, G01, M05, S1445.&nbsp; </I>The terminology
+of Address, Word Address and Word all refer to the same element.&nbsp;
+The are used interchangably in UG/POST Builder.&nbsp;&nbsp;
+
+<P><A NAME="Block"></A><B>Block</B> -- A line of output sent to the NC
+controller.&nbsp; Each block consists of words that may be separated by
+a separator and terminated by an end-of-line.&nbsp; Example:&nbsp; <I>N0100
+G01 X.1.234 Y1.234 Z1.234 F100. S1500 M03.</I>
+
+<P><A NAME="Custom Command"></A><B>Custom Command</B> -- In UG/POST Builder,
+this allows you to create a custom procedure referred to as a PROC, consisting
+of custom Tcl code.&nbsp; These can then be added to the existents events
+and sequences by the UG/POST Builder.&nbsp; These custom commands <I>add
+functions </I>which cannot be added by the UG/POST Builder.
+
+<P><A NAME="Definition file"></A><B>Definition file</B> -- This file, with
+the file extension .def, describes the static characteristics of the blocks
+and their available list of addresses and formats for a specific machine/tool
+controller.&nbsp; Also referred to as the <I>def </I>file and has a corresponding
+Tcl and pui file for each postprocessor.
+
+<P><A NAME="Event"></A><B>Event</B> -- This is sent to the postprocessor
+by the Event Generator.&nbsp; When you postprocess, a series of Events
+is sent, and with each Event, numerous variables are defined.&nbsp; An
+<I>Event </I>is therefore a collection of data which is processed by UG/POST,
+creating data which causes a specific action(s) by the machine tool/controller.
+
+<P><A NAME="Event Generator"></A><B>Event Generator </B>-- The mechansim
+in UG/CAM that extracts the tool path information from UG and passes it
+to UG/POST as Events and variables.&nbsp; The Event Generator is started
+when you select <I>OK </I>or <I>Aplly </I>from a selection of a program
+and a postprocessor in the interactive CAM session.
+
+<P><A NAME="Event Handler"></A><B>Event Handler </B>-- A file containing
+Tcl code which are procedures that determine what is to be done with each
+Event.&nbsp; each procedure will determine if output is to be generated
+and if so, what blocks will be output.&nbsp; Unigraphics extends the Tcl
+scripting language to allow you to easily construct output blocks based
+on the Definition file.&nbsp; These extensions are available from within
+an Event Handler.&nbsp; The Event Handler can also process the variables
+which are loaded by the Event Generator before outputting a block.&nbsp;
+Examaple: <I>my_post.tcl</I>
+
+<P><A NAME="Extensions"></A><B>Extensions -- </B>Unigraphics extends the
+Tcl scripting language by adding several commands for postprocessing.&nbsp;
+This makes the task of outputting easier and reduce the amount of Tcl code
+required.&nbsp; These all begin with the prefix <I>MOM_.&nbsp; </I>Example:
+<I>MOM_do_template.</I>
+
+<P><A NAME="Global variable"></A><B>Global variable </B>-- These are variables
+that are available to all procedures in the Event Handler.&nbsp; They are
+also available to block templates in the Definition file.&nbsp; If you
+need to add a variable that <I>different </I>procedures will access, then
+you must declare the variable as <I>global.</I>
+
+<P><A NAME="Leader"></A><B>Leader </B>-- In the Definition file, this is
+the character(s) used to represent the address.&nbsp; In UG/POST, the default
+leader is the address.&nbsp; Examples: <I>X,G.</I>&nbsp; In the NC output,
+the leader can be blanks or other characters output before the start of
+program.&nbsp; In this context, leader was originally used for threading
+paper tape readers.
+
+<P><A NAME="Marker"></A><B>Marker </B>-- Within a UG/POST Builder sequence,
+markers indicate the possible Events that may occur.&nbsp; Each marker/event
+may include several blocks of information.&nbsp; Example: <I>Start_of_Path.&nbsp;
+</I>Within the Events in machine control, there are several markers that
+allow the CAM user to control the order in which some of the output will
+be generated.&nbsp; For example, output an operator message with the Start
+of Program marker.
+
+<P><A NAME="mom_variable"></A><B>mom_variable </B>-- The variables which
+are set by the Event Genarator as each Event is generated.&nbsp; They are
+always global variables.&nbsp; Example: <I>mom_feed_rate.</I>
+
+<P><A NAME="MOM"></A><B>MOM </B>-- An acronym for the Unigraphics <B>M</B>anufacturing
+<B>O</B>utput <B>M</B>anager. This is the basic functionality in Unigraphics
+CAM that also is used to generate shop documentation, output the CLS, UG
+library access and UG Post.&nbsp; Lower case mom is used for variables,
+for eample <I>mom_feed_rate.&nbsp; </I>Upper case MOM refers to either
+Event Handler names, for example <I>MOM_linear_move</I> or Extensions,
+for example <I>MOM_do_template</I>.
+
+<P><A NAME="Operation End Sequence"></A><B>Operation End Sequence </B>--
+In an NC program contains the Events and actions that will occur from the
+final retract motion to the end of the Operation.
+
+<P><A NAME="Operation Start Sequence"></A><B>Operation Start Sequence </B>--
+In an NC program contains the Events and actions that will occur from the
+start of an Operation to the first cut motion.
+
+<P><A NAME="Operator Message"></A><B>Operator Message</B> -- This a message
+contain within NC code that sends instructions to the console of a machine
+tool.&nbsp; This usually requires special codes in the NC code such as
+"(" or "(.msg" to differentiate between the message and machine/control
+information.&nbsp; Example:&nbsp; <I>N0010 (*** Tool number 12 ***).</I>
+
+<P><A NAME="Postprocessor"></A><B>Postprocessor</B> -- Commonly referred
+to as the "post", this is the mechanism that converts the tool path information
+from a CAM system's tool path format to a format for a specific machine/tool
+controller.&nbsp; In UG/POST, this includes an Event Handler file (.tcl),
+a Definition file (.def) and a Post Builder User Interface file (.pui).&nbsp;
+The use of these files with each post is determined by the postprocessor
+template file.
+
+<P><A NAME="Postprocessor template file"></A><B>Postprocessor template
+file </B>-- This file contains the list of postprocessors available to
+the user user in a CAM session.&nbsp; This file is selected as part of
+the CAM configuaration (TEMPLATE_POST) or by a library machine tool.&nbsp;
+Example: <I>template_post.dat.</I>
+
+<P><A NAME="Procedure"></A><B>Procedure </B>-- Also referred to as <I>proc,
+</I>this is a part of a Tcl program that is analogous to a subroutine.&nbsp;
+For every Event that the post needs to react to, there is a procedure in
+the Event Handler file.&nbsp; Example:&nbsp; <I>MOM_start_of_parogram.</I>
+
+<P><A NAME="Program End Sequence"></A><B>Program End Sequence </B>-- In
+an NC program contains the Events and actions that will occur from the
+end of the last Operation to the end of the Program.
+
+<P><A NAME="Program Start Sequence"></A><B>Program Start Sequence </B>--
+In an NC program contains the Events and actions that will occur from the
+start of the program to the start of the first Operation.
+
+<P><A NAME="pui file"></A><B>pui file</B> -- This is used by UG/POST Builder
+to define a postprocessor.&nbsp; This file, along with the .tcl and .def
+files, makes a complete post.&nbsp; The .pui file is not required to actually
+postprocess, but is required for you to edit existing postprocessors.&nbsp;
+Example: <I>my_post.pui.</I>
+
+<P><A NAME="Review Tool"></A><B>Review Tool </B>-- After postprocessing,
+the Review Tool will display a window of three columns showing all the
+Events, variables and output blocks that were processed.&nbsp; For example,
+you can select an Event, see what variables are set and what blocks are
+used for output.
+
+<P><A NAME="Sequence"></A><B>Sequence -- </B>In the UG/POST Builder, this
+is a series of markers at common areas in a program.&nbsp; They are used
+to group several Events and blocks for output in a specific sequence.&nbsp;
+Example: <I>Operation Start Sequence.</I>
+
+<P><A NAME="Tcl"></A><B>Tcl</B> -- Tcl (pronounced tee-cee-el), which stands
+for Tool Command Language, is a scripting language that has become popular
+because of its ease of use.&nbsp; Tcl has another component, Tk, a user
+interface tool.&nbsp; WISH, a windows shell also contains Tk.
+
+<P><A NAME="Tk"></A><B>Tk -- </B>Tk is a user interface tool that may be
+used in conjunction with Tcl.&nbsp; Tk provides basic user interface tools
+such as buttons, check boxes and scroll bars.
+
+<P><A NAME="tcl file"></A><B>tcl file</B> -- see Event Handler.
+
+<P><A NAME="UG/Post Execute"></A><B>UG/Post Execute -- </B>Unigraphics
+provides a postprocessor, UG/POST, which utilizes Unigraphics tool path
+data as input and outputs machine controller readable NC code.&nbsp; UG/POST
+is customization through the use of user created Event handler and Definition
+files.&nbsp; These files, in conjunction with UG/POST, are used to generate
+output for the simplest to the most complex of machine tool/controller
+combinations.
+
+<P><A NAME="UG/POST Builder"></A><B>UG/POST Builder -- </B>Provides an
+easy to use interface for creating and modifying postprocessors.&nbsp;
+drag and drop functions allows for the creation of formats, words, blocks
+and sequences.&nbsp; The Post Builder allows the deinition of output blocks,
+formats for addresses and controls the sequence of output for the start
+and end of operations, the start and end of program, tool changes and canned
+cycles.
+
+<P><A NAME="User Defined Event"></A><B>User Defined Event -- </B>Also referred
+to as UDE, this is an Event that can be changed by the user.&nbsp; UDE's
+are used in machine control and as the <I>start post</I> and <I>end post</I>
+commands.&nbsp; UDE's can be attached to any CAM object such as a Tool
+or Program.&nbsp; Several of the basic UDE are included with CAM and users
+may modify them or add their own.
+
+<P><A NAME="Wish"></A><B>Wish -- </B>WISH is an ancronym for windows shell
+that includes both Tcl and Tk.&nbsp; Wish is an intrepeter and executes
+Tcl and Tk commands.&nbsp; It is required in order to use the <I>UG/POST
+Review Tool</I>.&nbsp; It is installed as <I>ugwish.exe</I> and is located
+in the <I>mach/auxiliary</I> directory.
+
+<P><A NAME="Word"></A><B>Word</B> -- See Address
+<BR>&nbsp;
+</BODY>
+</HTML>

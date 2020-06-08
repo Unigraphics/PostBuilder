@@ -1,0 +1,36 @@
+/* XPM */
+static char * f_arrow_xpm[] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"45 25 5 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".	s iconColor1	m black	c black",
+"X	s iconColor6	m white	c yellow",
+"o	s bottomShadowColor	m black	c #636363636363",
+"O	s iconGray6	m black	c #636363636363",
+/* pixels */
+"                                             ",
+"                                .            ",
+"                                ..           ",
+"                                .X.          ",
+"                                .XX.         ",
+"                                .XXX.        ",
+"                                .XXXX.       ",
+"                                .XXXXX.      ",
+" o...............................XXXXXX.     ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.    ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.   ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.  ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX. ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.O ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.OO ",
+" oXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.OO  ",
+" ................................XXXXXX.OO   ",
+"  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.XXXXX.OO    ",
+"                                .XXXX.OO     ",
+"                                .XXX.OO      ",
+"                                .XX.OO       ",
+"                                .X.OO        ",
+"                                ..OO         ",
+"                                .OO          ",
+"                                             "};

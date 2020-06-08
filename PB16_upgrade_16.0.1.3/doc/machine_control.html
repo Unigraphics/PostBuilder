@@ -1,0 +1,513 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="R.L. Marks">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>post Builder</TITLE>
+</HEAD>
+<BODY>
+
+<H3>
+<A NAME="Tool Path Events"></A>Tool Path Events</H3>
+
+<H4>
+<A NAME="Machine Control"></A>Machine Control</H4>
+These events are generally the type of events that control the machine
+tool devices such as, coolant, spindles, tailstocks or clamps.&nbsp; The
+machine control events can also be used to change modes such as incremental,
+absolute, inverse time, per minute, per revolution or constant surface
+speed.&nbsp; The following machine control events define the output for
+that event and establish some of the parameters used by your post processor
+to output the correct NC code.
+
+<P>The system can pass&nbsp;<A NAME="Machine control parameters"></A>machine
+control information to your postprocessor in two ways.&nbsp; One method
+is parameter data.&nbsp; This means that information that is specified
+as an operation parameter is available at the start of operation.&nbsp;
+This includes any feeds and speeds data, any data specified with the tool
+or any cutting parameters such as stepover, tolerances, etc.&nbsp; The
+other way that machine control information can be passed to the postprocessor
+is by way of&nbsp;<A NAME="User Defined Events"></A>User Defined Events
+(also called post commands).&nbsp; UDEs specified as Start Post come out
+after the Start of Operation in the order specified by the Operation Markers.&nbsp;
+UDEs attached with the tool, machine tool, method, carrier or any other
+devices are output before the Start of Operation event.&nbsp; Because of
+the way the machine control information is passed the recommended method
+of outputting the start of operation NC code is to collect all of the data
+(spindle speed, spindle direction, coolant status, length compensation,
+tool number) and output as part of the Operation Start Sequence.
+
+<P>For legacy operations with UDEs being used to specify all of the machine
+control information, the user has a choice of outputting in the traditional
+way where each UDE generated the necessary code or saving all of the UDE
+information and outputting using the recommended method.
+<BR>&nbsp;
+<BR><IMG SRC="image22k.jpg" HEIGHT=752 WIDTH=1008>
+
+<P><IMG SRC="imagelul.jpg" HEIGHT=752 WIDTH=1008>
+<BR>&nbsp;
+<BLOCKQUOTE>
+<H4>
+<A NAME="Tool Change (Mill)"></A>Tool Change (Mill)</H4>
+<IMG SRC="image6vp.jpg" HEIGHT=727 WIDTH=808>
+
+<P>When Tool Change event is selected, the above dialog will be displayed.&nbsp;
+You can now define the blocks and parameters for the Tool Change function.&nbsp;
+The tool change function is not an event.&nbsp; The blocks and parameters
+defined here are used in other sequences.
+
+<P>You can modify the blocks to be output by adding, editing or deleting
+words to the template.&nbsp; See the description of <A HREF="#Creating a New Block">creating
+a block</A> for details on editing the blocks.&nbsp; The Tool Change event
+blocks are used in the Automatic Tool Change event of the Start of Operation
+sequence.&nbsp; Any changes made here will affect the blocks being used
+in the Start of Operation sequence or any other sequence.&nbsp; Any blocks
+created in any event dialog may be used by any sequence or custom command.
+
+<P>Note the yellow highlight of the T code word.&nbsp; This tells you what
+the pre-defined context of that word.&nbsp; In this case it is the tool
+pre-select word for the next tool.
+
+<P>You can change the tool change M code in this dialog.&nbsp; If you change
+the M code here, it will also be changed in every block that references
+the&nbsp;<A NAME="tool change M code."></A>Tool change M code.
+
+<P>You can define the&nbsp;<A NAME="Minimum and maximum tool numbers"></A>minimum
+and maximum tool numbers that can be used by this machine tool.&nbsp; You
+can assign a time to be added to the total machining time for each tool
+change.
+
+<P>You can specify a&nbsp;<A NAME="Tool change retract Z position"></A>Z
+position that the tool change will cause the tool to rectract to.&nbsp;
+This Z position is used in subsequent work plane change logic.&nbsp; This
+is useful if your M06 command causes the machine tool to retract.&nbsp;
+This way the postprocessor knows where the tool actually is.
+
+<P><IMG SRC="imagep0c.jpg" HEIGHT=435 WIDTH=489>
+
+<P>If you select the&nbsp;<A NAME="Tool Code Configure"></A>Tool Code Configure
+button, you will be able to specify how the&nbsp;<A NAME="Tool Number"></A>Tool
+Number and&nbsp;<A NAME="Length Offset Number"></A>Length Offset Number
+will be formatted.&nbsp; Notice that the current format is displayed in
+the upper portion of the dialog.&nbsp; The following formats and the corresponding
+options are available:
+<BR>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 >
+<TR>
+<TD>T01</TD>
+
+<TD></TD>
+
+<TD>Tool Number Only</TD>
+</TR>
+
+<TR>
+<TD>T0102</TD>
+
+<TD></TD>
+
+<TD>Tool Number and Length Offset Number</TD>
+</TR>
+
+<TR>
+<TD>T0201</TD>
+
+<TD>&nbsp;</TD>
+
+<TD>Length Offset Number and Tool Number</TD>
+</TR>
+</TABLE>
+&nbsp;
+<BR>&nbsp;
+<H4>
+<A NAME="Tool Change (Lathe)"></A>Tool Change (Lathe)</H4>
+<IMG SRC="imagel3k.jpg" HEIGHT=727 WIDTH=808>
+
+<P>The tool change for mill and lathe behave the same except for the default
+blocks.&nbsp; There are also some differences in the parameters.
+
+<P>You can modify the blocks to be output by adding, editing or deleting
+words to the template.&nbsp; See the description of <A HREF="#Creating a New Block">creating
+a block</A> for details on editing the blocks.&nbsp; The Tool Change event
+blocks are used in the Automatic Tool Change event of the Start of Operation
+sequence.&nbsp; Any changes made here will affect the blocks being used
+in the Start of Operation sequence or any other sequence.&nbsp; Any blocks
+created in any event dialog may be used by any sequence or custom command.
+
+<P>Note the yellow highlight of the M21 word.&nbsp; This will output an
+M21 for the Primary Turret and an M22 for the Secondary Turret.&nbsp; You
+can change the M code numbers for the Primary and Secondary Turrets or
+remove the block entirely by deleting the word from the dialog.
+
+<P>You can change the&nbsp;<A NAME="Tool change M code"></A>tool change
+M code in this dialog.&nbsp; If you change the M code here, it will also
+be changed in every block that references the tool change M code.
+
+<P>You can define the&nbsp;<A NAME="Minimum and maximum tool numbers"></A>minimum
+and maximum tool numbers that can be used by this machine tool.&nbsp; You
+can assign a time to be added to the total machining time for each tool
+change.
+
+<P>You can specify what the turret index will be for each turret and and
+then specify how it will be used in the tool code.
+
+<P><IMG SRC="imagebt5.jpg" HEIGHT=491 WIDTH=560>
+<BR>&nbsp;
+
+<P>If you select the&nbsp;<A NAME="Tool Code Configure Lathe"></A>Tool
+Code Configure button, you will be able to specify how the&nbsp;<A NAME="Tool Number"></A>Tool
+Number and&nbsp;<A NAME="Length Offset Number"></A>Length Offset Number
+will be formatted.&nbsp; Notice that the current format is displayed in
+the upper portion of the dialog.&nbsp; The following formats and the corresponding
+options are available:
+<BR>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 >
+<TR>
+<TD>T01</TD>
+
+<TD></TD>
+
+<TD>Tool Number Only</TD>
+</TR>
+
+<TR>
+<TD>T0102</TD>
+
+<TD></TD>
+
+<TD>Tool Number and Length Offset Number</TD>
+</TR>
+
+<TR>
+<TD>T11</TD>
+
+<TD>&nbsp;</TD>
+
+<TD>Turret Index and Tool Number</TD>
+</TR>
+
+<TR>
+<TD>T1102</TD>
+
+<TD></TD>
+
+<TD>Turret Index, Tool Number and Length Offset Number</TD>
+</TR>
+</TABLE>
+&nbsp;
+<H4>
+Length Compensation</H4>
+<IMG SRC="imagepoj.jpg" HEIGHT=727 WIDTH=808>
+
+<P>This dialog allows you to specify the words in the Length Compensation
+blocks and the parameters.&nbsp; These block(s) will be output when the
+User Defined Event SET/ADJUST,n is specified.&nbsp; These blocks can also
+be used to output Length Compensation as part of the Start of Operation
+Sequence.
+
+<P>You can specify the&nbsp;<A NAME="Tool Length G code"></A>G code number
+that will be output with the Length Compensation code.&nbsp; For mill only
+a G43 will be in the default block.&nbsp; However, you can configure the
+Length Compsensation blocks as your machine tool requires it.
+
+<P>You can specify the&nbsp;<A NAME="Minimum and maximum Length Offset Register numbers"></A>minimum
+and maximum Length Offset Register numbers in this dialog.
+
+<P>You can use the configure option to configure how your T and H codes
+will be output.&nbsp; See the <A HREF="#Tool Code Configuration Dialog">Tool
+Configuration dialog</A> for details.
+<H4>
+<A NAME="Set Modes"></A>Set Modes</H4>
+This dialog allows you to define the G codes for incremental and absolute
+output modes.&nbsp; The default setting will output a G90 when the User
+Defined Event&nbsp;<A NAME="SET/MODE,ABSOL"></A>SET/MODE,ABSOL is programmed
+and a G91 when the User defined Event&nbsp;<A NAME="SET/MODE,INCR"></A>SET/MODE,INCR
+is programmed.&nbsp; If you do not specify any output in this dialog and
+instead include the G90/G91 word in the motion blocks, you will get the
+G90/G91 code out with motion.
+<H4>
+<A NAME="Spindle RPM"></A>Spindle RPM</H4>
+<IMG SRC="imageb4s.jpg" HEIGHT=727 WIDTH=808>
+
+<P>This dialog allows you to define the NC code needed to start the spindle
+in RPM mode.&nbsp; If this is a lathe postprocessor then the default event
+will have a G97 word in it.&nbsp;<A NAME="Spindle Direction M Code"></A>You
+can define the M code needed to turn on the spindle direction either clockwise
+(CW) or counterclockwise (CCW).&nbsp;&nbsp; You can also set the&nbsp;<A NAME="Maximum and minimum spindle RPM"></A>maximum
+and minimum spindle RPM in this dialog.
+
+<P>If there is a&nbsp;<A NAME="Spindle User Defined Event"></A>User Defined
+Event to turn on the spindle, then the blocks defined in this dialog will
+be output.&nbsp; However, most users will use the feeds and speeds functionality
+in the system to specify the spindle speed.&nbsp;&nbsp; In this case, there
+will be no event, only data made available to the postprocessor at the
+Start of Operation.&nbsp; The recommended method of output is then to include
+the spindle start information in the Operation Start Sequence with the
+tool change or initial move.
+<H4>
+<A NAME="Spindle Ranges"></A>Spindle Ranges</H4>
+You can also define the number of ranges and how you machine tool determines
+the spindle range.&nbsp;&nbsp; The pull-down dialog in the Spindle Range
+Control section allows you to select from the following choices:
+<H4>
+None</H4>
+This option is for machine tools that automatically determine the range,
+have only a single spindle range or control the range manually.
+<BR>&nbsp;
+<H4>
+<A NAME="Separate M Code"></A>Separate M Code</H4>
+<IMG SRC="imagesdo.jpg" HEIGHT=239 WIDTH=409>
+<BR>This option allows you specify a specific M code that will be used
+for each range.&nbsp; The M code will change depending on the range that
+is programmed.&nbsp; For example, for range 1, the system has defined 41,
+now that value will be used and an M41 will be output.&nbsp; Note that
+you must place the correct word into the output sequence, either Operation
+Start or in the Spindle RPM event if you are using post commands.
+<H4>
+<A NAME="Range Code with M code"></A>Range Code with M code</H4>
+<IMG SRC="imageknp.jpg" HEIGHT=239 WIDTH=409>
+
+<P>This option allows you to output the range code with the spindle direction
+code.&nbsp; With a range code of one and a spindle direction of clw, the
+M code will be range code * 10 + the spindle direction code of 3 for a
+value of 13.&nbsp; So this will result in an M13.&nbsp; There is no separate
+M code for range in this case.
+
+<P><IMG SRC="image44d.jpg" HEIGHT=203 WIDTH=409>
+
+<P>This option allows you to output the range code with the spindle speed
+code.&nbsp; There are only two ranges allowed.&nbsp; With a range 1 and
+a spindle spped of 100, the S code will be S100.&nbsp; With a range 2 and
+and spindle speed of 500, the S code would be S-500.&nbsp; There is no
+separate M code for range in this case.
+
+<P>Note that all of these special codes are done by formulas in the words
+themselves.&nbsp; If you have some specific requirement for combining range,
+direction or speed parameters, a formula may be used to calculate what
+you need.
+<H4>
+<A NAME="Spindle CSS"></A>Spindle CSS</H4>
+<IMG SRC="image00e.jpg" HEIGHT=727 WIDTH=808>
+
+<P>This dialog will allow you to determine the words and blocks that will
+start your machine tool in constant surface speed.&nbsp; You can also set
+the&nbsp;<A NAME="G Code for SFM"></A>G code for SFM (Usually 96), the
+G code for maximum RPM during SFM (Usually 92 or 50) and the maximum RPM
+that is allowed during SFM.
+
+<P>There are usually two blocks required to turn on SFM, the first one
+listed here is the G92 S9999 block.&nbsp; This block sets the&nbsp;<A NAME="Maximum RPM for SFM"></A>maximum
+RPM allowed for this operation.&nbsp; If you wish to define the maximum
+RPM only once, you can move this block to the Start of Program sequence.&nbsp;
+The second block listed here (G96 S M03) is the actual spindle start in
+SFM mode.
+
+<P>If the spindle speed data comes from the feeds and speeds function of
+Unigraphics, then there will be no spindle event.&nbsp; The spindle data
+will just be passed as operation information and will be available at the
+Start of Operation sequence.&nbsp; You must attach the spindle output blocks
+to the tool change, initial motion or first cut blocks.
+
+<P>Most users prefer to pre-start their machine tool in RPM mode at the
+RPM that the machine tool would be in at the first cut.&nbsp; This RPM
+is made available to your post so that this&nbsp;<A NAME="RPM Pre-start Block"></A>pre-start
+block may be output.&nbsp; We have included two custom commands that may
+be used to achieve this functionality and are included as default in all
+default lathe postprocessers.
+<H4>
+<A NAME="Spindle Off"></A>Spindle Off</H4>
+<IMG SRC="imageqhu.jpg" HEIGHT=456 WIDTH=808>
+
+<P>This dialog allows you to specify how the spindle is turned off.&nbsp;
+Unless you add a UDE to the End Post commands in the Operation Create dialog
+you will not automatically get an M05 output in your program.&nbsp; You
+can get the M05 output in one of two ways, include a UDE in your operation
+or add it to a sequence such as the End of Operation sequence.
+<H4>
+<A NAME="Coolant On"></A>Coolant On</H4>
+<IMG SRC="imageurs.jpg" HEIGHT=507 WIDTH=808>
+
+<P>This dialog will define the blocks needed to turn on the coolant for
+your operation.&nbsp; The code being output will either be M08, M08, M07
+or M08 respectively depending on whether the UDE COOLNT/ON, COOLNT/FLOOD,
+COOLNT/MIST or COOLNT/TAP was included in the operation as a Start Post
+command or assigned to one of the objects in the setup.
+
+<P>If the Coolant UDE was included in the Start Post of an operation, then
+the Coolant event will occur after the tool change in the sequence defined
+by the markers.&nbsp; In this case you cannot use the information in the
+Coolant UDE until after the event occurs. You will then need to output
+this code with the Initial Move.
+
+<P>If the Coolant UDE was assigned to an Unigraphics setup object (such
+as tool, machine tool, carrier, etc.) then that Coolant event will occur
+before the start of operation and the Coolant data will be available for
+the entire operation.
+<H4>
+<A NAME="Coolant Off"></A>Coolant Off</H4>
+&nbsp;<IMG SRC="imagen2t.jpg" HEIGHT=406 WIDTH=808>
+
+<P>This dialog allows you to specify how the coolant is turned off.&nbsp;
+Unless you add a UDE to the End Post commands in the Operation Create dialog
+you will not automatically get an M09 output in your program.&nbsp; You
+can get the M09 output in one of two ways, include a UDE in your operation
+or add it to a sequence such as the End of Operation sequence.
+<BR>&nbsp;
+<H4>
+<A NAME="Inch Metric Modes"></A>Inch Metric Modes</H4>
+<IMG SRC="imagepqo.jpg" HEIGHT=256 WIDTH=808>
+
+<P>This dialog will allow you to define the G codes for Inch and metric
+output modes.
+<H4>
+<A NAME="Feedrates"></A>Feedrates (Lathe)</H4>
+<IMG SRC="imageqo3.jpg" HEIGHT=560 WIDTH=808>
+<BR>&nbsp;
+
+<P>This dialog allows you to define how the feedrates will be controlled
+for lathes.&nbsp; You can specif<A NAME="Feedrate Mode G-code"></A>y the
+feedrate mode G-code that determines the mode (IPM, IPR) that your lathe
+will output.&nbsp; For the feedrate mode G-codes to output, the word must
+be included in every motion block.&nbsp; The default lathe postprocessors
+include this as basic functionality.&nbsp; You can also define the format
+and the&nbsp;<A NAME="Maximum and Minimum Feedrate Value"></A>maximum and
+minimum feedrate value that is valid within each mode.&nbsp; See the <A HREF="#Format">format</A>
+section for details on how to specify and edit formats.&nbsp; The post
+will also give a warning if the IPR value and the current spindle RPM value
+exceed the maximum IPM value or is less than minimum IPR value.
+
+<P>By default your post will output IPR mode when you specify an IPR feedrate
+for a specific motion and will output IPM mode when you specify an IPM
+feedrate for a specific motion.&nbsp; The UDE that controls this function
+is the&nbsp;<A NAME="SET/MODE command for Feedrate Output Mode"></A>SET/MODE
+command.&nbsp; SET/MODE,OFF is the default mode and means that the feedrate
+output mode will be the same as the feedrate mode for that motion.&nbsp;
+SET/MODE,IPM means that all feedrate output will be output in IPM mode
+regardless of the input feedrate mode.&nbsp; Likewise SET/MODE,IPR means
+that all feedrate output will be output in IPR mode regardless of the input
+feedrate mode.&nbsp; You can also get inverse time feedrates (FRN) output
+by specifying the UDE SET/MODE,INVERS.
+<BR>&nbsp;
+<H4>
+<A NAME="Feedrates (Mill)"></A>Feedrates (Mill)</H4>
+<IMG SRC="image040.jpg" HEIGHT=338 WIDTH=808>
+<BR>&nbsp;
+
+<P>This dialog allows you to define how the feedrates will be controlled
+your three axis mill.&nbsp; You can specify the feedrate mode G-code that
+determines the mode (IPM, FRN) that your mill will output.&nbsp; For the
+feedrate mode&nbsp;<A NAME="Feedrate G-codes"></A>G-codes to output, the
+word must be included in every motion block.&nbsp; The default three axis
+mill postprocessors will not output feedrate mode G codes.&nbsp; You can
+also define the formats and the&nbsp;<A NAME="Maximum and Minimum Feedrates Mill"></A>maximum
+and minimum feedrate value that is valid within each mode.&nbsp; See the
+<A HREF="#Format">format</A> section for details on how to specify and
+edit formats.
+
+<P>Your post will output IPM mode when you specify either an IPR feedrate
+or an IPM feedrate for a specific motion.&nbsp;&nbsp; You can only get
+inverse time feedrates (FRN) output by specifying the UDE SET/MODE,INVERS.&nbsp;
+To turn off&nbsp;<A NAME="FRN output mode,"></A>FRN output mode, use the
+UDE SET/MODE,OFF.&nbsp; If your post needs the G94/G93 codes output, you
+will need to add the Feedrate Mode Word to each motion block event.
+<BR>&nbsp;
+<H4>
+<A NAME="Feedrates (Mill 4/5 axis)"></A>Feedrates (Mill 4/5 axis)</H4>
+<IMG SRC="imagec0h.jpg" HEIGHT=616 WIDTH=808>
+
+<P>This dialog will allow you to configure how your post will control the
+feedrates for the linear and rotary axes.&nbsp; This dialog can be used
+for indexing as well as contouring rotary axes.&nbsp; You can define the
+feedrate mode&nbsp;<A NAME="feedrate Mode G-codes"></A>G-codes,&nbsp;<A NAME="Feedrate Formats Mill"></A>formats
+and&nbsp;<A NAME="Maximum and Minimum Feedrates (5 axis)"></A>maximum and
+minimum feedrates for each of the feedrate modes.&nbsp; See the <A HREF="#Format">format</A>
+section for details on how to specify and edit formats.
+
+<P>The default four and five axis postprocessors include the G93/G94 in
+all motion blocks.&nbsp; If you do not need these codes you can either
+edit all of the motion blocks and remove the feedrate mode G-code word
+from each block or go to the <A HREF="#Word Sequencing">word sequencing</A>
+dialog to deactivate it globally.
+
+<P>The f<A NAME="Feedrate Mode Table"></A>eedrate mode can be specified
+for all combinations of whether there is a linear move in a motion block,
+whether there is a rotary move in a motion block and whether the move is
+a rapid positioning move or a linear cutting move.&nbsp; It is very common
+to have all of the options set to IPM mode for positioning tables.&nbsp;
+For full five axis machine a common requirement is to set all the linear
+output modes to FRN and all of the positioning output modes to IPM.&nbsp;
+Many controls also need to have (Degrees Per Minute) DPM mode for moving
+the rotary axes.
+
+<P>See the <A HREF="#Machine Tool">machine tool</A> section for specifying
+the DPM and rotary axes parameters.
+<H4>
+<A NAME="Cutcom On"></A>Cutcom On</H4>
+<IMG SRC="image431.jpg" HEIGHT=551 WIDTH=808>
+
+<P>This dialog allows you to define the output and parameters to activate
+cutter compensation.&nbsp; You can specify the G-codes for cutter compenation
+to left or right of the toolpath, the&nbsp;<A NAME="Maximum and minimum values for the cutter compensation register"></A>maximum
+and minimum values for the cutter compenation register and the&nbsp;<A NAME="Cutcom plane code"></A>plane
+code that will be output.
+
+<P>There are two basic methods for outputting the cutter compensation codes.&nbsp;
+One way is the to output the code immediately in a block by themselves.&nbsp;
+This is the default method.&nbsp; The other way is to use this dialog only
+to specify parameters and define G-codes and output all of the cutter compensation
+words in the linear motion block.&nbsp; To use the second method, you must
+delete all the words from this event and make sure that all these words
+are in the linear motion block.&nbsp; By default all of these codes are
+also in the linear motion block as well.&nbsp; These codes are modal and
+are only output once, so no duplicate output results.&nbsp; However, if
+you delete the cutter compensation codes from this dialog, the codes will
+only be output by the linear motion block.
+<H4>
+<A NAME="Cutcom Off"></A>Cutcom Off</H4>
+<IMG SRC="imagete3.jpg" HEIGHT=406 WIDTH=808>
+
+<P>This dialog allows you to specify the G-code to be output for turning
+off cutter compensation.&nbsp; The system will output all necessary CUTCOM/OFF
+UDEs automatically.&nbsp; However, if want additional G40 codes output,
+you can add them to the appropriate sequences to insure that cutter compensation
+is not active.
+<H4>
+<A NAME="Delay"></A>Delay (Lathe)</H4>
+<IMG SRC="imageib4.jpg" HEIGHT=643 WIDTH=808>
+
+<P>This dialog defines the output for causing a dwell to occur on your
+lathe machine tool.&nbsp; You can define the G-code for seconds or revolution
+mode and the format of the dwell code for both seconds and revolution mode.&nbsp;
+You have the following options for the dwell output mode.
+<BR><A NAME="Seconds Only"></A><B>Seconds Only -- </B>this mode will only
+use the seconds G-code and seconds format for all dwell output.
+<BR><A NAME="Revolutions Only"></A><B>Revolutions Only -- </B>this mode
+will only use the revolutions G-code and seconds format for all dwell output.
+<BR><A NAME="Depends On Feedrate"></A><B>Depends On Feedrate </B>-- this
+mode will use the seconds G-code and seconds format when in feedrate IPM
+mode and will use the revolutions G-code and seconds format when in IPR
+mode for all dwell output.
+<H4>
+<A NAME="Opstop"></A>Opstop</H4>
+<IMG SRC="imagecfc.jpg" HEIGHT=298 WIDTH=808>
+
+<P>This dialog will allow you to specify the output when the UDE OPSTOP
+event is handled.
+<H4>
+<A NAME="Load Tool"></A>Load Tool</H4>
+This event is by default not handled and is included here only to support
+legacy operations.&nbsp; All the data needed for tool change is available
+in the tool change event itself and UDEs that are assigned to the tool,
+machine tool and carriers in the setup.&nbsp; If the LOAD/TOOL UDE needs
+to be handled, the blocks can be constructed in this dialog.
+<H4>
+<A NAME="Stop"></A>Stop</H4>
+<IMG SRC="imageidl.jpg" HEIGHT=290 WIDTH=808>
+
+<P>This dialog can be used to define the output required when the UDE STOP
+event is handled.</BLOCKQUOTE>
+
+</BODY>
+</HTML>
