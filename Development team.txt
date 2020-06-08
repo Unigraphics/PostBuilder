@@ -1,0 +1,22 @@
+set msg "Development team of UG/Post\ Builder acknowledges\
+that Tcl/Tk, Tix and Stooop have been utilized to\
+develop this product.  Credits should be honored\
+to the authors of these tool kits (John Ousterhout,\
+Ioi Lam & Jean-Luc Fontaine and their associates),\
+who have subconsciously made invaluable contribution\
+to this product.\
+\n\
+\n\
+\n Team Members:\
+\n\
+\n  Arun N.\
+\n  Bill B.\
+\n  Bing Z.\
+\n  Binu P.\
+\n  Byung C.\
+\n  Gen L.\
+\n  David L.\
+\n  Mahendra G.\
+\n  Naveen M.\
+\n  Satya C.\
+\n  Stan The Man"
