@@ -11,8 +11,20 @@
 #
 #############################################################################################
 #
-#	Copyright 2014-2019 Siemens Product Lifecycle Management Software Inc.
+#	Copyright 2014-2020 Siemens Product Lifecycle Management Software Inc.
 #				All Rights Reserved.
+#	Copyright (c) 2012-2020 Siemens Industry Software GmbH & Co. KG
+#
+#	Die Quellcodes der Programme sind urheberrechtlich geschuetzt und
+#	duerfen ohne Zustimmung von Siemens Industry Software GmbH & Co. KG weder kopiert noch
+#	fuer andere Zwecke weiterverwendet werden.
+#
+#	The source of the programs is protected by Copyright.
+#	You are not allowed to make any copies or modifications
+#	without consent of Siemens Industry Software GmbH & Co. KG.
+#
+#	Le contenu de ces programmes sont protégés par copyright et ne
+#	peuvent pas être copiés ou réutilisés sans l'agrément de Siemens Industry Software GmbH & Co. KG
 #
 #############################################################################################
 #____________________________________________________________________________________________

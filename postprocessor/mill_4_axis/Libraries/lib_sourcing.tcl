@@ -1,8 +1,8 @@
-lappend lib_config_data  [list "lib_sourcing" "LIB-Sourcing-Version 229"]
-set lib_release_version "4.7.1"
+lappend lib_config_data  [list "lib_sourcing" "LIB-Sourcing-Version 244"]
+set lib_release_version "5.3.0"
 #############################################################################################
 #
-#	Copyright 2014-2019 Siemens Product Lifecycle Management Software Inc.
+#	Copyright 2014-2020 Siemens Product Lifecycle Management Software Inc.
 #				All Rights Reserved.
 #
 #############################################################################################
@@ -939,8 +939,10 @@ proc LIB_Shell_init {} {
 
 	LIB_Shell_defined_post_environment
 
-	if {$lib_shell(load_library)} {
-		set lib_pp_source_file [LIB_GE_cleanup_list [list "lib_general" "lib_msg" "lib_file_handling" "lib_standard_post_func" "lib_document"] $lib_pp_source_file 1]
+	if {![info exists lib_shell(version)] || $lib_shell(version) < 2} {
+		if {$lib_shell(load_library)} {
+			set lib_pp_source_file [LIB_GE_cleanup_list [list "lib_general" "lib_msg" "lib_file_handling" "lib_standard_post_func" "lib_document"] $lib_pp_source_file 1]
+		}
 	}
 
 	if {[info commands LIB_GE_cleanup_list] != ""} {
@@ -987,7 +989,7 @@ proc LIB_Shell_init {} {
 #       <Filename Name="oem_my_oem" Processing="true" />
 #       <Filename Name="mach_my_machine" Processing="true" />
 #       <Filename Name="post_mit_kim_service" Processing="true" />
-#       <Filename Name="post_mit_kim_custom" Processing="true" />
+#       <Filename Name="post_mit_kim_test" Processing="true" />
 #	<Filename Name="shop_doc" Processing="true" Folder="UGII_CAM_SHOP_DOC_DIR" Extension=".TCL" />
 #     </Sequence>
 #   </Sourcing>
@@ -1021,30 +1023,50 @@ proc LIB_Shell_external_source {} {
 	if {[info commands LIB_XML_to_list] != ""} {
 		if {[info exists lib_shell(package,tdom)]} {
 			LIB_XML_tdom_load $sourcefile
-	
+
 			if {[info exists lib_xml(tdom)]} {
-				foreach sublist $lib_xml(tdom) {			
-					switch -nocase -- [lindex $sublist 0] { 
-					  "Variable"	{
-					  			foreach {name target} [lindex $sublist 1] {
-					  				LIB_Shell_external_source_variable $name $target
+				foreach sublist $lib_xml(tdom) {
+					switch -nocase -- [lindex $sublist 0] {
+					  "Configuration"	{
+						  			foreach {name value} [lindex $sublist 1] {
+						  				LIB_Shell_external_status_variable $name $value
+						  			}
+						  			if {[info exists lib_shell(version)] && $lib_shell(version) > 1} {
+						  				set lib_pp_source_file ""
+						  			}
 					  			}
-					  		}     
-					  "SubFolder"	{
-					  			foreach {name} [lindex $sublist 1] {
-					  				LIB_Shell_external_source_subfolder $name
+					  "Variable"		{
+					  				foreach {name target} [lindex $sublist 1] {
+					  					LIB_Shell_external_source_variable $name $target
+					  				}
 					  			}
-					  		}  
-					  "Filename"	{
-					  			LIB_Shell_external_source_files [lindex $sublist 1]
-					  		}   
-					}          
+					  "SubFolder" -
+					  "Subfolder"		{
+					  				foreach {name} [lindex $sublist 1] {
+					  					LIB_Shell_external_source_subfolder $name
+					  				}
+					  			}
+					  "Filename" -
+					  "Scripts"		{
+					  				LIB_Shell_external_source_files [lindex $sublist 1]
+					  			}
+					  "DefinedEvents"	{
+					  				LIB_Shell_external_def_files [lindex $sublist 1]
+					  			}
+					  "CustomerDialogs"	{
+					  				LIB_Shell_external_cdl_files [lindex $sublist 1]
+					  			}
+					  "Functions"		{
+					  				# Implementation currently still without reaction
+					  			}
+					}
 				}
 			}
-			
+
 		} else {
+
 			set xmllist [LIB_XML_to_list $sourcefile]
-			
+
 			# Read out all environment which are to be created
 			set node [LIB_XML_get_node $xmllist Environment]
 
@@ -1054,6 +1076,15 @@ proc LIB_Shell_external_source {} {
 				set name [lindex [lindex $namelist 1] [expr [lsearch -exact [lindex $namelist 1] "Name"]+1]]
 				set target [lindex [lindex $namelist 1] [expr [lsearch -exact [lindex $namelist 1] "Target"]+1]]
 				LIB_Shell_external_source_variable $name $target
+			}
+
+			# Read out all environment which are to be created
+			set value [LIB_XML_get_value $xmllist "Version"]
+			if {[llength $value]} {
+				LIB_Shell_external_status_variable "Version" $value
+	  			if {[info exists lib_shell(version)] && $lib_shell(version) > 1} {
+	  				set lib_pp_source_file ""
+	  			}
 			}
 
 			# Read out all folder which are to be analysed
@@ -1074,14 +1105,34 @@ proc LIB_Shell_external_source {} {
 			set lib_xml_node_idx 0
 			while	{$lib_xml_node_idx > -1} {
 				LIB_Shell_external_source_files
-			}			
+			}
 		}
+
 	} else {
 		# The current post-processor can not run, because not all files were loaded
 		# This is also the case, if utility.pce not available
 		return
 	}
 
+}
+
+set lib_shell(version) 1.0
+
+#____________________________________________________________________________________________
+# <Internal Documentation>
+#
+# Internal function to handle loading environment variables
+#
+# <Internal Example>
+#
+#____________________________________________________________________________________________
+proc LIB_Shell_external_status_variable {name value} {
+
+	global lib_shell
+
+	if {[string length $name] > 0} {
+		set lib_shell([string tolower $name]) $value
+	}
 }
 
 #____________________________________________________________________________________________
@@ -1114,32 +1165,97 @@ proc LIB_Shell_external_source_variable {name target} {
 # <Internal Example>
 #
 #____________________________________________________________________________________________
-proc LIB_Shell_external_source_subfolder {name } {
+proc LIB_Shell_external_source_subfolder {name} {
 
-	global lib_pp_source_folder
-	
-	if {[string length $name] > 0} {lappend lib_pp_source_folder $name}
+	if {[string length $name] > 0} {
+		LIB_Shell_path_init $name
+	}
 }
 
 #____________________________________________________________________________________________
 # <Internal Documentation>
 #
-# Internal function to handle loading sub folder
+# Internal function to handle loading files
 #
 # <Internal Example>
 #
 #____________________________________________________________________________________________
-proc LIB_Shell_external_source_files {{list ""}} {
+proc LIB_Shell_external_source_files {{list ""} {action 0}} {
 
-	global lib_pp_source_file node
-	
+	global lib_pp_source_file lib_shell node lib_xml_node_idx
+
 	array set external "Name {} Processing {} Folder {} Extension {}"
-	if {[llength $list] < 1} {
-		array set external [lindex [LIB_XML_get_nodes $node Filename] 1]
+	if {!$action && [llength $list] < 1} {
+
+		if {![info exists lib_shell(version)] || $lib_shell(version) < 2} {
+			array set external [lindex [LIB_XML_get_nodes $node Filename] 1]
+		} else {
+			set nodes [LIB_XML_get_nodes $node [list Layer Filename]]
+			switch -- [lindex $nodes 0] {
+				"Layer"
+				{
+
+					if {[string match "Name" [lindex [lindex $nodes 1] 0]]} {
+						foreach {variable value} [lindex $nodes 1] {
+							switch -- $variable {
+								"SubFolder"
+								{
+									if {[string match "Bin" $value] || [string match "Controller" $value] || [string match "Libraries" $value]} {
+										continue
+									}
+									set value [LIB_GE_search_pathname $value]
+									if {![LIB_Shell_file_exists $value]} {
+										set value [file join $::lib_ge_env(installed_machines_dir) $value]
+										set value [LIB_GE_search_pathname $value]
+									}
+
+									LIB_Shell_external_source_subfolder $value
+								}
+							}
+						}
+					}
+
+					foreach e {Scripts DefinedEvents CustomerDialogs Functions} {
+						set nodes [LIB_XML_get_node $nodes $e]
+						switch -- [lindex $nodes 0] {
+							"Scripts"
+							{
+								foreach files [lindex $nodes 2] {
+									LIB_Shell_external_source_files [lindex $files 1] 1
+								}
+								return
+							}
+							"DefinedEvents"
+							{
+								foreach files [lindex $nodes 2] {
+									LIB_Shell_external_def_files [lindex $files 1]
+								}
+								return
+							}
+							"CustomerDialogs"
+							{
+								foreach files [lindex $nodes 2] {
+									LIB_Shell_external_cdl_files [lindex $files 1]
+								}
+								return
+							}
+							"Functions"
+							{
+								# Implementation currently still without reaction
+							}
+						}
+					}
+				}
+				"Filename"
+				{
+					array set external [lindex $nodes 1]
+				}
+			}
+		}
 	} else {
 		array set external $list
 	}
-	
+
 	if {[string match -nocase "TRUE" $external(Processing)] || ![string length $external(Processing)]} {
 		if {[string length $external(Folder)] && [string length $external(Name)]} {
 			if {[string length $external(Extension)]} {
@@ -1152,6 +1268,74 @@ proc LIB_Shell_external_source_files {{list ""}} {
 				lappend lib_pp_source_file "$external(Name)@@$external(Extension)"
 			} else {
 				lappend lib_pp_source_file "$external(Name)"
+			}
+		}
+	}
+}
+
+#____________________________________________________________________________________________
+# <Internal Documentation>
+#
+# Internal function to handle loading def files
+#
+# <Internal Example>
+#
+#____________________________________________________________________________________________
+proc LIB_Shell_external_def_files {{list ""}} {
+
+	global lib_pp_source_file node
+
+	array set external "Name {} Processing {} Include {} Folder {} Extension {}"
+	if {[llength $list] < 1} {
+		array set external [lindex [LIB_XML_get_nodes $node Filename] 1]
+	} else {
+		array set external $list
+	}
+
+	if {[string length $external(Extension)] <= 0} {set external(Extension) ".def"}
+
+	if {[string match -nocase "FALSE" $external(Include)] && ([string match -nocase "TRUE" $external(Processing)] || ![string length $external(Processing)])} {
+		if {[string length $external(Folder)] && [string length $external(Name)]} {
+			if {[string length $external(Extension)]} {
+				lappend lib_pp_source_file "$external(Name)@[LIB_GE_format_path_names [LIB_GE_search_pathname $external(Folder)] 1 2]@$external(Extension)"
+			}
+		} elseif {[string length $external(Name)]} {
+			if {[string length $external(Extension)]} {
+				lappend lib_pp_source_file "$external(Name)@@$external(Extension)"
+			}
+		}
+	}
+}
+
+#____________________________________________________________________________________________
+# <Internal Documentation>
+#
+# Internal function to handle loading def files
+#
+# <Internal Example>
+#
+#____________________________________________________________________________________________
+proc LIB_Shell_external_cdl_files {{list ""}} {
+
+	global lib_pp_source_file node
+
+	array set external "Name {} Processing {} Include {} Folder {} Extension {}"
+	if {[llength $list] < 1} {
+		array set external [lindex [LIB_XML_get_nodes $node Filename] 1]
+	} else {
+		array set external $list
+	}
+
+	if {[string length $external(Extension)] <= 0} {set external(Extension) ".cdl"}
+
+	if {[string match -nocase "FALSE" $external(Include)] && ([string match -nocase "TRUE" $external(Processing)] || ![string length $external(Processing)])} {
+		if {[string length $external(Folder)] && [string length $external(Name)]} {
+			if {[string length $external(Extension)]} {
+				lappend lib_pp_source_file "$external(Name)@[LIB_GE_format_path_names [LIB_GE_search_pathname $external(Folder)] 1 2]@$external(Extension)"
+			}
+		} elseif {[string length $external(Name)]} {
+			if {[string length $external(Extension)]} {
+				lappend lib_pp_source_file "$external(Name)@@$external(Extension)"
 			}
 		}
 	}
@@ -2265,13 +2449,13 @@ proc LIB_Shell_reload_functions {} {
 		# MOM_output_text differ from MOM_output_literal in the NX-Core!!
 		# so we have to change this proc when we are in simulation
 		#
-		# PR#9360571 : remove mom_post_in_smulation check, change MOM_output_text for both of post and 
+		# PR#9360571 : remove mom_post_in_smulation check, change MOM_output_text for both of post and
 		# simulation
-		#		
+		#
 		# <Internal Example>
 		# >> This function is a black box  <<
 		#____________________________________________________________________________________________
-		
+
 
 		if {![llength [info commands PC_MOM_output_text]]} {
 			rename MOM_output_text PC_MOM_output_text
@@ -2286,7 +2470,7 @@ proc LIB_Shell_reload_functions {} {
 				return $output
 			}
 		}
-		
+
 	}
 }
 

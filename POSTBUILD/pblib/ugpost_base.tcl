@@ -1757,7 +1757,7 @@ proc  OPEN_files { } {
     }
 
 
-    if { $mom_sys_ptp_output == "ON" } {
+    if { $mom_sys_ptp_output == "ON" && [string length $mom_output_file_basename] > 0} {
       if { $tcl_version < 8.0 } {
         if { ![file exists $ptp_file_name] } {
            MOM_open_output_file $ptp_file_name

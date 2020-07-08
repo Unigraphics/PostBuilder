@@ -1904,7 +1904,8 @@ if 0 { ;# Moved up
     }
 }
 
-    if { $mom_sys_ptp_output == "ON" } {
+    #<07-Feb-2020 Jintao> 9570589, prevent openning tmp file is not needed
+    if { $mom_sys_ptp_output == "ON" && [string length $mom_output_file_basename] > 0 } {
       if { $tcl_version < 8.0 } {
         if { ![file exists $ptp_file_name] } {
            MOM_open_output_file $ptp_file_name

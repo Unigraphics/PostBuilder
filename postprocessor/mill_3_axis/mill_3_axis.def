@@ -11,7 +11,7 @@
 #
 #############################################################################################
 #
-#	Copyright 2014-2019 Siemens Product Lifecycle Management Software Inc.
+#	Copyright 2014-2020 Siemens Product Lifecycle Management Software Inc.
 #				All Rights Reserved.
 #	Copyright (c) 2012-2015 Siemens Industry Software GmbH & Co. KG
 #
@@ -31,9 +31,10 @@
 MACHINE Default
 
 INCLUDE {
-$POST_LIB_CURRENT_MACH_DIR/Controller/ctrl_generic_base.cdl
-$POST_LIB_CURRENT_MACH_DIR/Controller/ctrl_generic_base.def
-$POST_LIB_CURRENT_MACH_DIR/mill_3_axis.cdl
+$POST_LIB_CURRENT_MACH_DIR/Controller/ctrl_template_base.def
+$POST_LIB_CURRENT_MACH_DIR/Controller/ctrl_template_base.cdl
 $POST_LIB_CURRENT_MACH_DIR/mill_3_axis_service.def
+$POST_LIB_CURRENT_MACH_DIR/mill_3_axis_custom.cdl
+$POST_LIB_CURRENT_MACH_DIR/mill_3_axis_custom.def
 
 }
