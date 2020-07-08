@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Anfang des Mustersatz-Koordinatensystems"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Ende des Mustersatz-Koordinatensystems"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Unterprogrammausgabe aktivieren"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Dieser Umschalter informiert den NX/Post-Core-Prozessor, dass dieser Post über die Möglichkeit verfügt, eine Unterprogrammausgabe zu produzieren."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "Bezugspfeil von X, Y, Z, fourth_axis, fifth_axis und N sollte nicht mit einem Ausdruck konfiguriert werden, der Variablen enthält.\n\nDiese Überprüfung kann durch Festlegen der Einstellung gPB (ALLOW_VAR_SYS_LEADER) auf \"1\" in Ihrer Datei \"ui_pb_user_resource.tcl\" deaktiviert werden."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Vor Konturende"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Vor Konturende"
 
 
 #=============================================================================
@@ -1458,7 +1472,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(block,change_popup,Label)"           "Element ändern"
 ::msgcat::mcset $gPB(LANG) "MC(block,user_popup,Label)"             "Benutzerdefinierter Ausdruck"
 ::msgcat::mcset $gPB(LANG) "MC(block,opt_popup,Label)"              "Optional"
-::msgcat::mcset $gPB(LANG) "MC(block,no_sep_popup,Label)"           "Kein Leerzeichen"
+::msgcat::mcset $gPB(LANG) "MC(block,no_sep_popup,Label)"           "Kein Wortbegrenzungszeichen"
 ::msgcat::mcset $gPB(LANG) "MC(block,force_popup,Label)"            "Kraftausgabe"
 ::msgcat::mcset $gPB(LANG) "MC(block,delete_popup,Label)"           "Löschen"
 ::msgcat::mcset $gPB(LANG) "MC(block,undo_popup,Label)"             "Rückgängig"
@@ -1616,8 +1630,8 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(other,seq_num,max,Context)"          "Max. Wert der Sequenznummern festlegen."
 
 ::msgcat::mcset $gPB(LANG) "MC(other,chars,Label)"                  "Sonderzeichen"
-::msgcat::mcset $gPB(LANG) "MC(other,chars,word_sep,Label)"         "Leerzeichen"
-::msgcat::mcset $gPB(LANG) "MC(other,chars,word_sep,Context)"       "Ein als Leerzeichen zu verwendendes Leerzeichen festlegen."
+::msgcat::mcset $gPB(LANG) "MC(other,chars,word_sep,Label)"         "Wortbegrenzungszeichen"
+::msgcat::mcset $gPB(LANG) "MC(other,chars,word_sep,Context)"       "Ein als Wortbegrenzungszeichen zu verwendendes Zeichen festlegen."
 ::msgcat::mcset $gPB(LANG) "MC(other,chars,decimal_pt,Label)"       "Dezimalpunkt"
 ::msgcat::mcset $gPB(LANG) "MC(other,chars,decimal_pt,Context)"     "Ein als Dezimalpunkt zu verwendendes Zeichen festlegen."
 ::msgcat::mcset $gPB(LANG) "MC(other,chars,end_of_block,Label)"     "Blockende"
@@ -2228,7 +2242,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,TG)"             "Umschalten"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,TG,B,Label)"     "Umschalten"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,TG,B,Context)"   "Umschaltwert auswählen"
-::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,ON,Label)"       "Auf Kontur"
+::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,ON,Label)"       "Ein"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,OFF,Label)"      "Aus"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,ON,Context)"     "Standardwert als \"AKTIVIERT\" auswählen"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,paramdlg,OFF,Context)"    "Standardwert als \"DEAKTIVIERT\" auswählen"

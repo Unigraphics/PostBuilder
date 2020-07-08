@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Začátek souřadnicového systému sady vzorů"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Konec souřadnicového systému sady vzorů"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Povolit výstup podprogramu"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Pomocí tohoto přepínače bude jádro postprocesoru NX upozorněno, že je tento postprocesor vybaven možností vytvořit výstup podprogramu."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "Úvodní kód adres X, Y, Z, fourth_axis, fifth_axis a N nesmí být konfigurován s výrazem obsahující proměnné.\n\nTato kontrola může být vypnuta pomocí nastavení gPB(ALLOW_VAR_SYS_LEADER) na \"1\" v souboru ui_pb_user_resource.tcl."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Před koncem kontury"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Před koncem kontury"
 
 
 #=============================================================================
@@ -282,8 +296,8 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(event,cycle,tap_float,name)"             "Závitování s vyrov. hlavou"
 ::msgcat::mcset $gPB(LANG) "MC(event,cycle,thread,name)"                "Závit"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,group,MSG_NESTED_GROUP)"      "Vnořené seskupení není podporováno!"
-::msgcat::mcset $gPB(LANG) "MC(ude,editor,bmp,Label)"                   "Bitmapa"
-::msgcat::mcset $gPB(LANG) "MC(ude,editor,bmp,Context)"                 "Přidejte nový parametr bitmapy jeho přetažením do seznamu vpravo."
+::msgcat::mcset $gPB(LANG) "MC(ude,editor,bmp,Label)"                   "Rastrový obrázek"
+::msgcat::mcset $gPB(LANG) "MC(ude,editor,bmp,Context)"                 "Přidejte nový parametr rastrového obrázku jeho přetažením do seznamu vpravo."
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,group,Label)"                 "Skupina"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,group,Context)"               "Přidejte nový parametr seskupování jeho přetažením do seznamu vpravo."
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,eventdlg,DESC,Label)"         "Popis"
@@ -291,7 +305,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,eventdlg,URL,Label)"          "URL"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,eventdlg,URL,Context)"        "Určit adresu URL pro popis k události"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,param,MSG_WRONG_IMAGE_FILE)"  "Soubor obrázku musí být formátu BMP!"
-::msgcat::mcset $gPB(LANG) "MC(ude,editor,param,MSG_WRONG_IMAGE_FOLDER)" "Soubor bitmapy nesmí obsahovat cestu k adresáři!"
+::msgcat::mcset $gPB(LANG) "MC(ude,editor,param,MSG_WRONG_IMAGE_FOLDER)" "Soubor rastrového obrázku nesmí obsahovat cestu k adresáři!"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,param,MSG_WRONG_VAR_NAME)"    "Název proměnné musí začínat písmenem."
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,param,MSG_WRONG_KEYWORD)"     "Název proměnné nemůže obsahovat klíčová slova: "
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,status_label)"                "Stav"
@@ -1121,7 +1135,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(prog,Status)"                        "Definovat výstup událostí"
 
 ::msgcat::mcset $gPB(LANG) "MC(prog,tree,Label)"                    "Program -- Strom posloupností"
-::msgcat::mcset $gPB(LANG) "MC(prog,tree,Context)"                  "Program N/C je rozdělen do pěti segmentů: čtyř posloupností a tělesa dráhy nástroje: \n \n * Počáteční posloupnost programu \n * Počáteční posloupnost operace \n * Dráha nástroje \n * Koncová posloupnost operace \n * Koncová posloupnost programu \n \nKaždá posloupnost se skládá z řady značek. Značka označuje událost, kterou je možné naprogramovat a může se vyskytnout v určité fázi programu N/C. Každou značku je možné připojit s určitým uspořádáním kódů N/C tak, aby byla součástí výstupu při postprocesingu programu. \n \nDráha nástroje se skládá z několika událostí. Ty jsou rozděleny do tří skupin: \n \n * Řízení stroje \n * Pohyby \n * Cykly \n"
+::msgcat::mcset $gPB(LANG) "MC(prog,tree,Context)"                  "Program N/C je rozdělen do pěti segmentů: čtyř posloupností a tělesa dráhy nástroje: \n \n * Počáteční posloupnost programu \n * Počáteční posloupnost operace \n * Dráha nástroje \n * Koncová posloupnost operace \n * Koncová posloupnost programu \n \nKaždá posloupnost se skládá z řady značek. Značka naznačuje událost, kterou je možné naprogramovat a může se vyskytnout v určité fázi programu N/C. Každou značku je možné připojit s určitým uspořádáním kódů N/C tak, aby byla součástí výstupu při postprocesingu programu. \n \nDráha nástroje se skládá z několika událostí. Ty jsou rozděleny do tří skupin: \n \n * Řízení stroje \n * Pohyby \n * Cykly \n"
 
 ::msgcat::mcset $gPB(LANG) "MC(prog,tree,prog_strt,Label)"          "Počáteční posloupnost programu"
 ::msgcat::mcset $gPB(LANG) "MC(prog,tree,prog_end,Label)"           "Koncová posloupnost programu"
@@ -1154,7 +1168,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(prog,plus,Context)"                  "Pomocí tohoto tlačítka je možné sbalit nebo rozbalit větve této komponenty."
 
 ::msgcat::mcset $gPB(LANG) "MC(prog,marker,Label)"                  "Posloupnost -- Značka"
-::msgcat::mcset $gPB(LANG) "MC(prog,marker,Context)"                "Značky posloupnosti značí možné události, které je možné naprogramovat a které se mohou vyskytnout v posloupnosti v určité fázi programu N/C. \n \nBloky je možné připojit nebo uspořádat tak, aby byly na výstupu na každé značce."
+::msgcat::mcset $gPB(LANG) "MC(prog,marker,Context)"                "Značky posloupnosti naznačuje možné události, které je možné naprogramovat a které se mohou vyskytnout v posloupnosti v určité fázi programu N/C. \n \nBloky je možné připojit nebo uspořádat tak, aby byly na výstupu na každé značce."
 
 ::msgcat::mcset $gPB(LANG) "MC(prog,event,Label)"                   "Program -- Událost"
 ::msgcat::mcset $gPB(LANG) "MC(prog,event,Context)"                 "Každou událost je možné upravit jedním kliknutím levým tlačítkem myši."
@@ -1960,8 +1974,8 @@ return 1
 ### Cutcom On
 ::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,name)"               "Poloměrová korekce zapnuta"
 ::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,g_code)"             "G-kód"
-::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,left)"               "##22Levý"
-::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,right)"              "##23Pravý"
+::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,left)"               "Levý"
+::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,right)"              "Pravý"
 ::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,app_planes)"         "Použitelné roviny"
 ::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,edit_planes)"        "Upravit kódy rovin"
 ::msgcat::mcset $gPB(LANG) "MC(event,cutcom_on,reg)"                "Index poloměrové korekce"
@@ -2423,7 +2437,7 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,boolean,frame,Label)"      "Definice booleovské položky"
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Label)"       "Zapnout WCS  "
-::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Context)"     "0 značí použití výchozích souřadnic nuly stroje\n 1 značí použití prvního uživatelského odsazení upínky (pracovní souřadnice)"
+::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Context)"     "0 naznačuje použití výchozích souřadnic nuly stroje\n 1 naznačuje použití prvního uživatelského odsazení upínky (pracovní souřadnice)"
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,use_s_leader,Label)"       "Použito S"
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,use_f_leader,Label)"       "Použito F"
@@ -2473,7 +2487,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(isv,incremental_gcode,Label)"        "G-kód"
 ::msgcat::mcset $gPB(LANG) "MC(isv,incremental_gcode,Context)"      "Použití G90 G91 k odlišení absolutního a přírůstkového režimu"
 ::msgcat::mcset $gPB(LANG) "MC(isv,incremental_uvw,Label)"          "Speciální úvodní kód"
-::msgcat::mcset $gPB(LANG) "MC(isv,incremental_uvw,Context)"        "Pomocí speciálního úvodního kódu je možné určit, zda se jedná o absolutní nebo přírůstkový režim. Úvodní kód X Y Z značí absolutní režim, úvodní kód U V W značí přírůstkový režim."
+::msgcat::mcset $gPB(LANG) "MC(isv,incremental_uvw,Context)"        "Pomocí speciálního úvodního kódu je možné určit, zda se jedná o absolutní nebo přírůstkový režim. Úvodní kód X Y Z naznačuje absolutní režim, úvodní kód U V W značí přírůstkový režim."
 ::msgcat::mcset $gPB(LANG) "MC(isv,incr_x,Label)"                   "X "
 ::msgcat::mcset $gPB(LANG) "MC(isv,incr_y,Label)"                   "Y "
 ::msgcat::mcset $gPB(LANG) "MC(isv,incr_z,Label)"                   "Z "

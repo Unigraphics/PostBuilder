@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "패턴 좌표계 설정 시작"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "패턴 좌표계 설정 종료"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "보조 프로그램 출력 사용"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "이 토글은 이 포스트가 보조 프로그램 출력을 생산할 수 있는 기능을 구비하고 있음을 NX/포스트 코어 프로세서에 알립니다."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "주소 X, Y, Z, fourth_axis, fifth_axis 및 N의 지시선은 변수가 포함된 수식으로 구성될 수 없습니다. \n\ngPB(ALLOW_VAR_SYS_LEADER)를 ui_pb_user_resource.tcl file에서 \"1\"로 설정하여 이 검사를 사용하지 않을 수 있습니다."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "윤곽 끝 앞에"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "윤곽 끝 앞에"
 
 
 #=============================================================================

@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "パターンセット座標系の開始"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "パターンセット座標系の終了"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "サブプログラム出力を使用"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "このトグルは、NX/Postコアプロセッサに、このポストがサブプログラム出力を生成する機能を有することを通知します。"
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "アドレスX、Y、Z、fourth_axis、fifth_axisおよびNのリーダーは、変数を含んでいる式を用いて構成してはいけません。 \n\nこれをチェックすると、ui_pb_user_resource.tclファイルにおいて、gPB(ALLOW_VAR_SYS_LEADER)に、\"1\"をチェックすることにより、使用不可とすることが可能です。"
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "コンタ終了前"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "コンタ終了前"
 
 
 #=============================================================================
@@ -397,7 +411,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(main,options,Context)"               " "
 ::msgcat::mcset $gPB(LANG) "MC(main,options,menu,Context)"          " "
 
-::msgcat::mcset $gPB(LANG) "MC(main,windows,Label)"                 "Windows"
+::msgcat::mcset $gPB(LANG) "MC(main,windows,Label)"                 "ウィンドウ"
 ::msgcat::mcset $gPB(LANG) "MC(main,windows,Balloon)"               "編集ポストリスト"
 ::msgcat::mcset $gPB(LANG) "MC(main,windows,Context)"               " "
 ::msgcat::mcset $gPB(LANG) "MC(main,windows,menu,Context)"          " "
@@ -471,16 +485,16 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(main,help,manual,Context)"           "オンラインヘルプです"
 
 ::msgcat::mcset $gPB(LANG) "MC(main,help,about,Label)"              "バージョン情報"
-::msgcat::mcset $gPB(LANG) "MC(main,help,about,Balloon)"            "バージョン情報"
-::msgcat::mcset $gPB(LANG) "MC(main,help,about,Context)"            "バージョン情報"
+::msgcat::mcset $gPB(LANG) "MC(main,help,about,Balloon)"            "バージョン情報です"
+::msgcat::mcset $gPB(LANG) "MC(main,help,about,Context)"            "バージョン情報です"
 
 ::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Label)"           "リリースノート"
-::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Balloon)"         "リリースノート"
-::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Context)"         "リリースノート"
+::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Balloon)"         "リリースノートです"
+::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Context)"         "リリースノートです"
 
 ::msgcat::mcset $gPB(LANG) "MC(main,help,tcl_man,Label)"            "Tcl/Tk リファレンスマニュアル"
-::msgcat::mcset $gPB(LANG) "MC(main,help,tcl_man,Balloon)"          "Tcl/Tk リファレンスマニュアル"
-::msgcat::mcset $gPB(LANG) "MC(main,help,tcl_man,Context)"          "Tcl/Tk リファレンスマニュアル"
+::msgcat::mcset $gPB(LANG) "MC(main,help,tcl_man,Balloon)"          "Tcl/Tk リファレンスマニュアルです"
+::msgcat::mcset $gPB(LANG) "MC(main,help,tcl_man,Context)"          "Tcl/Tk リファレンスマニュアルです"
 
 ##----------
 ## Tool Bar
@@ -929,8 +943,8 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,front,Label)"         "FRONT"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,rear,Label)"          "REAR"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,right,Label)"         "右"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,left,Label)"          "左"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,right,Label)"         "RIGHT"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,left,Label)"          "LEFT"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,side,Label)"          "SIDE"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret,saddle,Label)"        "SADDLE"
 
@@ -976,10 +990,10 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,spindle_axis,Context)"           "活動中のミル加工ツールに指定された初期スピンドル軸は、Z軸へ平行またはZ軸へ直角のいずれかとして指定できます。オペレーションのツール軸は指定されたスピンドル軸と一致しなければなりません。指定されたスピンドル軸にポストを配置できない場合はエラーが発生します。\nこのベクトルは、ヘッドオブジェクトで指定されたスピンドル軸によりオーバライドされる可能性があります。"
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,position_in_yaxis,Label)"        "Y軸の位置"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,position_in_yaxis,Context)"      "機械には、コンタ加工中に位置決めできるプログラム可能Y軸があります。このオプションは、スピンドル軸がZ軸に沿わないときのみ適用可能です。"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,position_in_yaxis,Context)"      "マシンには、コンタ加工中に位置決めできるプログラム可能Y軸があります。このオプションは、スピンドル軸がZ軸に沿わないときのみ適用可能です。"
 
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,Label)"                "機械モード"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,Context)"              "機械モードはXZC Millまたは単純ミルターンのいずれかです。"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,Label)"                "マシンモード"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,Context)"              "マシンモードはXZC Millまたは単純ミルターンのいずれかです。"
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,xzc_mill,Label)"       "XZCミル"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,mach_mode,xzc_mill,Context)"     "XZCミルには、回転C軸としてみるターン機械上にロックされたテーブルまたはチャックフェースができます。すべてのXY移動はXおよびCに変換され、Xは半径値に、Cは角度になります。"
@@ -996,7 +1010,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,Label)"               "デフォルト座標モード"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,Context)"             "このオプションは、座標出力モードに対する初期設定を極座標(XZC)または直交座標(XYZ)に定義します。このモードは\\\"SET/POLAR,ON\\\" UDEのプログラムによってオペレーションで変更できます。"
 
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,polar,Label)"         "放射状"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,polar,Label)"         "極"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,polar,Context)"       "XZCでの座標出力です。"
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,coord_mode,cart,Label)"          "直交"
@@ -1005,7 +1019,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,Label)"             "円形レコードモード"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,Context)"           "このオプションは、円形レコード出力を極座標(XCR)または直交座標(XYIJ)モードに定義します。"
 
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,polar,Label)"       "放射状"
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,polar,Label)"       "極"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,polar,Context)"     "XCRでの円形出力です。"
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,cart,Label)"        "直交"
@@ -1279,7 +1293,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(addrsum,tab,Label)"                  "ワードサマリ "
 ::msgcat::mcset $gPB(LANG) "MC(addrsum,Status)"                     "パラメータを指定"
 
-::msgcat::mcset $gPB(LANG) "MC(addrsum,col_addr,Label)"             "Word"
+::msgcat::mcset $gPB(LANG) "MC(addrsum,col_addr,Label)"             "ワード"
 ::msgcat::mcset $gPB(LANG) "MC(addrsum,col_addr,Context)"           "マウスの左ボタンで名前をクリックすると、ワードアドレスを編集できます。"
 ::msgcat::mcset $gPB(LANG) "MC(addrsum,col_lead,Label)"             "リーダ/コード"
 ::msgcat::mcset $gPB(LANG) "MC(addrsum,col_data,Label)"             "データタイプ"
@@ -1427,7 +1441,7 @@ return 1
 ##-------
 ## BLOCK
 ##
-::msgcat::mcset $gPB(LANG) "MC(block,tab,Label)"                    "BLOCK"
+::msgcat::mcset $gPB(LANG) "MC(block,tab,Label)"                    "ブロック"
 ::msgcat::mcset $gPB(LANG) "MC(block,Status)"                       "ブロックテンプレートを定義します。"
 
 ::msgcat::mcset $gPB(LANG) "MC(block,name,Label)"                   "ブロック名"
@@ -1809,10 +1823,10 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(definition,include,Label)"           "INCLUDE"
 ::msgcat::mcset $gPB(LANG) "MC(definition,format_txt,Label)"        "フォーマット"
 ::msgcat::mcset $gPB(LANG) "MC(definition,addr_txt,Label)"          "ワード"
-::msgcat::mcset $gPB(LANG) "MC(definition,block_txt,Label)"         "BLOCK"
+::msgcat::mcset $gPB(LANG) "MC(definition,block_txt,Label)"         "ブロック"
 ::msgcat::mcset $gPB(LANG) "MC(definition,comp_txt,Label)"          "複合ブロック"
 ::msgcat::mcset $gPB(LANG) "MC(definition,post_txt,Label)"          "ポストブロック"
-::msgcat::mcset $gPB(LANG) "MC(definition,oper_txt,Label)"          "ダミーメッセージBLOCK"
+::msgcat::mcset $gPB(LANG) "MC(definition,oper_txt,Label)"          "ダミーメッセージブロック"
 
 #+++++++++++++
 # Balloon
@@ -1948,10 +1962,10 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,max)"                "最大"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,min)"                "最小"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,label)"         "送り速度モード"
-::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,lin)"           "直線補間のみ"
+::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,lin)"           "直線のみ"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,rot)"           "回転のみ"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,lin_rot)"       "線形および回転"
-::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,rap_lin)"       "早送り線形補間のみ"
+::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,rap_lin)"       "早送り線形のみ"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,rap_rot)"       "早送り回転のみ"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,mode,rap_lin_rot)"   "早送り線形および回転"
 ::msgcat::mcset $gPB(LANG) "MC(event,feedrates,cycle_mode)"         "サイクル - 送り速度モード"
@@ -2547,7 +2561,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(isv,g_code,frame,Context)"           "シミュレーションで使用される特殊Gコードを指定します"
 ::msgcat::mcset $gPB(LANG) "MC(isv,g_code,from_home,Label)"         "ホームから"
 ::msgcat::mcset $gPB(LANG) "MC(isv,g_code,return_home,Label)"       "ホームポジションに戻る"
-::msgcat::mcset $gPB(LANG) "MC(isv,g_code,mach_wcs,Label)"          "機械データム移動"
+::msgcat::mcset $gPB(LANG) "MC(isv,g_code,mach_wcs,Label)"          "マシンデータム移動"
 ::msgcat::mcset $gPB(LANG) "MC(isv,g_code,set_local,Label)"         "ローカル座標をセット"
 
 ###########################

@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Inicio del sistema de coordenadas de fijación de patrón"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Fin del sistema de coordenadas de fijación de patrón"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Habilitar la salida del subprograma"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Este botón selector notifica al procesador de núcleo de NX o del postprocesador que este postprocesador está equipado con la capacidad de generar salidas de subprogramas. "
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "La llamada para las direcciones X, Y, Z, fourth_axis, fifth_axis y N no debería configurarse con expresiones que contengan variables. \n\nEsta verificación se puede desactivar fijando gPB(ALLOW_VAR_SYS_LEADER) en \"1\" en su archivo ui_pb_user_resource.tcl."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Después del extremo de contorno"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Después del extremo de contorno"
 
 
 #=============================================================================
@@ -84,13 +98,13 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(msg,info,obj_undef)"                       "Aun no se ha configurado la información sobre este objeto."
 
-::msgcat::mcset $gPB(LANG) "MC(msg,info,vnc_cmd_by_pb)"                   "El comando VNC generado por el constructor de post para transmitir los ajustes de un post en el accionador VNC."
+::msgcat::mcset $gPB(LANG) "MC(msg,info,vnc_cmd_by_pb)"                   "El comando VNC generado por Post Builder para transmitir los ajustes de un postprocesador en el accionador VNC."
 
 ::msgcat::mcset $gPB(LANG) "MC(msg,info,vnc_util)"                        "Comandos de la utilidad VNC definidos en PB_CMD_vnc__define_misc_procs."
 
 ::msgcat::mcset $gPB(LANG) "MC(msg,info,sim_cmd)"                         "Los comandos de SIM que se utilizarán en el accionador de la simulación."
 
-::msgcat::mcset $gPB(LANG) "MC(msg,info,pb_vnc_cmd)"                      "Los comandos generados por el constructor del post en los eventos clave del post de la interfaz con un accionador VNC."
+::msgcat::mcset $gPB(LANG) "MC(msg,info,pb_vnc_cmd)"                      "Los comandos generados por Post Builder en los eventos clave del postprocesador de la interfaz con un accionador VNC."
 
 ::msgcat::mcset $gPB(LANG) "MC(msg,info,vnc_broker_cmd)"                  "Comando del mediador utilizado en un accionador VNC para ejecutar otros comandos."
 
@@ -236,7 +250,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(new,alter_unit,toggle,label)"         "Unidad de salida alterna"
 ::msgcat::mcset $gPB(LANG) "MC(new,main_post,label)"                 "Postprocesador principal"
 ::msgcat::mcset $gPB(LANG) "MC(new,main_post,warning_1,msg)"         "Se puede usar solamente un postprocesador principal completo para crear un postprocesador subordinado."
-::msgcat::mcset $gPB(LANG) "MC(new,main_post,warning_2,msg)"         "Se debe crear o guardar el postprocesador principal \n en la aplicación Post Builder, versión 8.0 o posterior."
+::msgcat::mcset $gPB(LANG) "MC(new,main_post,warning_2,msg)"         "Se debe crear o guardar el postprocesador principal \n en Post Builder, versión 8.0 o posterior."
 ::msgcat::mcset $gPB(LANG) "MC(new,main_post,specify_err,msg)"       "Se debe especificar un postprocesador para crear un postprocesador subordinado. "
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,alter_unit,Label)"        "Unidades de salida del subpostprocesador:"
 ::msgcat::mcset $gPB(LANG) "MC(unit_related_param,tab,Label)"        "Parámetros de las unidades"
@@ -381,12 +395,12 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(main,file,close,Context)"            "Cerrar el postprocesador en curso."
 
 ::msgcat::mcset $gPB(LANG) "MC(main,file,exit,Label)"               "Salir"
-::msgcat::mcset $gPB(LANG) "MC(main,file,exit,Balloon)"             "Terminar la aplicación Post Builder."
-::msgcat::mcset $gPB(LANG) "MC(main,file,exit,Context)"             "Terminar la aplicación Post Builder."
+::msgcat::mcset $gPB(LANG) "MC(main,file,exit,Balloon)"             "Finalice Post Builder."
+::msgcat::mcset $gPB(LANG) "MC(main,file,exit,Context)"             "Finalice Post Builder."
 
 ::msgcat::mcset $gPB(LANG) "MC(main,file,history,Label)"            "Postprocesadores recientemente abiertos"
 ::msgcat::mcset $gPB(LANG) "MC(main,file,history,Balloon)"          "Editar un postprocesador visitado con anterioridad."
-::msgcat::mcset $gPB(LANG) "MC(main,file,history,Context)"          "Editar un postprocesador en las sesiones anteriores de la aplicación Post Builder."
+::msgcat::mcset $gPB(LANG) "MC(main,file,history,Context)"          "Edite un postprocesador que haya visitado en las sesiones anteriores de Post Builder."
 
 ##---------
 ## Options
@@ -406,9 +420,9 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(main,options,properties,Balloon)"    "Propiedades"
 ::msgcat::mcset $gPB(LANG) "MC(main,options,properties,Context)"    "Propiedades"
 
-::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Label)"         "Asesor de postprocesadores"
-::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Balloon)"       "Asesor de postprocesadores"
-::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Context)"       "Activar o Desactivar el asesor de postprocesadores."
+::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Label)"         "Consultor de postprocesadores"
+::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Balloon)"       "Consultor de postprocesadores"
+::msgcat::mcset $gPB(LANG) "MC(main,options,advisor,Context)"       "Activar o Desactivar el consultor de postprocesadores."
 
 ::msgcat::mcset $gPB(LANG) "MC(main,options,cmd_check,Label)"       "Validar los comandos personalizados"
 ::msgcat::mcset $gPB(LANG) "MC(main,options,cmd_check,Balloon)"     "Validar los comandos personalizados"
@@ -470,9 +484,9 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(main,help,manual,Balloon)"           "Manual de ayuda del usuario"
 ::msgcat::mcset $gPB(LANG) "MC(main,help,manual,Context)"           "Manual de ayuda del usuario"
 
-::msgcat::mcset $gPB(LANG) "MC(main,help,about,Label)"              "Acerca de la aplicación Post Builder"
-::msgcat::mcset $gPB(LANG) "MC(main,help,about,Balloon)"            "Acerca de la aplicación Post Builder"
-::msgcat::mcset $gPB(LANG) "MC(main,help,about,Context)"            "Acerca de la aplicación Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(main,help,about,Label)"              "Acerca de Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(main,help,about,Balloon)"            "Acerca de Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(main,help,about,Context)"            "Acerca de Post Builder"
 
 ::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Label)"           "Notas sobre la versión"
 ::msgcat::mcset $gPB(LANG) "MC(main,help,rel_note,Balloon)"         "Notas sobre la versión"
@@ -516,8 +530,8 @@ return 1
 ##-----------------
 ## Common Messages
 ##
-::msgcat::mcset $gPB(LANG) "MC(msg,error,title)"                    "Error en la aplicación Post Builder"
-::msgcat::mcset $gPB(LANG) "MC(msg,dialog,title)"                   "Mensaje de la aplicación Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(msg,error,title)"                    "Error en Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(msg,dialog,title)"                   "Mensaje de Post Builder"
 ::msgcat::mcset $gPB(LANG) "MC(msg,warning)"                        "Aviso"
 ::msgcat::mcset $gPB(LANG) "MC(msg,error)"                          "Error"
 ::msgcat::mcset $gPB(LANG) "MC(msg,invalid_data)"                   "Se han introducido datos correspondientes al parámetro que no son válidos."
@@ -529,12 +543,12 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(msg,no_file)"                        "Falta el archivo cifrado para el postprocesador con licencia."
 ::msgcat::mcset $gPB(LANG) "MC(msg,no_license)"                     "No dispone de la licencia correspondiente para realizar esta función."
 ::msgcat::mcset $gPB(LANG) "MC(msg,no_license_title)"               "Uso sin licencia de la aplicación Post Builder de NX"
-::msgcat::mcset $gPB(LANG) "MC(msg,no_license_dialog)"              "Puede utilizar la aplicación Post Builder de NX\n sin la licencia correspondiente.  Pero, no podrá\n guardar el trabajo posteriormente."
+::msgcat::mcset $gPB(LANG) "MC(msg,no_license_dialog)"              "Puede utilizar Post Builder de NX\n sin la licencia correspondiente.  Pero, no podrá\n guardar el trabajo posteriormente."
 ::msgcat::mcset $gPB(LANG) "MC(msg,pending)"                        "Se implementará el servicio de esta opción en una versión futura."
 ::msgcat::mcset $gPB(LANG) "MC(msg,save)"                           "¿Desea guardar los cambios\nantes de cerrar el postprocesador en curso?"
 ::msgcat::mcset $gPB(LANG) "MC(msg,version_check)"                  "No se puede abrir el postprocesador creado con la versión nueva de la aplicación Post Builder en esta versión."
 
-::msgcat::mcset $gPB(LANG) "MC(msg,file_corruption)"                "Contenido incorrecto en el archivo de sesiones de la aplicación Post Builder."
+::msgcat::mcset $gPB(LANG) "MC(msg,file_corruption)"                "Contenido incorrecto en el archivo de sesiones de Post Builder."
 ::msgcat::mcset $gPB(LANG) "MC(msg,bad_tcl_file)"                   "Contenido incorrecto en el archivo Tcl del postprocesador."
 ::msgcat::mcset $gPB(LANG) "MC(msg,bad_def_file)"                   "Contenido incorrecto en el archivo de definición del postprocesador."
 ::msgcat::mcset $gPB(LANG) "MC(msg,invalid_post)"                   "Deberá especificar por lo menos un conjunto de archivos de Tcl y de definición del postprocesador."
@@ -548,7 +562,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(msg,file_exist)"                     "ya existe.  \n¿Desea reemplazarlos de todos modos?"
 ::msgcat::mcset $gPB(LANG) "MC(msg,file_missing)"                   "Faltan algunos o todos los archivos de este postprocesador.\n No puede abrir este postprocesador."
 ::msgcat::mcset $gPB(LANG) "MC(msg,sub_dialog_open)"                "Debe completar la edición de todos los subcuadros de diálogo de parámetros antes de guardar el postprocesador."
-::msgcat::mcset $gPB(LANG) "MC(msg,generic)"                        "Se ha implementado la aplicación Post Builder solamente para las máquinas de fresado genérico."
+::msgcat::mcset $gPB(LANG) "MC(msg,generic)"                        "Se ha implementado la aplicación Post Builder solamente en las máquinas de fresado genérico."
 ::msgcat::mcset $gPB(LANG) "MC(msg,min_word)"                       "Un bloque debe contener por lo menos una palabra."
 ::msgcat::mcset $gPB(LANG) "MC(msg,name_exists)"                    "ya existe. \n Especifique otro nombre."
 ::msgcat::mcset $gPB(LANG) "MC(msg,in_use)"                         "Este componente ya está en uso.\n No se puede eliminar."
@@ -673,7 +687,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_3,desc,Label)"              "Esta es una máquina fresadora con 3 ejes. "
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_3MT,desc,Label)"            "Torno fresador con 3 ejes (XZC)"
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_4H,desc,Label)"             "Esta es una máquina fresadora con 4 ejes y con un cabezal rotatorio."
-::msgcat::mcset $gPB(LANG) "MC(new,mill_4T,desc,Label)"             "Esta es una máquina fresadora con 4 ejes y con una mesa rotatoria."
+::msgcat::mcset $gPB(LANG) "MC(new,mill_4T,desc,Label)"             "Esta es una máquina fresadora con 4 ejes y con una mesa giratoria."
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_5TT,desc,Label)"            "Esta es una máquina fresadora con 5 ejes y con dos mesas rotatorias."
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_5HH,desc,Label)"            "Esta es una máquina fresadora con 5 ejes y dos cabezales rotatorios."
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_5HT,desc,Label)"            "Esta es una máquina fresadora con 5 ejes y con un cabezal y una mesa rotatorios."
@@ -714,7 +728,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(new,lathe_2,Label)"                  "2 ejes"
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_3,Label)"                   "3 ejes"
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_3MT,Label)"                 "Torno fresador con 3 ejes (XZC)"
-::msgcat::mcset $gPB(LANG) "MC(new,mill_4T,Label)"                  "4 ejes con tabla rotatoria"
+::msgcat::mcset $gPB(LANG) "MC(new,mill_4T,Label)"                  "4 ejes con mesa giratoria"
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_4H,Label)"                  "4 ejes con un cabezal rotatorio"
 ::msgcat::mcset $gPB(LANG) "MC(new,lathe_4,Label)"                  "4 ejes"
 ::msgcat::mcset $gPB(LANG) "MC(new,mill_5HH,Label)"                 "5 ejes con cabezales dobles rotatorios"
@@ -752,7 +766,7 @@ return 1
 ##
 ::msgcat::mcset $gPB(LANG) "MC(open,title,Label)"                   "Editar el postprocesador"
 ::msgcat::mcset $gPB(LANG) "MC(open,Status)"                        "Seleccionar un archivo PUI para abrir."
-::msgcat::mcset $gPB(LANG) "MC(open,file_type_pui)"                 "Archivos de la sesión de la aplicación Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(open,file_type_pui)"                 "Archivos de la sesión de Post Builder"
 ::msgcat::mcset $gPB(LANG) "MC(open,file_type_tcl)"                 "Archivos de secuencias de comandos Tcl"
 ::msgcat::mcset $gPB(LANG) "MC(open,file_type_def)"                 "Archivos de definición"
 ::msgcat::mcset $gPB(LANG) "MC(open,file_type_cdl)"                 "Archivos CDL"
@@ -788,7 +802,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(save_as,name,Label)"                 "Nombre del postprocesador"
 ::msgcat::mcset $gPB(LANG) "MC(save_as,name,Context)"               "El nombre que el postprocesador guardará como."
 ::msgcat::mcset $gPB(LANG) "MC(save_as,Status)"                     "Introduzca el nombre del archivo de postprocesador nuevo."
-::msgcat::mcset $gPB(LANG) "MC(save_as,file_type_pui)"              "Archivos de la sesión de la aplicación Post Builder"
+::msgcat::mcset $gPB(LANG) "MC(save_as,file_type_pui)"              "Archivos de la sesión de Post Builder"
 
 ##----------------
 ## Common Widgets
@@ -950,17 +964,17 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,mir,Label)"       "Salida simétrica"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,mir,Context)"     "Estas opciones le permiten hacer una simetría de las direcciones seleccionadas al denegar los valores en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,x,Label)"         "-X"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,x,Context)"       "Estas opciones le permiten denegar las coordenadas del eje X en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,x,Context)"       "Este selector permite invalidar las coordenadas del eje X en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,y,Label)"         "-Y"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,y,Context)"       "Estas opciones le permiten denegar las coordenadas del eje Y en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,y,Context)"       "Este selector permite invalidar las coordenadas del eje Y en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,z,Label)"         "-Z"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,z,Context)"       "Estas opciones le permiten denegar las coordenadas del eje Z en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,z,Context)"       "Este selector permite invalidar las coordenadas del eje Z en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,i,Label)"         "-I"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,i,Context)"       "Este selector permite denegar los valores de I correspondientes a los registros circulares en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,i,Context)"       "Este selector permite invalidar los valores de I correspondientes a los registros circulares en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,j,Label)"         "-J"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,j,Context)"       "Este selector permite denegar los valores de J correspondientes a los registros circulares en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,j,Context)"       "Este selector permite invalidar los valores de J correspondientes a los registros circulares en la salida N/C."
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,k,Label)"         "-K"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,k,Context)"       "Este selector permite denegar los valores de K correspondientes a los registros circulares en la salida N/C."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,axis_multi,k,Context)"       "Este selector permite invalidar los valores de K correspondientes a los registros circulares en la salida N/C."
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,output,Label)"               "Método por salida"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,output,Context)"             "Método por salida"
@@ -970,7 +984,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,output,turret_ref,Context)"  "Salida con respecto a la referencia de la torreta"
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,lathe_turret,msg)"           "La designación de la torreta primera no puede ser la misma que la de la torreta secundaria."
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret_chg,msg)"             "Para modificar esta opción puede que sea necesario agregar o eliminar el bloque G92 en los eventos Cambio en la herramienta. "
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,turret_chg,msg)"             "Para modificar esta opción puede que sea necesario agregar o eliminar el bloque G92 en los eventos Cambio de herramienta. "
 # Entries for XZC/Mill-Turn
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,spindle_axis,Label)"             "Eje del husillo inicial"
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,spindle_axis,Context)"           "Se puede especificar el eje del husillo inicial designado para la herramienta fresadora en vivo como paralelo al eje Z o perpendicular al eje Z.  El eje de la herramienta de la operación debe ser consistente con el eje del husillo especificado. Se producirá un error si el postprocesador no puede posicionarse con el eje del husillo especificado. \nSe podrá invalidar este vector mediante el eje del husillo especificado con un objeto Cabezal."
@@ -1012,7 +1026,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,xzc_arc_mode,cart,Context)"      "Salida circular en XYIJ."
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,gen,def_spindle_axis,Label)"         "Eje del husillo inicial"
-::msgcat::mcset $gPB(LANG) "MC(machine,gen,def_spindle_axis,Context)"       "El eje del husillo inicial puede ser invalidado por el eje del husillo especificado con un objeto Cabezal. \nNo es necesario unificar el vector."
+::msgcat::mcset $gPB(LANG) "MC(machine,gen,def_spindle_axis,Context)"       "El eje del husillo inicial puede ser invalidado por el eje del husillo especificado con un objeto Cabezal. \nNo es necesario unitizar el vector."
 
 
 ##-----------------
@@ -1088,7 +1102,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,Context)"             "Seleccione XY, YZ, ZX u otro como el plano de rotación. La opción \\\"Otro\\\" permite especificar un vector arbitrario."
 
 ::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,normal,Label)"        "Vector normal al plano"
-::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,normal,Context)"      "Especifique el vector normal al plano como el eje de rotación. \n                                                     No es necesario utilizar el vector.                                                  "
+::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,normal,Context)"      "Especifique el vector normal al plano como el eje de rotación. \nNo es necesario unitizar el vector.                                                       "
 ::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,4th,Label)"           "Normal al plano del cuarto eje"
 ::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,4th,Context)"         "Especifique un vector normal del plano correspondiente a la rotación del cuarto eje."
 ::msgcat::mcset $gPB(LANG) "MC(machine,axis,plane,5th,Label)"           "Normal al plano del quinto eje"
@@ -1207,7 +1221,7 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,arc_start,Label)"          "Inicio del arco al centro"
 ::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,arc_center,Label)"         "Centro del arco al inicio"
-::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,u_arc_start,Label)"        "Inicio del arco no asignado al centro"
+::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,u_arc_start,Label)"        "Inicio del arco sin signo al centro"
 ::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,absolute,Label)"           "Centro del arco absoluto"
 ::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,long_thread_lead,Label)"   "Guía de rosca longitudinal"
 ::msgcat::mcset $gPB(LANG) "MC(tool,ijk_desc,tran_thread_lead,Label)"   "Guía de rosca transversal"
@@ -1551,7 +1565,7 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(address,name_msg)"                   "Nombre de la palabra no válido.\n Especifique otro."
 # - No translation for rapid1, rapid2 & rapid3
-::msgcat::mcset $gPB(LANG) "MC(address,rapid_add_name_msg)"         "rapid1, rapid2 y rapid3 están reservados para la aplicación Post Builder.\n Especifique otro nombre."
+::msgcat::mcset $gPB(LANG) "MC(address,rapid_add_name_msg)"         "rapid1, rapid2 y rapid3 están reservados para Post Builder.\n Especifique otro nombre."
 
 ::msgcat::mcset $gPB(LANG) "MC(address,rapid1,desc)"                "Posicionamiento rápido a lo largo del eje longitudinal"
 ::msgcat::mcset $gPB(LANG) "MC(address,rapid2,desc)"                "Posicionamiento rápido a lo largo del eje transversal"
@@ -1585,7 +1599,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(format,data,num,trail,Context)"      "Esta opción activa el relleno de los ceros a la derecha en los números reales en el código N/C."
 ::msgcat::mcset $gPB(LANG) "MC(format,data,text,Label)"             "Texto"
 ::msgcat::mcset $gPB(LANG) "MC(format,data,text,Context)"           "Esta opción define el tipo de dato de un formato como una cadena de texto."
-::msgcat::mcset $gPB(LANG) "MC(format,data,plus,Label)"             "Signo de más (+) anterior a la salida"
+::msgcat::mcset $gPB(LANG) "MC(format,data,plus,Label)"             "Signo más (+) anterior a la salida"
 ::msgcat::mcset $gPB(LANG) "MC(format,data,plus,Context)"           "Esta opción permite producir un signo más en el código N/C."
 ::msgcat::mcset $gPB(LANG) "MC(format,zero_msg)"                    "No puede hacer una copia del formato cero"
 ::msgcat::mcset $gPB(LANG) "MC(format,zero_cut_msg)"                "No puede eliminar un formato cero"
@@ -1694,7 +1708,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(output,vnc,mode,Context)"                 "Un controlador virtual N/C puede ser independiente o estar subordinado a una VNC (Computación virtual en red) maestra."
 ::msgcat::mcset $gPB(LANG) "MC(output,vnc,mode,std,Context)"             "Una VNC independiente está autocontenida."
 ::msgcat::mcset $gPB(LANG) "MC(output,vnc,mode,sub,Context)"             "Una VNC (Computación virtual en red) depende en mayor grado de la VNC maestra. Se originará la VNC maestra en el tiempo de ejecución ISV."
-::msgcat::mcset $gPB(LANG) "MC(output,vnc,pb_ver,msg)"                   "Controlador virtual N/C creado con la aplicación Post Builder "
+::msgcat::mcset $gPB(LANG) "MC(output,vnc,pb_ver,msg)"                   "Controlador virtual N/C creado con Post Builder "
 #++++++++++++++
 # Listing File
 #++++++++++++++
@@ -1800,8 +1814,8 @@ return 1
 #++++++++++++++
 # Post Advisor
 #++++++++++++++
-::msgcat::mcset $gPB(LANG) "MC(advisor,tab,Label)"                  "Asesor de postprocesadores"
-::msgcat::mcset $gPB(LANG) "MC(advisor,Status)"                     "Asesor de postprocesadores"
+::msgcat::mcset $gPB(LANG) "MC(advisor,tab,Label)"                  "Consultor de postprocesadores"
+::msgcat::mcset $gPB(LANG) "MC(advisor,Status)"                     "Consultor de postprocesadores"
 
 ::msgcat::mcset $gPB(LANG) "MC(definition,word_txt,Label)"          "WORD_SEPARATOR"
 ::msgcat::mcset $gPB(LANG) "MC(definition,end_txt,Label)"           "END_OF_BLOCK"
@@ -1832,7 +1846,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,start_path,name)"    "Inicio de la trayectoria"
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,from_move,name)"     "Movimiento desde"
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,fst_tool,name)"      "Primera herramienta"
-::msgcat::mcset $gPB(LANG) "MC(event,opr_start,auto_tc,name)"       "Cambio automático en la herramienta"
+::msgcat::mcset $gPB(LANG) "MC(event,opr_start,auto_tc,name)"       "Cambio automático de herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,manual_tc,name)"     "Cambio manual en la herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,init_move,name)"     "Movimiento inicial"
 ::msgcat::mcset $gPB(LANG) "MC(event,opr_start,fst_move,name)"      "Primer movimiento"
@@ -1857,9 +1871,9 @@ return 1
 
 
 ### Tool Change
-::msgcat::mcset $gPB(LANG) "MC(event,tool_change,name)"             "Cambio en la herramienta"
+::msgcat::mcset $gPB(LANG) "MC(event,tool_change,name)"             "Cambio de herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,m_code)"           "Código M"
-::msgcat::mcset $gPB(LANG) "MC(event,tool_change,m_code,tl_chng)"   "Cambio en la herramienta"
+::msgcat::mcset $gPB(LANG) "MC(event,tool_change,m_code,tl_chng)"   "Cambio de herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,m_code,pt)"        "Torreta primaria"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,m_code,st)"        "Torreta secundaria"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,t_code)"           "Código T"
@@ -1870,7 +1884,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,tool_num,min)"     "Mínimo"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,tool_num,max)"     "Máximo"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,time)"             "Tiempo (seg)"
-::msgcat::mcset $gPB(LANG) "MC(event,tool_change,time,tl_chng)"     "Cambio en la herramienta"
+::msgcat::mcset $gPB(LANG) "MC(event,tool_change,time,tl_chng)"     "Cambio de herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,retract)"          "Retroceso"
 ::msgcat::mcset $gPB(LANG) "MC(event,tool_change,retract_z)"        "Retroceso a Z de"
 
@@ -1905,9 +1919,9 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,name)"             "CSS del husillo"
 ::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,g_code)"           "Código G de husillos"
 ::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,g_code,const)"     "Código de superficies constantes"
-::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,g_code,max)"       "Código de RMP máximo"
+::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,g_code,max)"       "Código de RPM máximas"
 ::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,g_code,sfm)"       "Código para cancelar SFM"
-::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,max)"              "RMP máximo durante CSS"
+::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,max)"              "RPM máximas durante CSS"
 ::msgcat::mcset $gPB(LANG) "MC(event,spindle_css,sfm)"              "Tener siempre un modo IPM para SFM"
 
 ### Spindle Off
@@ -2143,7 +2157,7 @@ return 1
 ##------------
 ## M Code
 ##
-::msgcat::mcset $gPB(LANG) "MC(m_code,stop_manual_tc,name)"         "Cambio en la herramienta manual/Parada"
+::msgcat::mcset $gPB(LANG) "MC(m_code,stop_manual_tc,name)"         "Cambio de herramienta manual/Parada"
 ::msgcat::mcset $gPB(LANG) "MC(m_code,stop,name)"                   "Parar"
 ::msgcat::mcset $gPB(LANG) "MC(m_code,opt_stop,name)"               "Parada en operación"
 ::msgcat::mcset $gPB(LANG) "MC(m_code,prog_end,name)"               "Fin del programa"
@@ -2176,7 +2190,7 @@ return 1
 ## UDE
 ##
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,enable,Label)"            "Activar el editor de UDE"
-::msgcat::mcset $gPB(LANG) "MC(ude,editor,enable,as_saved,Label)"   "Según lo guardado"
+::msgcat::mcset $gPB(LANG) "MC(ude,editor,enable,as_saved,Label)"   "Conforme se guardó"
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,TITLE)"                   "Eventos definidos por el usuario"
 
 ::msgcat::mcset $gPB(LANG) "MC(ude,editor,no_ude)"                  "No hay ningún UDE de relevancia."
@@ -2382,7 +2396,7 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,axis_frm,Label)"           "Nombres del eje NC"
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,rev_fourth,Label)"         "Rotación inversa"
-::msgcat::mcset $gPB(LANG) "MC(isv,setup,rev_fourth,Context)"       "Especifique la dirección rotatoria del eje. Puede ser inversa o normal. Solamente se aplica a una tabla rotatoria."
+::msgcat::mcset $gPB(LANG) "MC(isv,setup,rev_fourth,Context)"       "Especifique la dirección rotatoria del eje. Puede ser inversa o normal. Solamente se aplica a una mesa giratoria."
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,rev_fifth,Label)"          "Rotación inversa"
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,fourth_limit,Label)"       "Límite rotatorio"
@@ -2423,7 +2437,7 @@ return 1
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,boolean,frame,Label)"      "Definición del ítem Booleano"
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Label)"       "Potencia en el sistema de coordenadas de trabajo (SCT por su sigla en español)  "
-::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Context)"     "0 indica que se utilizará la coordenada predeterminada cero de la máquina\n 1 indica que el primer usuario definirá la fijación desplazada (offset) (coordenada de trabajo)"
+::msgcat::mcset $gPB(LANG) "MC(isv,setup,power_on_wcs,Context)"     "0 indica que se utilizará la coordenada predeterminada cero de la máquina\n 1 indica que el primer usuario definirá el desplazamiento de la fijación (coordenada de trabajo)"
 
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,use_s_leader,Label)"       "S usado"
 ::msgcat::mcset $gPB(LANG) "MC(isv,setup,use_f_leader,Label)"       "F usado"
@@ -2498,7 +2512,7 @@ return 1
 ################
 # WCS Definition
 ################
-::msgcat::mcset $gPB(LANG) "MC(isv,machine_zero,offset,Label)"      "Desplazamientos cero de la máquina desde\nla unión cero de la máquina herramienta"
+::msgcat::mcset $gPB(LANG) "MC(isv,machine_zero,offset,Label)"      "Desplazamientos cero de la máquina desde\nla posición cero de la máquina herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,frame,Label)"         "Desplazamientos de la fijación"
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_leader,Label)"               " Código "
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_number,Label)"               "    "
@@ -2511,7 +2525,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_num,Label)"       "Sistema de coordenadas"
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_num,Context)"     "Especifique el número de desplazamiento de la fijación que es necesario agregar"
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_add,Label)"       "Agregar"
-::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_add,Context)"     "Agregar un sistema de coordenadas de offset de fijación, especificar la posición"
+::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_add,Context)"     "Agregar un sistema de coordenadas con desplazamiento de la fijación, especificar la posición"
 ::msgcat::mcset $gPB(LANG) "MC(isv,wcs_offset,wcs_err,Msg)"         "Ya existe el número del sistema de coordenadas."
 ::msgcat::mcset $gPB(LANG) "MC(isv,tool_info,frame,Label)"          "Información sobre la herramienta"
 ::msgcat::mcset $gPB(LANG) "MC(isv,tool_info,tool_entry,Label)"     "Introducir un nombre de herramienta nuevo"
@@ -2632,7 +2646,7 @@ return 1
 ::msgcat::mcset $gPB(LANG) "MC(optionMenu,item,-X_Axis)"     "Eje -X"
 ::msgcat::mcset $gPB(LANG) "MC(optionMenu,item,Y_Axis)"      "Eje Y"
 ::msgcat::mcset $gPB(LANG) "MC(optionMenu,item,MDD)"         "La magnitud determina la dirección"
-::msgcat::mcset $gPB(LANG) "MC(optionMenu,item,SDD)"         "La señal determina la dirección"
+::msgcat::mcset $gPB(LANG) "MC(optionMenu,item,SDD)"         "El signo determina la dirección"
 
 
 

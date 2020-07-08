@@ -3726,18 +3726,18 @@ proc UI_PB_com_HighlightTclKeywords { w } {
    concat join lappend lindex linsert list llength lrange \
    lreplace lsearch lset lsort split expr break catch continue \
    error eval for foreach if return switch update uplevel \
- vwait while array global incr namespace proc rename set \
- unset upvar variable close file gets open puts read info \
- source cd exec exit pwd pid time clock]
- ctext::addHighlightClassForSpecialChars $w key2 red {{}}
- ctext::addHighlightClassForSpecialChars $w key3 red {[]}
- ctext::addHighlightClassForRegexp  $w key5 cyan4 {MOM_[^\n\r\s]*}
- ctext::addHighlightClassForRegexp  $w key6 RoyalBlue4 {#[^\n\r]*}
- ctext::addHighlightClassForRegexp  $w key7 red {".*"}
- ctext::addHighlightClassForRegexp  $w key8 cyan4 {PB_call_macro}
- set fnt "$::gPB(fixed_font) bold"
- ctext::highlight $w 1.0 end $fnt
-}
+   vwait while array global incr namespace proc rename set \
+   unset upvar variable close file gets open puts read info \
+   source cd exec exit pwd pid time clock]
+   ctext::addHighlightClassForSpecialChars $w key2 red {{}}
+   ctext::addHighlightClassForSpecialChars $w key3 red {[]}
+   ctext::addHighlightClassForRegexp  $w key5 cyan4 {MOM_[^\n\r\s]*}
+   ctext::addHighlightClassForRegexp  $w key6 RoyalBlue4 {#[^\n\r]*}
+   ctext::addHighlightClassForRegexp  $w key7 red {".*"}
+   ctext::addHighlightClassForRegexp  $w key8 cyan4 {PB_call_macro}
+   set fnt "$::gPB(fixed_font) bold"
+   ctext::highlight $w 1.0 end $fnt
+  }
 }
 
 #=======================================================================

@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Système de coordonnées de départ de Duplication"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Système de coordonnées de fin de Duplication"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Activer sortie sous-programme"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Cette bascule notifiera le processeur NX/Post que ce post est équipé de la fonction de produire une sortie de sous-programme."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "Le registre de l'adresse X, Y, Z, quatrième axe, cinquième axe et N ne doit pas être configuré avec une expression contenant des variables. \n\nCe contrôle peut être désactivé en réglant gPB(ALLOW_VAR_SYS_LEADER) sur \"1\" dans votre fichier ui_pb_user_resource.tcl."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Avant Fin du contour"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Avant Fin du contour"
 
 
 #=============================================================================
@@ -337,7 +351,7 @@ return 1
 ##
 ::msgcat::mcset $gPB(LANG) "MC(main,title,Unigraphics)"             "Unigraphics"
 ::msgcat::mcset $gPB(LANG) "MC(main,title,UG)"                      "NX"
-::msgcat::mcset $gPB(LANG) "MC(main,title,Post_Builder)"            "Créateur de post"
+::msgcat::mcset $gPB(LANG) "MC(main,title,Post_Builder)"            "Créateur de Post"
 
 ::msgcat::mcset $gPB(LANG) "MC(main,title,Version)"                 "Version"
 ::msgcat::mcset $gPB(LANG) "MC(main,default,Status)"                "Sélectionner l'option Nouveau ou Ouvrir dans le menu Fichier."

@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Sistema di coordinate inizio gruppo di pattern"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Sistema di coordinate fine gruppo di pattern"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Attiva output di sottoprogramma"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Se attivata, l'opzione notifica al processore base di NX/Post che il post è in grado di produrre output di sottoprogramma."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "La direttrice di indirizzo X, Y, Z, fourth_axis, fifth_axis e N non deve essere configurata con un'espressione contenente variabili. \n\nÈ possibile disattivare questo controllo impostando gPB(ALLOW_VAR_SYS_LEADER) su \"1\" nel file ui_pb_user_resource.tcl."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Prima della fine del contorno"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Prima della fine del contorno"
 
 
 #=============================================================================

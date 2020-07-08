@@ -61,10 +61,24 @@ return 1
 
 
 #=============================================================================
+# pb1899
+#=============================================================================
+# Start and end of coordinate system change event of a pattern instance.
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_start,name)"       "Положение СК начального набора шаблона"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,pattern_csys_end,name)"         "Положение СК конечного набора шаблона"
+
+# Toggle to signal post being able to process and output subprograms
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Label)"          "Включить вывод подпрограммы"
+
+::msgcat::mcset $gPB(LANG) "MC(listing,subprog_out,check,Context)"        "Этот переключатель отправляет уведомление в NX/Постпроцессор о том, что данный постпроцессор снабжен возможностью выводить результаты подпрограммы."
+
+::msgcat::mcset $gPB(LANG) "MC(address,leader,err_msg)"                   "Выноска адреса X, Y, Z, fourth_axis, fifth_axis и N не должна конфигурироваться с выражением, содержащим переменные. \n\nЭту проверку можно отключить, задав для gPB(ALLOW_VAR_SYS_LEADER) значение \"1\" в файле ui_pb_user_resource.tcl."
+
+#=============================================================================
 # pb1872
 #=============================================================================
 # Event triggered, during lathe roughing cycle, before the last segment of contour geometry is processed.
-::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"      "Перед концом контура"
+::msgcat::mcset $gPB(LANG) "MC(event,misc,before_contour_end,name)"       "Перед концом контура"
 
 
 #=============================================================================
