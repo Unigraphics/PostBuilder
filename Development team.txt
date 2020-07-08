@@ -20,3 +20,35 @@ to this product.\
 \n  Naveen M.\
 \n  Satya C.\
 \n  Stan The Man"
+
+
+==================================================================
+
+set msg "Project team of NX/Post\ Builder\
+   acknowledges that Tcl/Tk, Tix and\
+   Stooop have been utilized in the development of\
+   this software.  Credits should\
+   be honored to the authors of these\
+   tool kits (John Ousterhout, Ioi Lam &\
+   Jean-Luc Fontaine and their\
+   associates), who have subconsciously\
+   made invaluable contribution to\
+   this product.\n\n\
+   \n Team Members:\
+   \n\
+   \n     Arun N.\
+   \n     Bi-Hua W.\
+   \n     Bill B.\
+   \n     Bing Z.\
+   \n     Binu P.\
+   \n     Byung C.\
+   \n     David L.\
+   \n     Gen S. L.\
+   \n     Mahendra G.\
+   \n     Naveen M.\
+   \n     Peter(Zhi-Gong) M.\
+   \n     Pheobe(Juan) D.\
+   \n     Satya C.\
+   \n     Stan S.\
+   \n     Xiang-Yang L."
+
