@@ -44,7 +44,15 @@ Project team of NX/Post\ Builder
 
 # Version:
 
-PB1980s  https://github.com/Unigraphics/PostBuilder/tree/PB1980s
+PB1980s  https://github.com/Unigraphics/PostBuilder/tree/PB1980s Final Release (2021).
+
+In a future release, the Post Builder application will be under critical maintenance. There will be no updates and no issues will be corrected.
+https://docs.sw.siemens.com/en-US/product/209349590/doc/PL20200507135732916.xid1753866/html/xid1006566
+Post Builder development is finally stopped with 1953 series. We still maintain the application for the next future releases and it also will take a while until we not deliver the application with NX installation directly (timeframe around 1-3y). In general take care of the product notes in CAM where we announce such changes.
+
+Post Configurator will be the development framework/ application for the future. Complete production status was achieved with NX1899 series with all features and amazing new ones and development continuously working on additional new features for the application. We recommend to use in general Post Configurator framework for every new project and even for converting existing old PB's
+
+____
 
 PB1899s  https://github.com/Unigraphics/PostBuilder/tree/PB1899s
 
@@ -72,4 +80,7 @@ PB03.303s https://github.com/Unigraphics/PostBuilder/tree/PB03.303
 
 PB02.001 https://github.com/Unigraphics/PostBuilder/tree/PB02.001
 
-PB00.16 https://github.com/Unigraphics/PostBuilder/tree/PB00.16
+PB00.16 https://github.com/Unigraphics/PostBuilder/tree/PB00.16  First Release (1999)
+
+____
+
